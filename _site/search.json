@@ -1,0 +1,20 @@
+[
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site\n\n1 + 1\n\n[1] 2"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "R Reference",
+    "section": "",
+    "text": "This website provides a reference for beginners who are using R in university courses (and beyond). Throughout the website, we will include many code examples. These code examples are live. You can edit the code and re-run it to see how things change.\n\nGive it a try. Run the code below to calculate 1 + 1. Then see if you can get R to compute the product 3 * 5 in the code block below.",
+    "crumbs": [
+      "Home",
+      "R Reference"
+    ]
+  }
+]

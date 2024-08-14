@@ -1,0 +1,37 @@
+project:
+  type: website
+
+website:
+  title: "R Reference"
+  repo-url: https://github.com/rpruim/r-reference
+  repo-actions: [edit, issue]
+  repo-subdir: "docs"
+  page-navigation: true
+  sidebar: 
+    contents: 
+      - href: index.qmd
+      - section: "Graphics with ggformula"
+        contents:
+        - graphics/ggformula-intro.qmd
+      - section: "Numerical summaries: mean(), sd(), etc."
+      - section: "Simulation methods: do()"
+      - section: "Working with distributions: pnorm(), etc."
+      - section: "Linear models: lm()"
+      - section: "Beyonnd linear models: glm(), etc."
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: true
+    
+theme:
+  light: yeti
+  dark: darkly
+
+
+

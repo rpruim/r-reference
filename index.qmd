@@ -2,6 +2,7 @@
 title: "R Reference"
 author: "Calvin University Department of Mathematics and Statistics"
 format: live-html
+
 engine: "knitr"
 toc: true
 ---

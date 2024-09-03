@@ -10,6 +10,10 @@ website:
   sidebar: 
     contents: 
       - href: index.qmd
+      - section: Data
+        contents: 
+        - data/data-frames.qmd
+        - data/loading-data.qmd
       - section: "Graphics with ggformula"
         contents:
         - graphics/ggformula-intro.qmd

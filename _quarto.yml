@@ -14,7 +14,7 @@ website:
         contents: 
         - data/data-frames.qmd
         - data/loading-data.qmd
-      - section: "Graphics with ggformula"
+      - section: "Graphics"
         contents:
         - graphics/ggformula-intro.qmd
       - section: "Numerical summaries: mean(), sd(), etc."

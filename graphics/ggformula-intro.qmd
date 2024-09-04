@@ -1,14 +1,12 @@
 ---
 title: "Graphics with ggformula"
-format: html
+format: live-html
 webr:
   packages:
     - dplyr
     - palmerpenguins
     - ggplot2
 engine: "knitr"
-filters: 
-  - webr
 
 ---
 
@@ -72,8 +70,7 @@ plots or plots with many arguments.
 
 Here is a simple example:
 
-```{webr, simple-example}
-#| message: false
+```{webr, simple-example, message = FALSE}
 library(ggformula)
 gf_point(mpg ~ hp, data = mtcars)
 mtcars |> gf_point(mpg ~ hp)

@@ -31,7 +31,7 @@ in the code block below.
 #| check: true
 results <- Filter(\(x) inherits(x, "result"), .evaluate_result)
 if(is.null(Find(\(x) x$value == 15, results))) {
-  list(correct = FALSE, message = "Incorrect, sorry.")
+  list(correct = FALSE, message = "Now see if you can compute 3 * 5.")
 } else {
   list(correct = TRUE, message = "Correct!")
 }

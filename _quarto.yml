@@ -12,8 +12,10 @@ website:
       - href: index.qmd
       - section: Data
         contents: 
-        - data/data-frames.qmd
-        - data/loading-data.qmd
+          - href: data/data-frames.qmd
+            text: "Data Frames"
+          - href: data/loading-data.qmd
+            text: "Loading Data"
       - section: "Graphics"
         contents:
         - graphics/ggformula-intro.qmd

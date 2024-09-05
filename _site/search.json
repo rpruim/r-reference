@@ -87,7 +87,7 @@
     "href": "python/python-test.html",
     "title": "Python HTML Output",
     "section": "",
-    "text": "The quarto-live extension has support for displaying several types of IPython rich output and Jupyter Widgets with interactive code blocks."
+    "text": "Note\n\n\n\nThis example is based on https://r-wasm.github.io/quarto-live/other/py_output.html#example-altair-interactive-visualisation.\nThe quarto-live extension has support for displaying several types of IPython rich output and Jupyter Widgets with interactive code blocks."
   },
   {
     "objectID": "python/python-test.html#example-ipython-rich-output",
@@ -101,7 +101,7 @@
     "href": "python/python-test.html#example-altair-interactive-visualisation",
     "title": "Python HTML Output",
     "section": "Example: Altair interactive visualisation",
-    "text": "Example: Altair interactive visualisation"
+    "text": "Example: Altair interactive visualisation\n\n\n\n\n\n\n\nJupyter Widgets\n\n\n\n\n\n\nNote\n\n\n\nAt the moment Jupyter widgets cannot be used as reactive inputs for quarto-live’s OJS integration. This is planned to be added in a future release of quarto-live."
   },
   {
     "objectID": "python/python-test.html#example-jupyter-widgets",

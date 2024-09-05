@@ -13,6 +13,8 @@ pyodide:
     - numpy
     - pandas
     - vega_datasets
+  cell-options:
+    autorun: false
 ---
 
 :::{.callout-note}

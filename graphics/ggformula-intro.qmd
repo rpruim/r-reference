@@ -6,6 +6,9 @@ webr:
     - dplyr
     - palmerpenguins
     - ggplot2
+    - ggformula
+  cell-options:
+    autorun: false
 engine: "knitr"
 
 ---
@@ -68,9 +71,21 @@ The first form of the tempate is useful for simple plots or for multi-layered pl
 where different layers use different data.  The second form is useful for multi-layered
 plots or plots with many arguments.
 
-Here is a simple example:
+Here is a simple example.
+
+First, we load the {ggformula} package.
+
+```{webr, load-ggformula, message = FALSE}
+#| autorun: true
+#| edit: false
+ 
+library(ggformula)
+```
+
+Then we create a plot (using both styles indicated above).
 
 ```{webr, simple-example, message = FALSE}
+#| autorun: true
 library(ggformula)
 gf_point(mpg ~ hp, data = mtcars)
 mtcars |> gf_point(mpg ~ hp)

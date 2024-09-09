@@ -1,0 +1,144 @@
+---
+title: "There and back again"
+subtitle: "Including R and Python in Quarto"
+echo: fenced
+---
+
+## Basic back and forth between R and Python
+
+1.  Include `library(reticulate)` in your document. That package does the connecting between R and Python.
+
+```{r}
+#| label: setup
+suppressPackageStartupMessages({
+  library(reticulate)
+  library(ggformula)
+})
+
+theme_set(theme_bw())
+```
+
+2.  To access an R object named `object` in Python, use `r.object`.
+
+3.  To access a Python object named `object` in R, use `py$object`.
+
+4.  Do some double checking to make sure the object coversion yield what you are expecting.
+
+## Simple Example
+
+```{r}
+#| label: some-r
+x <- 5
+```
+
+```{python}
+#| label: python-calling-r
+print(r.x)
+y = r.x * 2
+```
+
+```{r}
+#| label: r-calling-python 
+py$y
+```
+
+## More interesting Example
+
+```{r}
+#| label: r-penguins
+library(palmerpenguins)
+data(penguins)
+penguins |> reactable::reactable()
+str(penguins)
+```
+
+We can access `penguins` in Python, but what sort of thing will it be? Let's do some snooping.
+
+```{python}
+#| label: python-penguins
+import pandas as pd
+penguins = r.penguins
+type(penguins)
+```
+
+### `dir()`
+
+`dir()` is another useful function we can use to snoop information about a Python object, but the output is often long, so let's spend a little time with `dir()` to make it more manageable. Since the result of `dir()` is a Python object, we can inspect `dir(penguins)` to see what it is.
+
+```{python}
+#| label: what-does-dir-return
+type(dir(penguins))
+```
+
+It's a list. Let's see how long the list is.
+
+```{python}
+#| label: how-long-is-dir
+len(dir(penguins))
+```
+
+We could print all those values, but let's just do some of them.
+
+```{python}
+#| label: culling-dir
+dir(penguins)[0:10]
+```
+
+Now let's look only the ones without underscores.
+```{python}
+[item for item in dir(penguins) if not "_" in item]
+```
+
+Clearly we have some things to learn about pandas data frames, but some of these sound familiar enough that we could just try them out:
+
+```{python}
+#| label: inspecting-penguins
+penguins.shape
+penguins.head(5)
+penguins.tail(2)
+penguins.ndim
+penguins.species
+type(penguins.species)
+
+# We can guess that there is also a bill_length_mm (which we removed from our list)
+penguins.bill_length_mm
+type(penguins.bill_length_mm)
+```
+
+### `help()`
+
+The `help()` function provides another type of information: documentation. This can also be long. Open the block below to see what we get from `help(penguins)`.
+
+::: {.callout-note collapse="true"}
+#### Show results of `help(penguins)`
+
+```{python}
+help(penguins)
+```
+:::
+
+### Tab completion
+
+In many (most) interactive environments for R and Python, tab completion (hitting the tab key when you are part-way through typing something) can be a very useful way to get a nudge in the right direction or to get access to more help.
+
+As far as I can tell, tab completion does not work for Python inside Quarto Python chunks, but does (at least in a limited fashion) in the Python conosle that appears after you run some Python code. In some other environments (like VS Code) you can probably get more mileage out of Python tab completion.
+
+::: callout-tip
+Note: You can work with Quarto documents in VS code, you don't have to be in RStudio for that. Just install the [Quarto extension](https://marketplace.visualstudio.com/items?itemName=quarto.quarto) for VS code.
+:::
+
+<!-- ## Python to-do list -->
+
+<!-- -   Learn how to work with important object pandas/numpy data types (like `pandas.core.frame.DataFrame` and `pandas.core.series.Series`). -->
+
+<!-- -   Build up a tool kit of useful Python utility functions and snippets (like list comprehension, `char in some_string`, etc.). I sometimes refer to this as "finger food" -- little bits of code that are just "in your fingers" that you can use any time you need without needing to consult documenation or pause to think very long. -->
+
+<!-- -   Practice inspecting Python objects to find out what they are and what you can do with them. -->
+
+<!-- -   Learn how to find documentation for things you don't yet know. (Note: Some things may stay on the list of the things you need to consult documentation for for some time; others you may want to move to "finger food" after you learn about them.) -->
+
+<!-- -   Learn how to write "pythonically" -- that is, to follow the common practices of good Python programmers. -->
+
+<!-- ## R to-do list -->
+
+<!-- The R to-do list is similar. But most of you have more experience with R than with Python, so you are farther along in accomplishing the to-do list. -->

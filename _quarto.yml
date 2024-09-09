@@ -9,6 +9,12 @@ website:
   sidebar: 
     contents: 
       - href: index.qmd
+      - section: Quarto
+        contents: 
+          - href: quarto/math-in-markdown.qmd
+            text: "Mathematical notation"
+          - href: quarto/r-and-python.qmd
+            text: "R and Python together"
       - section: Data
         contents: 
           - href: data/data-frames.qmd

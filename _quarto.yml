@@ -21,6 +21,13 @@ website:
             text: "Data Frames"
           - href: data/loading-data.qmd
             text: "Loading Data"
+      - section: Data Wrangling
+        contents: 
+        - href: wrangling/wrangling-intro.qmd
+          text: Intro to Data Wrangling
+        - href: wrangling/tidy-tb.qmd
+          text: TB Case Study
+        
       - section: "Graphics"
         contents:
         - graphics/ggformula-intro.qmd

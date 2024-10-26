@@ -253,130 +253,220 @@
     "text": "About this site\n\n1 + 1\n\n[1] 2"
   },
   {
-    "objectID": "wrangling/wranging-intro.html#about-this-tutorial",
-    "href": "wrangling/wranging-intro.html#about-this-tutorial",
+    "objectID": "wrangling/wrangling-intro.html#about-this-tutorial",
+    "href": "wrangling/wrangling-intro.html#about-this-tutorial",
     "title": "Data Wrangling in the Tidyverse",
     "section": "About this Tutorial",
-    "text": "About this Tutorial\n\nToolkit\nThis tutorial was written using WebR.\n\n\nA little help from my friends\nThis tutorial has evolved from presentations and tutorials made by\n\nRandall Pruim\nDanny Kaplan\nJo Hardin\nMiles Ott\nNicholas Horton"
+    "text": "About this Tutorial\n\nToolkit\nThis tutorial was written using WebR.\n\n\nA little help from my friends\nThis tutorial has evolved from presentations and tutorials made by\n\nRandall Pruim\nDanny Kaplan\nJo Hardin\nMiles Ott\nNicholas Horton",
+    "crumbs": [
+      "Home",
+      "Data Wrangling",
+      "Intro to Data Wrangling"
+    ]
   },
   {
-    "objectID": "wrangling/wranging-intro.html#data-used-in-the-tutorial",
-    "href": "wrangling/wranging-intro.html#data-used-in-the-tutorial",
+    "objectID": "wrangling/wrangling-intro.html#data-used-in-the-tutorial",
+    "href": "wrangling/wrangling-intro.html#data-used-in-the-tutorial",
     "title": "Data Wrangling in the Tidyverse",
     "section": "Data used in the tutorial",
-    "text": "Data used in the tutorial\nFor simplicity, all the data in this tutorial come from R packages. We will rename some data sets so that in this tutorial data sets are capitalized and variables (mostly) are not.\n\n\n\n\n\n\nNote\n\n\n\nThis chunk is autorun when this tutorial is loaded to make sure you have the data available to you throughout the tutorial. Most other chunks are not run until you hit the play button."
+    "text": "Data used in the tutorial\nFor simplicity, all the data in this tutorial come from R packages. We will rename some data sets so that in this tutorial data sets are capitalized and variables (mostly) are not.\n\n\n\n\n\n\nNote\n\n\n\nThis chunk is autorun when this tutorial is loaded to make sure you have the data available to you throughout the tutorial. Most other chunks are not run until you hit the play button.",
+    "crumbs": [
+      "Home",
+      "Data Wrangling",
+      "Intro to Data Wrangling"
+    ]
   },
   {
-    "objectID": "wrangling/wranging-intro.html#what-is-the-tidyverse",
-    "href": "wrangling/wranging-intro.html#what-is-the-tidyverse",
+    "objectID": "wrangling/wrangling-intro.html#what-is-the-tidyverse",
+    "href": "wrangling/wrangling-intro.html#what-is-the-tidyverse",
     "title": "Data Wrangling in the Tidyverse",
     "section": "What is the tidyverse?",
-    "text": "What is the tidyverse?\n\nA collection of R packages\n\nwritten by Hadley Wickham (and friends)\nthat play well together\nto create and manage\ntidy data.\n\n\n\ndata I have  \\(\\stackrel{\\mbox{tidyverse}}{\\longrightarrow}\\)  data I want"
+    "text": "What is the tidyverse?\n\nA collection of R packages\n\nwritten by Hadley Wickham (and friends)\nthat play well together\nto create and manage\ntidy data.\n\n\n\ndata I have  \\(\\stackrel{\\mbox{tidyverse}}{\\longrightarrow}\\)  data I want",
+    "crumbs": [
+      "Home",
+      "Data Wrangling",
+      "Intro to Data Wrangling"
+    ]
   },
   {
-    "objectID": "wrangling/wranging-intro.html#tidy-data",
-    "href": "wrangling/wranging-intro.html#tidy-data",
+    "objectID": "wrangling/wrangling-intro.html#tidy-data",
+    "href": "wrangling/wrangling-intro.html#tidy-data",
     "title": "Data Wrangling in the Tidyverse",
     "section": "Tidy data",
-    "text": "Tidy data\n\nRows are cases (of interest)\nColumns are variables\n\n\nTidy vs Clean\nAs grandma says: tidy and clean are two different things\n\ntidy data may not be clean, but\ntidy data are easier to clean,\nand it is easier to tell whether data are clean when they are tidy\n\n\n\nGlyph Ready Data\nMany plotting libraries (including ggformula and ggplot2) require or work best with “glyph ready” data:\n\ninformation for each glyph (a mark on the “page”) is in a single row.\nattributes of each glyph are determined by values of variables in that row.\n\ntidyverse tools are useful for creating glyph ready data."
+    "text": "Tidy data\n\nRows are cases (of interest)\nColumns are variables\n\n\nTidy vs Clean\nAs grandma says: tidy and clean are two different things\n\ntidy data may not be clean, but\ntidy data are easier to clean,\nand it is easier to tell whether data are clean when they are tidy\n\n\n\nGlyph Ready Data\nMany plotting libraries (including ggformula and ggplot2) require or work best with “glyph ready” data:\n\ninformation for each glyph (a mark on the “page”) is in a single row.\nattributes of each glyph are determined by values of variables in that row.\n\ntidyverse tools are useful for creating glyph ready data.",
+    "crumbs": [
+      "Home",
+      "Data Wrangling",
+      "Intro to Data Wrangling"
+    ]
   },
   {
-    "objectID": "wrangling/wranging-intro.html#chaining-with-the-native-pipe",
-    "href": "wrangling/wranging-intro.html#chaining-with-the-native-pipe",
+    "objectID": "wrangling/wrangling-intro.html#chaining-with-the-native-pipe",
+    "href": "wrangling/wrangling-intro.html#chaining-with-the-native-pipe",
     "title": "Data Wrangling in the Tidyverse",
     "section": "Chaining with the native pipe (|>)",
-    "text": "Chaining with the native pipe (|&gt;)\n\nThe following are essentially equivalent\n\nf(x, y, ...)\n\n\nx |&gt; f(y, ...)\n\n\n\n\nYour Turn\nAdd a second line that is equivalent to the first but uses |&gt;. (Note: Unless you use set.seed() you will get different results each time because of different random choices.)"
+    "text": "Chaining with the native pipe (|&gt;)\n\nThe following are essentially equivalent\n\nf(x, y, ...)\n\n\nx |&gt; f(y, ...)\n\n\n\n\nYour Turn\nAdd a second line that is equivalent to the first but uses |&gt;. (Note: Unless you use set.seed() you will get different results each time because of different random choices.)",
+    "crumbs": [
+      "Home",
+      "Data Wrangling",
+      "Intro to Data Wrangling"
+    ]
   },
   {
-    "objectID": "wrangling/wranging-intro.html#little-bunny-foo-foo",
-    "href": "wrangling/wranging-intro.html#little-bunny-foo-foo",
+    "objectID": "wrangling/wrangling-intro.html#little-bunny-foo-foo",
+    "href": "wrangling/wrangling-intro.html#little-bunny-foo-foo",
     "title": "Data Wrangling in the Tidyverse",
     "section": "Little Bunny Foo Foo",
-    "text": "Little Bunny Foo Foo\nHere’s a silly example that illustrates why |&gt; is helpful.\nLittle bunny Foo Foo\nWent hopping through the forest\nScooping up the field mice\nAnd bopping them on the head.\nSuppose we wanted to express this poem in code…\n\nWithout chaining\n\n\n\n\nbop(scoop(hop(foo_foo, through = forest), up = field_mice), on = head)\n\nOr perhaps\n\nbop(\n  scoop(\n    hop(\n      foo_foo, through = forest), \n    up = field_mice), \n  on = head)\n\n\n\nWith chaining\nRewrite the code above using |&gt;.\n\n\n\n\n\n\n\n\n\nfoo_foo |&gt;\n  hop(through = forest) |&gt;\n  scoop(up = field_mice) |&gt;\n  bop(on = head)\n  \n\n\n\n\n\n\nDefinitions of functions and variables that make this work\n\n\n\n\n\nfoo_foo &lt;- \"Little Bunny Foo Foo\"\nforest &lt;- \"the forest\"\nfield_mice &lt;- \"the field mice\"\nhead &lt;- \"the head\"\nhop &lt;- function(object, through) {\n  paste0(object, '\\nWent hopping through ', through) \n}\nscoop &lt;- function(object, up) {\n  paste0(object, \"\\nScooping up\", up) \n}\nbop &lt;- function(object, on) {\n  paste0(object, \"\\nAnd bopping them on \", on) |&gt; cat()\n}\n\n\n\n\n\n\nAdvantages of Chaining\n\nreduces parenthesis chasing\nkeeps arguments near functions\nmirrors order of operations (making code easier to read)\nfacilitates code editing (easy to eliminate or insert a step)"
+    "text": "Little Bunny Foo Foo\nHere’s a silly example that illustrates why |&gt; is helpful.\nLittle bunny Foo Foo\nWent hopping through the forest\nScooping up the field mice\nAnd bopping them on the head.\nSuppose we wanted to express this poem in code…\n\nWithout chaining\n\n\n\n\nbop(scoop(hop(foo_foo, through = forest), up = field_mice), on = head)\n\nOr perhaps\n\nbop(\n  scoop(\n    hop(\n      foo_foo, through = forest), \n    up = field_mice), \n  on = head)\n\n\n\nWith chaining\nRewrite the code above using |&gt;.\n\n\n\n\n\n\n\n\n\nfoo_foo |&gt;\n  hop(through = forest) |&gt;\n  scoop(up = field_mice) |&gt;\n  bop(on = head)\n  \n\n\n\n\n\n\nDefinitions of functions and variables that make this work\n\n\n\n\n\nfoo_foo &lt;- \"Little Bunny Foo Foo\"\nforest &lt;- \"the forest\"\nfield_mice &lt;- \"the field mice\"\nhead &lt;- \"the head\"\nhop &lt;- function(object, through) {\n  paste0(object, '\\nWent hopping through ', through) \n}\nscoop &lt;- function(object, up) {\n  paste0(object, \"\\nScooping up\", up) \n}\nbop &lt;- function(object, on) {\n  paste0(object, \"\\nAnd bopping them on \", on) |&gt; cat()\n}\n\n\n\n\n\n\nAdvantages of Chaining\n\nreduces parenthesis chasing\nkeeps arguments near functions\nmirrors order of operations (making code easier to read)\nfacilitates code editing (easy to eliminate or insert a step)",
+    "crumbs": [
+      "Home",
+      "Data Wrangling",
+      "Intro to Data Wrangling"
+    ]
   },
   {
-    "objectID": "wrangling/wranging-intro.html#data-verbs",
-    "href": "wrangling/wranging-intro.html#data-verbs",
+    "objectID": "wrangling/wrangling-intro.html#data-verbs",
+    "href": "wrangling/wrangling-intro.html#data-verbs",
     "title": "Data Wrangling in the Tidyverse",
     "section": "Data Verbs",
-    "text": "Data Verbs\n\nChaining in the tidyverse\nMany functions in tidyverse\n\ntake tidy data as a first argument\nreturn tidy data as a result\ndo not have side effects\n\nThis sets them up for chaining:\n\nnew_data &lt;-\n  old_data |&gt;\n  do_this( ... ) |&gt;\n  and_that( ... ) |&gt;\n  and_the_other( ... )\n\nWe will refer to these kinds of functions as (transitive) data verbs because they do something to (tidy) data without side effects.\n\n\nLearning tidyverse Tools\nThere are basically two steps:\n\n\n\n\n\n\n\n1. Learn how each data verb works in isolation.\n(Low volume)\n\n\n2. Break down complex tasks into a sequence steps\n(Creativity)"
+    "text": "Data Verbs\n\nChaining in the tidyverse\nMany functions in tidyverse\n\ntake tidy data as a first argument\nreturn tidy data as a result\ndo not have side effects\n\nThis sets them up for chaining:\n\nnew_data &lt;-\n  old_data |&gt;\n  do_this( ... ) |&gt;\n  and_that( ... ) |&gt;\n  and_the_other( ... )\n\nWe will refer to these kinds of functions as (transitive) data verbs because they do something to (tidy) data without side effects.\n\n\nLearning tidyverse Tools\nThere are basically two steps:\n\n\n\n\n\n\n\n1. Learn how each data verb works in isolation.\n(Low volume)\n\n\n2. Break down complex tasks into a sequence steps\n(Creativity)",
+    "crumbs": [
+      "Home",
+      "Data Wrangling",
+      "Intro to Data Wrangling"
+    ]
   },
   {
-    "objectID": "wrangling/wranging-intro.html#movies-data",
-    "href": "wrangling/wranging-intro.html#movies-data",
+    "objectID": "wrangling/wrangling-intro.html#movies-data",
+    "href": "wrangling/wrangling-intro.html#movies-data",
     "title": "Data Wrangling in the Tidyverse",
     "section": "Movies Data",
-    "text": "Movies Data\nThe Movies data set contains information about movies.\n\n\n\n\n\n\n\n\n\nYour Turn\n\nChange glimpse() to skim() in the previous box; skimr::skim() provides an alternative way to take a quick look at a data set.\nNow change to slice_head(). What does this function do?\nNow change to nrow(). What does this function do?\nNow change to names(). What does this function do?\nWant more information? Try ?movies. (Note lower case here.)\n\n\n\nQuiz\n\nIs skim() a data verb?\nYesNo, its first argument is not tidy data.No, it doesn’t return tidy data.No, it has side effects.\nIs glimpse() a data verb?\nYesNo, its first argument is not tidy data.No, it doesn’t return tidy data.No, it has side effects.\nIs slice_head() a data verb?\nYesNo, its first argument is not tidy data.No, it doesn’t return tidy data.No, it has side effects.\nIs nrow() a data verb?\nYesNo, its first argument is not tidy data.No, it doesn’t return tidy data.No, it has side effects.\nIs names() a data verb?\nYesNo, its first argument is not tidy data.No, it doesn’t return tidy data.No, it has side effects."
+    "text": "Movies Data\nThe Movies data set contains information about movies.\n\n\n\n\n\n\n\n\n\nYour Turn\n\nChange glimpse() to skim() in the previous box; skimr::skim() provides an alternative way to take a quick look at a data set.\nNow change to slice_head(). What does this function do?\nNow change to nrow(). What does this function do?\nNow change to names(). What does this function do?\nWant more information? Try ?movies. (Note lower case here.)\n\n\n\nQuiz\n\nIs skim() a data verb?\nYesNo, its first argument is not tidy data.No, it doesn’t return tidy data.No, it has side effects.\nIs glimpse() a data verb?\nYesNo, its first argument is not tidy data.No, it doesn’t return tidy data.No, it has side effects.\nIs slice_head() a data verb?\nYesNo, its first argument is not tidy data.No, it doesn’t return tidy data.No, it has side effects.\nIs nrow() a data verb?\nYesNo, its first argument is not tidy data.No, it doesn’t return tidy data.No, it has side effects.\nIs names() a data verb?\nYesNo, its first argument is not tidy data.No, it doesn’t return tidy data.No, it has side effects.",
+    "crumbs": [
+      "Home",
+      "Data Wrangling",
+      "Intro to Data Wrangling"
+    ]
   },
   {
-    "objectID": "wrangling/wranging-intro.html#main-data-verbs",
-    "href": "wrangling/wranging-intro.html#main-data-verbs",
+    "objectID": "wrangling/wrangling-intro.html#main-data-verbs",
+    "href": "wrangling/wrangling-intro.html#main-data-verbs",
     "title": "Data Wrangling in the Tidyverse",
     "section": "6 Main Data Verbs",
-    "text": "6 Main Data Verbs\nWe’ll go through each of these in more detail in just a moment, but here are the key data verbs.\n\nReduction\n\nsummarise(): compute summary statistics\n\n\nresult is a 1-row data frame. (This is a white lie, but useful for now.)\n\n\n\nOperations on Rows\n\nfilter(): keep rows that match logical condition (discard the others)\narrange(): reorder the rows (i.e., sort)\n\n\n\nOperations on Columns\n\nselect(): keep some variables (columns) (discard the others)\nmutate(): create new variables and add them to the data\n\n\n\nGrouping\n\ngroup_by(): data unchanged, but groups are noted.\n\nsubsequent verbs are processed groupwise\nungroup(): clear grouping notes\n\n\n\n\nBut wait, there’s more!\nHere are some other data verbs\n\ntransmute() like mutate(), but returns only the new variables\nrename(): rename some of the variables\ndistinct(): returns each unique row once\nslice_sample(): returns randomly selected row(s)\nslice_head(): returns the first few rows [ignores groups]\nslice_tail(): returns the last few rows [ignores groups]\ndo(): used to create custom operations"
+    "text": "6 Main Data Verbs\nWe’ll go through each of these in more detail in just a moment, but here are the key data verbs.\n\nReduction\n\nsummarise(): compute summary statistics\n\n\nresult is a 1-row data frame. (This is a white lie, but useful for now.)\n\n\n\nOperations on Rows\n\nfilter(): keep rows that match logical condition (discard the others)\narrange(): reorder the rows (i.e., sort)\n\n\n\nOperations on Columns\n\nselect(): keep some variables (columns) (discard the others)\nmutate(): create new variables and add them to the data\n\n\n\nGrouping\n\ngroup_by(): data unchanged, but groups are noted.\n\nsubsequent verbs are processed groupwise\nungroup(): clear grouping notes\n\n\n\n\nBut wait, there’s more!\nHere are some other data verbs\n\ntransmute() like mutate(), but returns only the new variables\nrename(): rename some of the variables\ndistinct(): returns each unique row once\nslice_sample(): returns randomly selected row(s)\nslice_head(): returns the first few rows [ignores groups]\nslice_tail(): returns the last few rows [ignores groups]\ndo(): used to create custom operations",
+    "crumbs": [
+      "Home",
+      "Data Wrangling",
+      "Intro to Data Wrangling"
+    ]
   },
   {
-    "objectID": "wrangling/wranging-intro.html#one-row-summaries-with-summarise",
-    "href": "wrangling/wranging-intro.html#one-row-summaries-with-summarise",
+    "objectID": "wrangling/wrangling-intro.html#one-row-summaries-with-summarise",
+    "href": "wrangling/wrangling-intro.html#one-row-summaries-with-summarise",
     "title": "Data Wrangling in the Tidyverse",
     "section": "One-row summaries with summarise()",
-    "text": "One-row summaries with summarise()\nNote: summarize() works for non New Zelanders, but it conflicts with a function with that same name in another package.\n\n\n\n\n\n\n\n\nNote: n() only works in special tidyverse functions (like summarise()) and computes the same value as nrow() but doesn’t require us to name the data set inside summarise(). (This will be more important shortly.)\n\n\n\n\n\n\n\n\n\nMulti-tasking allowed\n\n\n\n\n\n\n\n\n\n\nYour turn\nAdd one more variable to the example above: the total length of all the movies in years.\n\n\n\n\n\n\n\n\n\n# mean and total number of minutes of all the movies\nMovies |&gt; \n  summarise(\n    n = n(),\n    mean_length  = mean(length, na.rm = TRUE), \n    total_length =  sum(length, na.rm = TRUE),\n    total_length_years =  sum(length, na.rm = TRUE) / (60 * 24 * 365),\n    total_length_years2 =  total_length / (60 * 24 * 365)\n    )\n\n\n\nUseful functions for use with summarise()\n\nmin(), max(), mean(), sum(), sd(), median(), IQR(), …\nn(): number of observations in the current group\nn_distinct(): number of unique values of a variable\nfirst_value(), last_value(), nth_value(x, n)"
+    "text": "One-row summaries with summarise()\nNote: summarize() works for non New Zelanders, but it conflicts with a function with that same name in another package.\n\n\n\n\n\n\n\n\nNote: n() only works in special tidyverse functions (like summarise()) and computes the same value as nrow() but doesn’t require us to name the data set inside summarise(). (This will be more important shortly.)\n\n\n\n\n\n\n\n\n\nMulti-tasking allowed\n\n\n\n\n\n\n\n\n\n\nYour turn\nAdd one more variable to the example above: the total length of all the movies in years.\n\n\n\n\n\n\n\n\n\n# mean and total number of minutes of all the movies\nMovies |&gt; \n  summarise(\n    n = n(),\n    mean_length  = mean(length, na.rm = TRUE), \n    total_length =  sum(length, na.rm = TRUE),\n    total_length_years =  sum(length, na.rm = TRUE) / (60 * 24 * 365),\n    total_length_years2 =  total_length / (60 * 24 * 365)\n    )\n\n\n\nUseful functions for use with summarise()\n\nmin(), max(), mean(), sum(), sd(), median(), IQR(), …\nn(): number of observations in the current group\nn_distinct(): number of unique values of a variable\nfirst_value(), last_value(), nth_value(x, n)",
+    "crumbs": [
+      "Home",
+      "Data Wrangling",
+      "Intro to Data Wrangling"
+    ]
   },
   {
-    "objectID": "wrangling/wranging-intro.html#select",
-    "href": "wrangling/wranging-intro.html#select",
+    "objectID": "wrangling/wrangling-intro.html#select",
+    "href": "wrangling/wrangling-intro.html#select",
     "title": "Data Wrangling in the Tidyverse",
     "section": "select()",
-    "text": "select()\nLet’s make a data set that has fewer variables.\n\n\n\n\n\n\n\n\n\nReminder: select() is for columns/variables\nCan use : to specify ranges of variables: title : budget\nCan use - to deselect variables: -length\n\n\nYour Turn\nSelect some variables of your own choosing."
+    "text": "select()\nLet’s make a data set that has fewer variables.\n\n\n\n\n\n\n\n\n\nReminder: select() is for columns/variables\nCan use : to specify ranges of variables: title : budget\nCan use - to deselect variables: -length\n\n\nYour Turn\nSelect some variables of your own choosing.",
+    "crumbs": [
+      "Home",
+      "Data Wrangling",
+      "Intro to Data Wrangling"
+    ]
   },
   {
-    "objectID": "wrangling/wranging-intro.html#creating-subsets-filter-and-friends",
-    "href": "wrangling/wranging-intro.html#creating-subsets-filter-and-friends",
+    "objectID": "wrangling/wrangling-intro.html#creating-subsets-filter-and-friends",
+    "href": "wrangling/wrangling-intro.html#creating-subsets-filter-and-friends",
     "title": "Data Wrangling in the Tidyverse",
     "section": "Creating subsets – filter() and friends",
-    "text": "Creating subsets – filter() and friends\nOften it is useful to work with a subset of the data\n\ninspect a few rows to understand the data\nsmall data sets for prototyping analysis methods\nanalyses applied only to an “interesting” subset of the data\ntraining and test data sets\n\n\nBeginning and End\n\n\n\n\n\n\n\n\n\n\nRandom sample\n\n\n\n\n\n\n\n\n\n\n\n\nfilter()\nLet’s use only use movies (cases) that have budget information and have shorter titles."
+    "text": "Creating subsets – filter() and friends\nOften it is useful to work with a subset of the data\n\ninspect a few rows to understand the data\nsmall data sets for prototyping analysis methods\nanalyses applied only to an “interesting” subset of the data\ntraining and test data sets\n\n\nBeginning and End\n\n\n\n\n\n\n\n\n\n\nRandom sample\n\n\n\n\n\n\n\n\n\n\n\n\nfilter()\nLet’s use only use movies (cases) that have budget information and have shorter titles.",
+    "crumbs": [
+      "Home",
+      "Data Wrangling",
+      "Intro to Data Wrangling"
+    ]
   },
   {
-    "objectID": "wrangling/wranging-intro.html#creating-new-variables-mutate-and-friends",
-    "href": "wrangling/wranging-intro.html#creating-new-variables-mutate-and-friends",
+    "objectID": "wrangling/wrangling-intro.html#creating-new-variables-mutate-and-friends",
+    "href": "wrangling/wrangling-intro.html#creating-new-variables-mutate-and-friends",
     "title": "Data Wrangling in the Tidyverse",
     "section": "Creating new variables – mutate() and friends",
-    "text": "Creating new variables – mutate() and friends\nmutate() can be used to add new variables (columns) that are calculated from existing variables. For example, let’s compute the dollars per minute (of runtime) for our films.\n\n\n\n\n\n\n\n\n\nYour Turn\nChange mutate() to transmute(). How do they differ?"
+    "text": "Creating new variables – mutate() and friends\nmutate() can be used to add new variables (columns) that are calculated from existing variables. For example, let’s compute the dollars per minute (of runtime) for our films.\n\n\n\n\n\n\n\n\n\nYour Turn\nChange mutate() to transmute(). How do they differ?",
+    "crumbs": [
+      "Home",
+      "Data Wrangling",
+      "Intro to Data Wrangling"
+    ]
   },
   {
-    "objectID": "wrangling/wranging-intro.html#group_by",
-    "href": "wrangling/wranging-intro.html#group_by",
+    "objectID": "wrangling/wrangling-intro.html#group_by",
+    "href": "wrangling/wrangling-intro.html#group_by",
     "title": "Data Wrangling in the Tidyverse",
     "section": "group_by()",
-    "text": "group_by()\ngroup_by() is what makes this system really hum. When tidy data is marked with groups, some subsequent data verbs are applied within groups.\n\n\n\n\n\n\n\n\n\nHint/Example\nHere are some examples. But you should create your own that are different.\n# mean length of movies in hours for all the movies, broken down by title length\nMovies2 |&gt; \n  mutate(\n    hours = length / 60,\n    dpm = budget / length) |&gt; \n  group_by(title_length = nchar(title)) |&gt; \n  summarise(\n    n = n(), \n    mean_length = mean(hours, na.rm = TRUE),\n    min_length  =  max(hours, na.rm = TRUE),\n    max_length  =  min(hours, na.rm = TRUE)\n    ) |&gt;\n  gf_pointrange(mean_length + min_length + max_length ~ title_length)\n\n\nYour Turn\n\nAdd some additional summaries of your choosing.\nGroup by length of title instead of by rating.\nBonus: show the results with a plot rather than a table.\n\n\n\n\n\n\n\nWarning\n\n\n\nGroups are in some sense “invisible”, and it is easy to forget about them. When saving data that have been created with a grouping, you may want to use ungroup() to remove the grouping information and let future you start fresh – you have been warned…\n\n\n\n\ngroup() and mutate()\ngroup() impacts some other operations as well. What happens when mutate() is applied after group_by()? Give it a try and see."
+    "text": "group_by()\ngroup_by() is what makes this system really hum. When tidy data is marked with groups, some subsequent data verbs are applied within groups.\n\n\n\n\n\n\n\n\n\nHint/Example\nHere are some examples. But you should create your own that are different.\n# mean length of movies in hours for all the movies, broken down by title length\nMovies2 |&gt; \n  mutate(\n    hours = length / 60,\n    dpm = budget / length) |&gt; \n  group_by(title_length = nchar(title)) |&gt; \n  summarise(\n    n = n(), \n    mean_length = mean(hours, na.rm = TRUE),\n    min_length  =  max(hours, na.rm = TRUE),\n    max_length  =  min(hours, na.rm = TRUE)\n    ) |&gt;\n  gf_pointrange(mean_length + min_length + max_length ~ title_length)\n\n\nYour Turn\n\nAdd some additional summaries of your choosing.\nGroup by length of title instead of by rating.\nBonus: show the results with a plot rather than a table.\n\n\n\n\n\n\n\nWarning\n\n\n\nGroups are in some sense “invisible”, and it is easy to forget about them. When saving data that have been created with a grouping, you may want to use ungroup() to remove the grouping information and let future you start fresh – you have been warned…\n\n\n\n\ngroup() and mutate()\ngroup() impacts some other operations as well. What happens when mutate() is applied after group_by()? Give it a try and see.",
+    "crumbs": [
+      "Home",
+      "Data Wrangling",
+      "Intro to Data Wrangling"
+    ]
   },
   {
-    "objectID": "wrangling/wranging-intro.html#arrange-reorders-the-cases",
-    "href": "wrangling/wranging-intro.html#arrange-reorders-the-cases",
+    "objectID": "wrangling/wrangling-intro.html#arrange-reorders-the-cases",
+    "href": "wrangling/wrangling-intro.html#arrange-reorders-the-cases",
     "title": "Data Wrangling in the Tidyverse",
     "section": "arrange() reorders the cases",
-    "text": "arrange() reorders the cases\n\nExample\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNote about groups\n\n\n\nBy default, arrange() ignores groups. If you use .by_group = TRUE, then sorting will be done by grouping variables first, then by additional variables specified.\n\n\n\n\nGroup, summarise, arrange\nGroup-summarise-arrange is a common operation sequence to list groups in an order based on some calculation.\n\nYour Turn\nFill in the missing pieces here to list the ratings in order of average length of film. Feel free to include additional summary quantities as well if you like.\n\n\n\n\n\n\n\n\n\nMovies2 |&gt;\n  group_by(mpaa) |&gt;\n  summarise(mean_length = mean(length)) |&gt;\n  arrange(mean_length)"
+    "text": "arrange() reorders the cases\n\nExample\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNote about groups\n\n\n\nBy default, arrange() ignores groups. If you use .by_group = TRUE, then sorting will be done by grouping variables first, then by additional variables specified.\n\n\n\n\nGroup, summarise, arrange\nGroup-summarise-arrange is a common operation sequence to list groups in an order based on some calculation.\n\nYour Turn\nFill in the missing pieces here to list the ratings in order of average length of film. Feel free to include additional summary quantities as well if you like.\n\n\n\n\n\n\n\n\n\nMovies2 |&gt;\n  group_by(mpaa) |&gt;\n  summarise(mean_length = mean(length)) |&gt;\n  arrange(mean_length)",
+    "crumbs": [
+      "Home",
+      "Data Wrangling",
+      "Intro to Data Wrangling"
+    ]
   },
   {
-    "objectID": "wrangling/wranging-intro.html#what-else-is-there",
-    "href": "wrangling/wranging-intro.html#what-else-is-there",
+    "objectID": "wrangling/wrangling-intro.html#what-else-is-there",
+    "href": "wrangling/wrangling-intro.html#what-else-is-there",
     "title": "Data Wrangling in the Tidyverse",
     "section": "What else is there?",
-    "text": "What else is there?\n\nLots more. Here are few examples.\n\npivot_wider() and pivot_longer() for converting from “long” to “wide” or from “wide” to “long” shapes\nseparate() splitting a single variable into multiple variables.\nbind_rows() and bind_cols() to (intelligently) glue data frames top-to-bottom or left-to-right.\nleft_join(), right_join(), inner_join(), etc. for merging data from multiple sources. (Like joins in SQL.)\nThe lubridate packages has functions for working with dates and times\n\nTB Case Study tutorial illustrates some of these in a case study using tuberculosis data from the World Health Organization.\n\n\nbind_rows()\nThe easiest way to combine data from multiple sources is when each source represents “more of the same thing”. Each data set might represent one site, one date (range), one researcher, etc.\nbind_rows() will stack data sets, using column names to align and filling in with NA if some columns are missing in some data sets.\n\n\nDatabase connections\nThese same commands can be used to manage data in an SQL data base.\n\nconverts data verbs into SQL query\nallows you to inspect the query\nonly fetches a few rows unless you ask for more (to save time while you are debugging)\n\n\n# establish connection -- details vary by type of database\ncon &lt;- DBI::dbConnect(RMySQL::MySQL(), \n  host = \"database.rstudio.com\",\n  user = \"hadley\",\n  password = rstudioapi::askForPassword(\"Database password\")\n)\n\n# extract a table\nflights_db &lt;- tbl(con, \"flights\")\n\n# treat it just like in-memory data (mostly)\nflights_db |&gt;\n  group_by(...) |&gt;\n  mutate(...) |&gt;\n  summarise(...) |&gt;\n  collect()          # get me all of the data\n\n\n\n\n\n\n\nNotes\n\n\n\n\nSome R commands can’t be translated into SQL and so don’t work inside mutate(), summarise(), etc.\nRecent R Studio releases include expanded support for working with databases."
+    "text": "What else is there?\n\nLots more. Here are few examples.\n\npivot_wider() and pivot_longer() for converting from “long” to “wide” or from “wide” to “long” shapes\nseparate() splitting a single variable into multiple variables.\nbind_rows() and bind_cols() to (intelligently) glue data frames top-to-bottom or left-to-right.\nleft_join(), right_join(), inner_join(), etc. for merging data from multiple sources. (Like joins in SQL.)\nThe lubridate packages has functions for working with dates and times\n\nTB Case Study tutorial illustrates some of these in a case study using tuberculosis data from the World Health Organization.\n\n\nbind_rows()\nThe easiest way to combine data from multiple sources is when each source represents “more of the same thing”. Each data set might represent one site, one date (range), one researcher, etc.\nbind_rows() will stack data sets, using column names to align and filling in with NA if some columns are missing in some data sets.\n\n\nDatabase connections\nThese same commands can be used to manage data in an SQL data base.\n\nconverts data verbs into SQL query\nallows you to inspect the query\nonly fetches a few rows unless you ask for more (to save time while you are debugging)\n\n\n# establish connection -- details vary by type of database\ncon &lt;- DBI::dbConnect(RMySQL::MySQL(), \n  host = \"database.rstudio.com\",\n  user = \"hadley\",\n  password = rstudioapi::askForPassword(\"Database password\")\n)\n\n# extract a table\nflights_db &lt;- tbl(con, \"flights\")\n\n# treat it just like in-memory data (mostly)\nflights_db |&gt;\n  group_by(...) |&gt;\n  mutate(...) |&gt;\n  summarise(...) |&gt;\n  collect()          # get me all of the data\n\n\n\n\n\n\n\nNotes\n\n\n\n\nSome R commands can’t be translated into SQL and so don’t work inside mutate(), summarise(), etc.\nRecent R Studio releases include expanded support for working with databases.",
+    "crumbs": [
+      "Home",
+      "Data Wrangling",
+      "Intro to Data Wrangling"
+    ]
   },
   {
-    "objectID": "wrangling/wranging-intro.html#your-turn-more-movies",
-    "href": "wrangling/wranging-intro.html#your-turn-more-movies",
+    "objectID": "wrangling/wrangling-intro.html#your-turn-more-movies",
+    "href": "wrangling/wrangling-intro.html#your-turn-more-movies",
     "title": "Data Wrangling in the Tidyverse",
     "section": "Your Turn – More Movies",
-    "text": "Your Turn – More Movies\n\nA Smaller Data Set\nWhen starting, it can be helpful to work with a small subset of the data. When you have your data wrangling statements in working order, shift to the entire data table.\nLet’s get just recent movies that have an MPAA rating category.\n\n\n\nYou can use the smaller data set as you are figuring out the solutions to these exercises. Once have it sussed, you can switch to the full Movies data.\n\n\nYour Turn\n\nWhat is the average IMDB user rating?\n\n\n\n\n\n\n\n\n\nRecentMovies |&gt;\n  summarise(avg = mean(rating)) \n\n\n\nWhat is the average IMDB user rating of movies for each mpaa category?\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nHow many Action Movies in each year?\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nHint: Action contains 0 or 1 depending on whether the movie is an action movie.\n\n\n\nHow many Comedies of each mpaa rating in each year?\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nHint: Comedy is 1 for comedies, else 0.\n\n\n\nTrack the average IMDB ratings for movies with mpaa “R” over the years.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTrack the number of IMDB ratings given to R-rated movies over the years\nYou could use total number or average number. Your choice.\n(Hint: Use votes to see how many votes were cast for each movie.)\n\n\n\n\n\n\n\n\n\n\nTrack the average IMDB ratings for movies in each mpaa rating group over the years.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nChallenge\nRedo the previous problem but average over voters rather than movies (because some movies have many more votes than others)."
+    "text": "Your Turn – More Movies\n\nA Smaller Data Set\nWhen starting, it can be helpful to work with a small subset of the data. When you have your data wrangling statements in working order, shift to the entire data table.\nLet’s get just recent movies that have an MPAA rating category.\n\n\n\nYou can use the smaller data set as you are figuring out the solutions to these exercises. Once have it sussed, you can switch to the full Movies data.\n\n\nYour Turn\n\nWhat is the average IMDB user rating?\n\n\n\n\n\n\n\n\n\nRecentMovies |&gt;\n  summarise(avg = mean(rating)) \n\n\n\nWhat is the average IMDB user rating of movies for each mpaa category?\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nHow many Action Movies in each year?\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nHint: Action contains 0 or 1 depending on whether the movie is an action movie.\n\n\n\nHow many Comedies of each mpaa rating in each year?\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nHint: Comedy is 1 for comedies, else 0.\n\n\n\nTrack the average IMDB ratings for movies with mpaa “R” over the years.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTrack the number of IMDB ratings given to R-rated movies over the years\nYou could use total number or average number. Your choice.\n(Hint: Use votes to see how many votes were cast for each movie.)\n\n\n\n\n\n\n\n\n\n\nTrack the average IMDB ratings for movies in each mpaa rating group over the years.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nChallenge\nRedo the previous problem but average over voters rather than movies (because some movies have many more votes than others).",
+    "crumbs": [
+      "Home",
+      "Data Wrangling",
+      "Intro to Data Wrangling"
+    ]
   },
   {
-    "objectID": "wrangling/wranging-intro.html#you-are-on-your-way",
-    "href": "wrangling/wranging-intro.html#you-are-on-your-way",
+    "objectID": "wrangling/wrangling-intro.html#you-are-on-your-way",
+    "href": "wrangling/wrangling-intro.html#you-are-on-your-way",
     "title": "Data Wrangling in the Tidyverse",
     "section": "You are on your way",
-    "text": "You are on your way\n\nKeep learning\n\nTB Case Study demonstrates a data tidying project based on WHO data on TB cases.\nRStudio webinar\nRStudio Cheatsheets\n\n\n\nKeep practicing\nUse Babynames or Flights to hone your skills.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nKeep a stiff upper lip\n\n\n\n\nImpostR Syndrome"
+    "text": "You are on your way\n\nKeep learning\n\nTB Case Study demonstrates a data tidying project based on WHO data on TB cases.\nRStudio webinar\nRStudio Cheatsheets\n\n\n\nKeep practicing\nUse Babynames or Flights to hone your skills.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nKeep a stiff upper lip\n\n\n\n\nImpostR Syndrome",
+    "crumbs": [
+      "Home",
+      "Data Wrangling",
+      "Intro to Data Wrangling"
+    ]
   },
   {
     "objectID": "quarto/math-in-markdown.html",

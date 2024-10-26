@@ -317,6 +317,8 @@ function `sum` to add them all up:
 my_numbers <- c(14, 27, 455)
 sum(my_numbers)
 ```
+:::
+
 
 ### What about data that are not numeric?
 

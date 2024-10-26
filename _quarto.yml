@@ -15,6 +15,10 @@ website:
             text: "Mathematical notation"
           - href: quarto/r-and-python.qmd
             text: "R and Python together"
+      - section: R Basics
+        contents: 
+          - href: basics/r-basics.qmd
+            text: R Basics
       - section: Data
         contents: 
           - href: data/data-frames.qmd

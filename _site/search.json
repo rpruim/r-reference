@@ -28,7 +28,7 @@
     "href": "quarto/r-and-python.html#simple-example",
     "title": "There and back again",
     "section": "Simple Example",
-    "text": "Simple Example\n\n```{r}\n#| label: some-r\nx &lt;- 5\n```\n\n\n```{python}\n#| label: python-calling-r\nprint(r.x)\ny = r.x * 2\n```\n\n5.0\n\n\n\n```{r}\n#| label: r-calling-python\npy$y\n```\n\n[1] 10",
+    "text": "Simple Example\n\n```{r}\n#| label: some-r\nx &lt;- 5\n```\n\n\n```{python}\n#| label: python-calling-r\nprint(r.x)\ny = r.x * 2\n```\n\n5.0\n\n\n\n```{r}\n#| label: r-calling-python \npy$y\n```\n\n[1] 10",
     "crumbs": [
       "Home",
       "Quarto",
@@ -225,6 +225,66 @@
       "Home",
       "Data Wrangling",
       "TB Case Study"
+    ]
+  },
+  {
+    "objectID": "getting-started/personal-device.html",
+    "href": "getting-started/personal-device.html",
+    "title": "Installing an R environment on your own device",
+    "section": "",
+    "text": "All of the software mentioned below is free and easy to install. So if you would like an R environment on your personal device (Mac, Windows, or Linux), just follow the instructions below.",
+    "crumbs": [
+      "Home",
+      "Getting Started",
+      "Using your own device"
+    ]
+  },
+  {
+    "objectID": "getting-started/personal-device.html#r",
+    "href": "getting-started/personal-device.html#r",
+    "title": "Installing an R environment on your own device",
+    "section": "R",
+    "text": "R\nThe first thing you will need is R itself. R is freely available at https://cran.r-project.org/. Choose the correct version for your operating system and follow the instructions.",
+    "crumbs": [
+      "Home",
+      "Getting Started",
+      "Using your own device"
+    ]
+  },
+  {
+    "objectID": "getting-started/personal-device.html#an-editor",
+    "href": "getting-started/personal-device.html#an-editor",
+    "title": "Installing an R environment on your own device",
+    "section": "An editor",
+    "text": "An editor\n\nRStudio\nMost likely you will want to install RStudio. RStudio provides and editor for code (and Quarto documents) and a number of tools that make working in R much easier.\nYou can obtain RStudio from https://posit.co/download/rstudio-desktop/.\n\n\nVS Code\nIf you already use VS Code, you can edit R projects in VS Code as well. You will want to install several extensions to make your experience with R better.\n\nR: R Extension for Visual Studio Code\nQuarto: An extention to facilitate rendering Quarto documents\nR Debugger\nError Lens: highlihts coding errors and suggests what the problem might be\nPath Intellisense: Adds a path completion feature (similar to what is built-in in RStudio)\nLiveShare: If you want to be able to edit code simultaneously with a partner, LiveShare makes this possible.\n\nThere are many additional extensions you can install, depending on your needs and interests. In particular, if you are using GitHub, there are extensions that will allow you to work with git and GitHub from within VS Code.\nYou can obtain VS Code at https://code.visualstudio.com/download.\n\n\nPositron\nPositron is Posit’s version of VS Code, but tuned for data science. It was released in 2024 and is being rapidly developed. Think of it as including the best of RStudio and VS Code in a single platform. On important feature borrowed from RStudio is the Session tab with allows you to inspect variables in your working environment.\nPositron has an extension system just like VS Code. Positron comes with several extensions already installed, so most of what you need for workign with R/Python/Quarto will be there already,but you can add other extensions if you wish.\nYou can obtain Positron from https://positron.posit.co/.",
+    "crumbs": [
+      "Home",
+      "Getting Started",
+      "Using your own device"
+    ]
+  },
+  {
+    "objectID": "getting-started/personal-device.html#r-packages",
+    "href": "getting-started/personal-device.html#r-packages",
+    "title": "Installing an R environment on your own device",
+    "section": "R packages",
+    "text": "R packages\nThe functionality of R lives in various packages. A small number of these packages come preinstalled with R, but many you will need to install yourself. Which packages you need will depend on your instructor and on the tasks you wish to perform.\n\n\n\n\n\n\nDon’t reinstall system packages\n\n\n\nOne of the advantages of using a cloud-based platforms is that your instructor can have packages preinstalled for you. Don’t install packages yourself if they are already installed on the system.\n\n\nHere is some code you can run to install a few packages you are likely to want.\n\ninstall.packages('tidyverse')\ninstall.packages('ggformula')\ninstall.packages('mosaic')\n\nIn RStudio, pacakges can also be installed from the Packages tab.\nPackages only need to be installed once, but you will need to load a package in each document or session wher you want to use it. To load an R package, use, for example\n\nlibrary(ggformula)",
+    "crumbs": [
+      "Home",
+      "Getting Started",
+      "Using your own device"
+    ]
+  },
+  {
+    "objectID": "getting-started/options-for-r.html",
+    "href": "getting-started/options-for-r.html",
+    "title": "Options for working with R",
+    "section": "",
+    "text": "Note\n\n\n\nFor Fall 2025, the primary R platform for Calvin courses will be _______. You are welcome to also use other options, including installng locally, but the primary support will be for _____.\n\n\nR is “a free software environment for statistical computing and graphics.”\nThere are several options for how you choose to work with R. The two main decisions you need to make are\n\nWhether to work locally (on your own laptop or deskstop) or remotely (using a cloud service).\nWorking remotely has the following advantages:\n\nYou can access your session from any device with a brower.\nIf you are taking a course and your instructor has set things up on a server, all the necessary packages and additional software configuration may have been done for you already and you will be sure to have things set up the way your instructor intends.\n\nExamples of web-based R systems include https://posit.cloud/ and (for Calvin faculty, staff, and students) https://coder.cs.calvin.edu.\nWorking locally requires you to install\n\nR (from CRAN),\nan editor (RStudio, VS Code, or Positron) and\nlikely a number of R packages.\n\nAll of this is free and installation is fairly simple. For more information see Installing an R environment on your own device.\nWhether you want to work in RStudio, VS Code, or Positron.\nEach of these provides an environment for editing and running R Code and for creating documents.\n\nRStudio has been the go-to environment for work in R for quite some time. It is freely available from Posit.\nVisual Studio Code is a general purpose code editor. There are many extensions that provide additional features to VS Code, including many that make working with R much nicer. The main reason you might work in VS Code is that it may be familiar to you from computer science courses or other coding projects.\nPositron is a fork of VS Code available from Posit. It is targeted at data science use cases and adds some of the R/Python goodies from RStudio to VS Code. Free cloud options are not available as of July 2025, but it is possible to use ssh to access files on a remote server using desktop Positron.\n\n\nBoth RStudio and VS Code are available in a web browser via https://coder.cs.calvin.edu.",
+    "crumbs": [
+      "Home",
+      "Getting Started",
+      "Options for working with R"
     ]
   },
   {
@@ -634,66 +694,6 @@
       "Home",
       "Quarto",
       "Mathematical notation"
-    ]
-  },
-  {
-    "objectID": "getting-started/options-for-r.html",
-    "href": "getting-started/options-for-r.html",
-    "title": "Options for working with R",
-    "section": "",
-    "text": "Note\n\n\n\nFor Fall 2025, the primary R platform for Calvin courses will be _______. You are welcome to also use other options, including installng locally, but the primary support will be for _____.\n\n\nR is “a free software environment for statistical computing and graphics.”\nThere are several options for how you choose to work with R. The two main decisions you need to make are\n\nWhether to work locally (on your own laptop or deskstop) or remotely (using a cloud service).\nWorking remotely has the following advantages:\n\nYou can access your session from any device with a brower.\nIf you are taking a course and your instructor has set things up on a server, all the necessary packages and additional software configuration may have been done for you already and you will be sure to have things set up the way your instructor intends.\n\nExamples of web-based R systems include https://posit.cloud/ and (for Calvin faculty, staff, and students) https://coder.cs.calvin.edu.\nWorking locally requires you to install\n\nR (from CRAN),\nan editor (RStudio, VS Code, or Positron) and\nlikely a number of R packages.\n\nAll of this is free and installation is fairly simple. For more information see Installing an R environment on your own device.\nWhether you want to work in RStudio, VS Code, or Positron.\nEach of these provides an environment for editing and running R Code and for creating documents.\n\nRStudio has been the go-to environment for work in R for quite some time. It is freely available from Posit.\nVisual Studio Code is a general purpose code editor. There are many extensions that provide additional features to VS Code, including many that make working with R much nicer. The main reason you might work in VS Code is that it may be familiar to you from computer science courses or other coding projects.\nPositron is a fork of VS Code available from Posit. It is targeted at data science use cases and adds some of the R/Python goodies from RStudio to VS Code. Free cloud options are not available as of July 2025, but it is possible to use ssh to access files on a remote server using desktop Positron.\n\n\nBoth RStudio and VS Code are available in a web browser via https://coder.cs.calvin.edu.",
-    "crumbs": [
-      "Home",
-      "Getting Started",
-      "Options for working with R"
-    ]
-  },
-  {
-    "objectID": "getting-started/personal-device.html",
-    "href": "getting-started/personal-device.html",
-    "title": "Installing an R environment on your own device",
-    "section": "",
-    "text": "All of the software mentioned below is free and easy to install. So if you would like an R environment on your personal device (Mac, Windows, or Linux), just follow the instructions below.",
-    "crumbs": [
-      "Home",
-      "Getting Started",
-      "Using your own device"
-    ]
-  },
-  {
-    "objectID": "getting-started/personal-device.html#r",
-    "href": "getting-started/personal-device.html#r",
-    "title": "Installing an R environment on your own device",
-    "section": "R",
-    "text": "R\nThe first thing you will need is R itself. R is freely available at https://cran.r-project.org/. Choose the correct version for your operating system and follow the instructions.",
-    "crumbs": [
-      "Home",
-      "Getting Started",
-      "Using your own device"
-    ]
-  },
-  {
-    "objectID": "getting-started/personal-device.html#an-editor",
-    "href": "getting-started/personal-device.html#an-editor",
-    "title": "Installing an R environment on your own device",
-    "section": "An editor",
-    "text": "An editor\n\nRStudio\nMost likely you will want to install RStudio. RStudio provides and editor for code (and Quarto documents) and a number of tools that make working in R much easier.\nYou can obtain RStudio from https://posit.co/download/rstudio-desktop/.\n\n\nVS Code\nIf you already use VS Code, you can edit R projects in VS Code as well. You will want to install several extensions to make your experience with R better.\n\nR: R Extension for Visual Studio Code\nQuarto: An extention to facilitate rendering Quarto documents\nR Debugger\nError Lens: highlihts coding errors and suggests what the problem might be\nPath Intellisense: Adds a path completion feature (similar to what is built-in in RStudio)\nLiveShare: If you want to be able to edit code simultaneously with a partner, LiveShare makes this possible.\n\nThere are many additional extensions you can install, depending on your needs and interests. In particular, if you are using GitHub, there are extensions that will allow you to work with git and GitHub from within VS Code.\nYou can obtain VS Code at https://code.visualstudio.com/download.\n\n\nPositron\nPositron is Posit’s version of VS Code, but tuned for data science. It was released in 2024 and is being rapidly developed. Think of it as including the best of RStudio and VS Code in a single platform. On important feature borrowed from RStudio is the Session tab with allows you to inspect variables in your working environment.\nPositron has an extension system just like VS Code. Positron comes with several extensions already installed, so most of what you need for workign with R/Python/Quarto will be there already,but you can add other extensions if you wish.\nYou can obtain Positron from https://positron.posit.co/.",
-    "crumbs": [
-      "Home",
-      "Getting Started",
-      "Using your own device"
-    ]
-  },
-  {
-    "objectID": "getting-started/personal-device.html#r-packages",
-    "href": "getting-started/personal-device.html#r-packages",
-    "title": "Installing an R environment on your own device",
-    "section": "R packages",
-    "text": "R packages\nThe functionality of R lives in various packages. A small number of these packages come preinstalled with R, but many you will need to install yourself. Which packages you need will depend on your instructor and on the tasks you wish to perform.\n\n\n\n\n\n\nDon’t reinstall system packages\n\n\n\nOne of the advantages of using a cloud-based platforms is that your instructor can have packages preinstalled for you. Don’t install packages yourself if they are already installed on the system.\n\n\nHere is some code you can run to install a few packages you are likely to want.\n\ninstall.packages('tidyverse')\ninstall.packages('ggformula')\ninstall.packages('mosaic')\n\nIn RStudio, pacakges can also be installed from the Packages tab.\nPackages only need to be installed once, but you will need to load a package in each document or session wher you want to use it. To load an R package, use, for example\n\nlibrary(ggformula)",
-    "crumbs": [
-      "Home",
-      "Getting Started",
-      "Using your own device"
     ]
   }
 ]

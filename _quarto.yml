@@ -13,18 +13,22 @@ website:
         contents:
           - href: getting-started/options-for-r.qmd
             text: Options for working with R
-          - href: getting-started/posit-cloud.qmd 
-            text: Posit cloud
-          - href: getting-started/coder.qmd
-            text: Coder
+          - section: Remote Options
+            contents:
+              - href: getting-started/posit-cloud.qmd 
+                text: Posit cloud
+              - href: getting-started/coder.qmd
+                text: Coder
           - href: getting-started/personal-device.qmd
             text: Using your own device
-          - href: getting-started/rstudio.qmd
-            text: RStudio
-          - href: getting-started/positron.qmd
-            text: Positron
-          - href: getting-started/vscode.qmd
-            text: VS Code
+          - section: Editors
+            contents:
+              - href: getting-started/rstudio.qmd
+                text: RStudio
+              - href: getting-started/positron.qmd
+                text: Positron
+              - href: getting-started/vscode.qmd
+                text: VS Code
             
       - section: Quarto
         contents: 

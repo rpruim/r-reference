@@ -288,15 +288,18 @@
     ]
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "R Reference",
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
     "section": "",
-    "text": "This website provides a reference for beginners who are using R in university courses (and beyond). Throughout the website, we will include many code examples. These code examples are live. You can edit the code and re-run it to see how things change.\n\nGive it a try. Run the code below to calculate 1 + 1. Then see if you can get R to compute the product 3 * 5 in the code block below.",
-    "crumbs": [
-      "Home",
-      "R Reference"
-    ]
+    "text": "About this site\n\n1 + 1\n\n[1] 2"
+  },
+  {
+    "objectID": "stat245-demo.html",
+    "href": "stat245-demo.html",
+    "title": "Example for Stat 245",
+    "section": "",
+    "text": "Section 1\nStat 245 is the greatest class ever!\n\nIt’s not at 8:00\nWe learn alot.\nMy friends are in the class.\nThe subsitute is great.\n\n\n\nLoading required package: ggplot2\n\n\nLoading required package: scales\n\n\nLoading required package: ggridges\n\n\n\nNew to ggformula?  Try the tutorials: \n    learnr::run_tutorial(\"introduction\", package = \"ggformula\")\n    learnr::run_tutorial(\"refining\", package = \"ggformula\")"
   },
   {
     "objectID": "basics/r-basics.html#your-mission",
@@ -407,18 +410,41 @@
     ]
   },
   {
-    "objectID": "stat245-demo.html",
-    "href": "stat245-demo.html",
-    "title": "Example for Stat 245",
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "R Reference",
     "section": "",
-    "text": "Section 1\nStat 245 is the greatest class ever!\n\nIt’s not at 8:00\nWe learn alot.\nMy friends are in the class.\nThe subsitute is great.\n\n\n\nLoading required package: ggplot2\n\n\nLoading required package: scales\n\n\nLoading required package: ggridges\n\n\n\nNew to ggformula?  Try the tutorials: \n    learnr::run_tutorial(\"introduction\", package = \"ggformula\")\n    learnr::run_tutorial(\"refining\", package = \"ggformula\")"
+    "text": "This website provides a reference for beginners who are using R in university courses (and beyond). Throughout the website, we will include many code examples. These code examples are live. You can edit the code and re-run it to see how things change.\n\nGive it a try. Run the code below to calculate 1 + 1. Then see if you can get R to compute the product 3 * 5 in the code block below.",
+    "crumbs": [
+      "Home",
+      "R Reference"
+    ]
   },
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
+    "objectID": "getting-started/coder.html",
+    "href": "getting-started/coder.html",
+    "title": "Coder",
     "section": "",
-    "text": "About this site\n\n1 + 1\n\n[1] 2"
+    "text": "From Coder:",
+    "crumbs": [
+      "Home",
+      "Getting Started",
+      "Remote Options",
+      "Coder"
+    ]
+  },
+  {
+    "objectID": "getting-started/coder.html#coder-calvin",
+    "href": "getting-started/coder.html#coder-calvin",
+    "title": "Coder",
+    "section": "Coder @ Calvin",
+    "text": "Coder @ Calvin\ncoder.cs.calvin.edu allows you to set up workspaces in which you can run softare (like R) in a web browser.\n\nStep 1: Create a Coder Workspace\nYou will only need to do this step once, and only if you don’t already have a Coder workspace.\n\nIf you don’t already have a Coder Workspace, create one from teh Calvin CS Linux template.\n\nName your workspace.\nCan’t think of a good name? A default name will be suggested.\n\n\n\nStep 2: Access an application\nYou should see options like RStudio and VS Code Web, among others. Choose RStudio unless you are familiar with VS Code and want to give that a try. (More about VS Code here.)\n\nAfter a few seconds, you shoudl see a new window with an RStudio session:\n\n\n\n\n\n\n\nStill running in your browser\n\n\n\nAlthough this launches a new window, it is still a browser window. RStudio is running on the Coder server, not on your device.\n\n\n\n\nStep 3: Do stuff\nYou now have a running R session inside RStudio and you are ready to go.\nNext steps:\n\nGet oriented to RStudio\nLearn a little R",
+    "crumbs": [
+      "Home",
+      "Getting Started",
+      "Remote Options",
+      "Coder"
+    ]
   },
   {
     "objectID": "wrangling/wrangling-intro.html#about-this-tutorial",
@@ -694,30 +720,6 @@
       "Home",
       "Quarto",
       "Mathematical notation"
-    ]
-  },
-  {
-    "objectID": "getting-started/coder.html",
-    "href": "getting-started/coder.html",
-    "title": "Coder",
-    "section": "",
-    "text": "From Coder:",
-    "crumbs": [
-      "Home",
-      "Getting Started",
-      "Coder"
-    ]
-  },
-  {
-    "objectID": "getting-started/coder.html#coder-calvin",
-    "href": "getting-started/coder.html#coder-calvin",
-    "title": "Coder",
-    "section": "Coder @ Calvin",
-    "text": "Coder @ Calvin\ncoder.cs.calvin.edu allows you to set up workspaces in which you can run softare (like R) in a web browser.\n\nStep 1: Create a Coder Workspace\nYou will only need to do this step once, and only if you don’t already have a Coder workspace.\n\nIf you don’t already have a Coder Workspace, create one from teh Calvin CS Linux template.\n\nName your workspace.\nCan’t think of a good name? A default name will be suggested.\n\n\n\nStep 2: Access an application\nYou should see options like RStudio and VS Code Web, among others. Choose RStudio unless you are familiar with VS Code and want to give that a try. (More about VS Code here.)\n\nAfter a few seconds, you shoudl see a new window with an RStudio session:\n\n\n\n\n\n\n\nStill running in your browser\n\n\n\nAlthough this launches a new window, it is still a browser window. RStudio is running on the Coder server, not on your device.\n\n\n\n\nStep 3: Do stuff\nYou now have a running R session inside RStudio and you are ready to go.\nNext steps:\n\nGet oriented to RStudio\nLearn a little R",
-    "crumbs": [
-      "Home",
-      "Getting Started",
-      "Coder"
     ]
   }
 ]

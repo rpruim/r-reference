@@ -1,0 +1,58 @@
+---
+title: Options for working with R
+---
+
+
+:::{.callout-note}
+
+For Fall 2025, the primary R platform for Calvin courses will 
+be _______.
+You are welcome to also use other options, including 
+installng locally, but the primary support will be for _____.
+:::
+
+R is "a free software environment for statistical computing and graphics."
+
+There are several options for how you choose to work with R.  The two main decisions you need to make are 
+
+1. Whether to work **locally** (on your own laptop or deskstop) or **remotely** (using a cloud service).
+
+
+    **Working remotely** has the following advantages:
+
+    * You can access your session from any device with
+    a brower.
+    * If you are taking a course and your instructor
+    has set things up on a server, all the necessary packages and additional software configuration may
+    have been done for you already and you will be sure
+    to have things set up the way your instructor intends.
+
+    Examples of web-based R systems include 
+    <https://posit.cloud/> and 
+    (for Calvin faculty, staff, and students) <https://coder.cs.calvin.edu>.
+
+    **Working locally** requires you to install 
+
+    * **R** (from [CRAN](https://cran.r-project.org/)), 
+    * an **editor** 
+    (RStudio, VS Code, or Positron) and 
+    * likely a number of **R packages**. 
+
+    All of this is free and installation is fairly simple.
+    For more information see [*Installing an R environment on your own device*](personal-device.qmd).
+
+
+2. Whether you want to work in **RStudio**, **VS Code**, or **Positron**.
+
+    Each of these provides an environment for editing and running R Code and for creating documents.
+
+    a. **RStudio** has been the go-to environment for work in R for quite some time.  It is freely available from [Posit](https://posit.co/).
+
+    b. **Visual Studio Code** is a general purpose code editor. There are many **extensions** that provide additional features to VS Code, including many that make working with R much nicer.  The main reason you might work in VS Code is that it may be familiar to you from computer science courses or other coding projects.  
+
+    c. **Positron** is a fork of **VS Code** available from Posit. It is targeted at data science use cases and adds some of the R/Python goodies from RStudio to VS Code.  Free cloud options are not available as of July 2025, but 
+    it is possible to use ssh to access files on
+    a remote server using desktop Positron.
+
+Both RStudio and VS Code are available in a web browser via 
+<https://coder.cs.calvin.edu>.

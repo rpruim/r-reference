@@ -1,0 +1,89 @@
+---
+title: Installing an R environment on your own device
+---
+
+All of the software mentioned below is free and easy to install.
+So if you would like an R environment on your personal device (Mac, Windows, or Linux), just follow the instructions below.
+
+## R
+
+The first thing you will need is R itself.
+R is freely available at <https://cran.r-project.org/>. Choose the correct version for your operating system and follow the instructions.
+
+## An editor
+
+### RStudio
+
+Most likely you will want to install RStudio.  RStudio provides and editor for code (and Quarto documents) and a number of tools that make working in R much easier.
+
+You can obtain RStudio from <https://posit.co/download/rstudio-desktop/>.
+
+### VS Code
+
+If you already use VS Code, you can edit R projects in VS Code as well. You will want to install several extensions to make your 
+experience with R better.
+
+* R: R Extension for Visual Studio Code
+* Quarto: An extention to facilitate rendering Quarto documents
+* R Debugger
+* Error Lens: highlihts coding errors and suggests what the problem might be
+* Path Intellisense: Adds a path completion feature (similar to what is built-in in RStudio)
+* LiveShare: If you want to be able to edit code simultaneously with a partner, LiveShare makes this possible.
+
+There are many additional extensions you can install, depending on your needs and interests.  In particular, if you are using GitHub, there are extensions that will allow you to work with git and GitHub from within VS Code.
+
+You can obtain VS Code at <https://code.visualstudio.com/download>.
+
+### Positron
+
+Positron is Posit's version of VS Code, but tuned for data science.
+It was released in 2024 and is being rapidly developed.
+Think of it as including the best of RStudio and VS Code in a single
+platform. 
+On important feature borrowed from RStudio is the Session tab with allows you to inspect variables in your working environment.
+
+Positron has an extension system just like VS Code.
+Positron comes with several extensions already installed, so most of what you need for workign with R/Python/Quarto will be there already,but you can add other extensions if you wish.
+
+You can obtain Positron from <https://positron.posit.co/>.
+
+## R packages
+
+
+The functionality of R lives in various packages. 
+A small number of these packages come preinstalled with R, but many
+you will need to install yourself.  Which packages you need will
+depend on your instructor and on the tasks you wish to perform.
+
+:::{.callout-warning}
+#### Don't reinstall system packages
+
+One of the advantages of using a cloud-based platforms is that your 
+instructor can have packages preinstalled for you. Don't install
+packages yourself if they are already installed on the system.
+:::
+
+Here is some code you can run to install a few packages you are likely
+to want.
+
+```{r}
+#| eval: false
+
+install.packages('tidyverse')
+install.packages('ggformula')
+install.packages('mosaic')
+```
+
+In RStudio, pacakges can also be installed from the Packages tab.
+
+Packages only need to be installed once, but you will need to load 
+a package in each document or session wher you want to use it.
+To load an R package, use, for example
+
+```{r}
+#| eval: false
+
+library(ggformula)
+```
+
+

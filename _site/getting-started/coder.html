@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>coder – R Reference</title>
+<title>Coder – R Reference</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -97,7 +97,6 @@ ul.task-list li input[type="checkbox"] {
 </ul>
           </div> <!-- /navcollapse -->
             <div class="quarto-navbar-tools">
-  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
 </div>
       </div> <!-- /container-fluid -->
     </nav>
@@ -171,7 +170,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../getting-started/vscode.qmd" class="sidebar-item-text sidebar-link">
+  <a href="../getting-started/vscode.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">VS Code</span></a>
   </div>
 </li>
@@ -305,17 +304,92 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#coder-calvin" id="toc-coder-calvin" class="nav-link active" data-scroll-target="#coder-calvin">Coder @ Calvin</a>
+  <ul class="collapse">
+  <li><a href="#step-1-create-a-coder-workspace" id="toc-step-1-create-a-coder-workspace" class="nav-link" data-scroll-target="#step-1-create-a-coder-workspace">Step 1: Create a Coder Workspace</a></li>
+  <li><a href="#step-2-access-an-application" id="toc-step-2-access-an-application" class="nav-link" data-scroll-target="#step-2-access-an-application">Step 2: Access an application</a></li>
+  <li><a href="#step-3-do-stuff" id="toc-step-3-do-stuff" class="nav-link" data-scroll-target="#step-3-do-stuff">Step 3: Do stuff</a></li>
+  </ul></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/rpruim/r-reference/edit/main/getting-started/coder.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/rpruim/r-reference/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../getting-started/options-for-r.html">Getting Started</a></li><li class="breadcrumb-item"><a href="../getting-started/coder.html">Coder</a></li></ol></nav></header>
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../getting-started/options-for-r.html">Getting Started</a></li><li class="breadcrumb-item"><a href="../getting-started/coder.html">Coder</a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title">Coder</h1>
+<p class="subtitle lead">A web interface to RStduio and VS Code</p>
+</div>
 
 
 
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
 
 
+</header>
 
+
+<p>From Coder:</p>
+<blockquote class="blockquote">
+<p>Coder is an open-source platform for creating and managing cloud development environments on your infrastructure, with the tools and IDEs your developers already love.</p>
+</blockquote>
+<section id="coder-calvin" class="level2">
+<h2 class="anchored" data-anchor-id="coder-calvin">Coder @ Calvin</h2>
+<p><a href="https://coder.cs.calvinl.edu">coder.cs.calvin.edu</a> allows you to set up workspaces in which you can run softare (like R) in a web browser.</p>
+<section id="step-1-create-a-coder-workspace" class="level3">
+<h3 class="anchored" data-anchor-id="step-1-create-a-coder-workspace">Step 1: Create a Coder Workspace</h3>
+<p>You will only need to do this step once, and only if you don’t already have a Coder workspace.</p>
+<ol type="a">
+<li><p>If you don’t already have a Coder Workspace, create one from teh Calvin CS Linux template.</p>
+<p><img src="images/create-coder-workspace.png" class="img-fluid"></p></li>
+<li><p>Name your workspace.</p>
+<p>Can’t think of a good name? A default name will be suggested.</p></li>
+</ol>
+</section>
+<section id="step-2-access-an-application" class="level3">
+<h3 class="anchored" data-anchor-id="step-2-access-an-application">Step 2: Access an application</h3>
+<p>You should see options like RStudio and VS Code Web, among others. Choose RStudio unless you are familiar with VS Code and want to give that a try. (More about VS Code <a href="../getting-started/vscode.html">here</a>.)</p>
+<p><img src="images/coder-applications.png" class="img-fluid"></p>
+<p>After a few seconds, you shoudl see a new window with an RStudio session:</p>
+<p><img src="images/coder-rstudio-window.png" class="img-fluid"></p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Still running in your browser
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Although this launches a new window, it is still a browser window. RStudio is running on the Coder server, not on your device.</p>
+</div>
+</div>
+</section>
+<section id="step-3-do-stuff" class="level3">
+<h3 class="anchored" data-anchor-id="step-3-do-stuff">Step 3: Do stuff</h3>
+<p>You now have a running R session inside RStudio and you are ready to go.</p>
+<p>Next steps:</p>
+<ul>
+<li><a href="../getting-started/rstudio.html">Get oriented to RStudio</a></li>
+<li><a href="../basics/r-basics.html">Learn a little R</a></li>
+</ul>
+
+
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -752,4 +826,4 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 
 
 
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions"><ul><li><a href="https://github.com/rpruim/r-reference/edit/main/getting-started/coder.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/rpruim/r-reference/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/rpruim/r-reference/edit/main/getting-started/coder.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/rpruim/r-reference/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>

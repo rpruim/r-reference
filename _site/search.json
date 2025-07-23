@@ -695,5 +695,29 @@
       "Quarto",
       "Mathematical notation"
     ]
+  },
+  {
+    "objectID": "getting-started/coder.html",
+    "href": "getting-started/coder.html",
+    "title": "Coder",
+    "section": "",
+    "text": "From Coder:",
+    "crumbs": [
+      "Home",
+      "Getting Started",
+      "Coder"
+    ]
+  },
+  {
+    "objectID": "getting-started/coder.html#coder-calvin",
+    "href": "getting-started/coder.html#coder-calvin",
+    "title": "Coder",
+    "section": "Coder @ Calvin",
+    "text": "Coder @ Calvin\ncoder.cs.calvin.edu allows you to set up workspaces in which you can run softare (like R) in a web browser.\n\nStep 1: Create a Coder Workspace\nYou will only need to do this step once, and only if you don’t already have a Coder workspace.\n\nIf you don’t already have a Coder Workspace, create one from teh Calvin CS Linux template.\n\nName your workspace.\nCan’t think of a good name? A default name will be suggested.\n\n\n\nStep 2: Access an application\nYou should see options like RStudio and VS Code Web, among others. Choose RStudio unless you are familiar with VS Code and want to give that a try. (More about VS Code here.)\n\nAfter a few seconds, you shoudl see a new window with an RStudio session:\n\n\n\n\n\n\n\nStill running in your browser\n\n\n\nAlthough this launches a new window, it is still a browser window. RStudio is running on the Coder server, not on your device.\n\n\n\n\nStep 3: Do stuff\nYou now have a running R session inside RStudio and you are ready to go.\nNext steps:\n\nGet oriented to RStudio\nLearn a little R",
+    "crumbs": [
+      "Home",
+      "Getting Started",
+      "Coder"
+    ]
   }
 ]

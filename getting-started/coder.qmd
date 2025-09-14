@@ -1,0 +1,52 @@
+---
+title: Coder
+subtitle: A web interface to RStduio and VS Code
+---
+
+From Coder:
+
+> Coder is an open-source platform for creating and managing cloud development environments on your infrastructure, with the tools and IDEs your developers already love.
+
+## Coder @ Calvin
+
+[coder.cs.calvin.edu](https://coder.cs.calvinl.edu) allows you to set up workspaces in which you can run softare (like R) in a web browser.
+
+### Step 1: Create a Coder Workspace 
+
+You will only need to do this step once, and only if you don't already have a Coder workspace.
+
+a.  If you don't already have a Coder Workspace, create one from teh Calvin CS Linux template.
+
+    ![](images/create-coder-workspace.png)
+
+b.  Name your workspace.
+
+    Can't think of a good name? A default name will be suggested.
+
+### Step 2: Access an application
+
+You should see options like RStudio and VS Code Web, among others.  Choose RStudio unless you are familiar with VS Code 
+and want to give that a try.  (More about VS Code [here](vscode.qmd).)
+
+
+![](images/coder-applications.png)
+
+After a few seconds, you shoudl see a new window with an RStudio session:
+
+![](images/coder-rstudio-window.png)
+
+:::{.callout-note}
+#### Still running in your browser
+
+Although this launches a new window, it is still a browser window.  RStudio is running on the Coder server, not on your 
+device.
+:::
+
+### Step 3: Do stuff
+
+You now have a running R session inside RStudio and you are ready to go.
+
+Next steps:
+
+* [Get oriented to RStudio](rstudio.qmd)
+* [Learn a little R](../basics/r-basics.qmd)

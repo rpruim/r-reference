@@ -1,0 +1,12 @@
+---
+title: posit.cloud
+---
+
+Posit, the company that created RStudio, offers posit.cloud as an online service.  Posit offers a number of free and paid teirs, including
+
+* **Free:** 
+If you are just experimenting and want to give it a try, you can sign up for a free account at <https://posit.cloud/plans/free>.
+
+* **Student:** If you are taking a class that uses posit.cloud, you will most likely need a student account.  This will give you more resources on the server, add additional functionality, and also allow your instructor to provide data, documents, and package configuration for your class.  You can sign up for a student account at <https://posit.cloud/plans/student>.
+
+For other plans see <https://posit.cloud/plans>.

@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Mathematics in Quarto – R Reference</title>
+<title>Introduction to Quarto – R Reference</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,6 +20,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -30,8 +64,6 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../quarto/r-and-python.html" rel="next">
-<link href="../getting-started/vscode.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -69,35 +101,6 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 <link rel="stylesheet" href="../styles.css">
 </head>
@@ -134,7 +137,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../quarto/math-in-markdown.html">Quarto</a></li><li class="breadcrumb-item"><a href="../quarto/math-in-markdown.html">Mathematical notation</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Introduction to Quarto</li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -238,7 +241,7 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../quarto/math-in-markdown.html" class="sidebar-item-text sidebar-link active">
+  <a href="../quarto/math-in-markdown.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Mathematical notation</span></a>
   </div>
 </li>
@@ -360,20 +363,19 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#math-inside-rmarkdown" id="toc-math-inside-rmarkdown" class="nav-link active" data-scroll-target="#math-inside-rmarkdown">Math inside RMarkdown</a></li>
-  <li><a href="#mathematical-notation" id="toc-mathematical-notation" class="nav-link" data-scroll-target="#mathematical-notation">Mathematical Notation</a></li>
-  <li><a href="#greek-letters" id="toc-greek-letters" class="nav-link" data-scroll-target="#greek-letters">Greek Letters</a></li>
-  <li><a href="#macros" id="toc-macros" class="nav-link" data-scroll-target="#macros">Macros</a></li>
+  <li><a href="#creating-a-new-quarto-file-in-rstudio" id="toc-creating-a-new-quarto-file-in-rstudio" class="nav-link active" data-scroll-target="#creating-a-new-quarto-file-in-rstudio">Creating a new Quarto file in RStudio</a></li>
+  <li><a href="#working-from-a-different-template-document" id="toc-working-from-a-different-template-document" class="nav-link" data-scroll-target="#working-from-a-different-template-document">Working from a different template document</a></li>
+  <li><a href="#editing-a-quarto-document" id="toc-editing-a-quarto-document" class="nav-link" data-scroll-target="#editing-a-quarto-document">Editing a Quarto document</a></li>
+  <li><a href="#some-tips" id="toc-some-tips" class="nav-link" data-scroll-target="#some-tips">Some tips</a></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/rpruim/r-reference/edit/main/quarto/math-in-markdown.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/rpruim/r-reference/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/rpruim/r-reference/edit/main/quarto/quarto-intro.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/rpruim/r-reference/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../quarto/math-in-markdown.html">Quarto</a></li><li class="breadcrumb-item"><a href="../quarto/math-in-markdown.html">Mathematical notation</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Mathematics in Quarto</h1>
-<p class="subtitle lead">(or R Markdown)</p>
+<h1 class="title">Introduction to Quarto</h1>
 </div>
 
 
@@ -390,543 +392,161 @@ window.Quarto = {
 </header>
 
 
-<style type="text/css">
-td
-{
-    padding:5px 10px 5px 10px;
-}
-</style>
-<section id="math-inside-rmarkdown" class="level2">
-<h2 class="anchored" data-anchor-id="math-inside-rmarkdown">Math inside RMarkdown</h2>
-<p>In side a text chunk, you can use mathematical notation if you surround it by dollar signs <code>$</code> for “inline mathematics” and <code>$$</code> for “displayed equations”. <strong>Do not leave a space between the <code>$</code> and your mathematical notation</strong>.</p>
-<p>Example: <code>$\sum_{n=1}^{10} n^2$</code> is rendered as <span class="math inline">\(\sum_{n=1}^{10} n^2\)</span>.</p>
-<p>Example: <code>$$\sum_{n=1}^{10} n^2$$</code> is rendered as <span class="math display">\[\sum_{n=1}^{10} n^2\]</span>.</p>
-<p>The mathematical typesetting is based on LaTeX, so if you need to search for the way to make a particular symbol, include <code>latex</code> in your search. But note: Not all LaTeX macros are available without using additional packages, and those packages likely will only work if you are creating a PDF. On the plus side, if you are working in PDF, you can use additional packages that give much better control and/or easier syntax.</p>
-<p>In LaTeX,</p>
+<section id="creating-a-new-quarto-file-in-rstudio" class="level2">
+<h2 class="anchored" data-anchor-id="creating-a-new-quarto-file-in-rstudio">Creating a new Quarto file in RStudio</h2>
+<ol type="1">
+<li><p>Navigate to File &gt; New File &gt; Quarto Document.</p>
+<p><img src="../images/quarto-new-file.png" class="img-fluid"></p></li>
+<li><p>From there, you will see a menu like this one.</p>
+<p><img src="../images/quarto-create-menu.png" class="img-fluid"></p>
+<p>You have several options here.</p>
+<ol type="a">
+<li><p>If you fill in the title and author and hit <create> you will get the built-in template document with your title and author information inserted.</create></p></li>
+<li><p>If you select <create empty="" document="">, you will get a blank document. This is mainly useful if you are already familiar with Quarto and want to start from scratch, or if you know you will be deleting the contents and pasting in a template document in a moment anyway.</create></p></li>
+<li><p>As you can see, there are also options for various types of documents. Feel free to experiment with these, but mainly we will start from the default (HTML) and change the format to <code>typst</code> later if we want to generate a PDF.</p></li>
+<li><p>You can choose to launch with the visual editor here, but note</p>
 <ul>
-<li>macros begin with a backslash (<code>\</code>)</li>
-<li>curly braces (<code>{</code> and <code>}</code>) are used to surround items that are to be considered as one object from LaTeX’s perspective.<br>
-Without them, usually the next letter or digit will be used, but that isn’t usually what you want. For example, <code>$$\sum_{x=1}^10 x^2$$</code> produces <span class="math display">\[\sum_{x=1}^10 x^2\]</span></li>
-</ul>
+<li><p>You can easily toggle between source and visual editors once you have the Quarto file open, and</p></li>
+<li><p>If you are going to copy and paste in a template document, you will want to be in source mode for that step.</p></li>
+</ul></li>
+</ol></li>
+<li><p>If you accept all the defaults and click <create>, you will see a document that looks like this:</create></p>
+<p><img src="../images/quarto-default-document.png" class="img-fluid"></p>
+<p>Things to notice:</p>
+<ol type="a">
+<li><p>In the bottom right corner you should shee the word “Quarto”, indicating that RStudio knows you are working with a quarto document.</p></li>
+<li><p>Just above the file you will see the toggle for source vs.&nbsp;visual editor.</p></li>
+<li><p>Above that you will see a menu of options, the most important of which is “Render”, which is used to process your file into its output format. Go ahead and click that now if you like to see the rendered version of your Quarto document.</p></li>
+</ol></li>
+</ol>
+<p>Congratulations, you have created a Quarto document.</p>
 </section>
-<section id="mathematical-notation" class="level2">
-<h2 class="anchored" data-anchor-id="mathematical-notation">Mathematical Notation</h2>
-<p>Here are some common mathematical things you might use in statistics. (Note: Some of these look better in PDF than in HTML.)</p>
-<table>
-<tbody><tr>
-<td>
-<span class="math inline">\(x = y\)</span>
-</td>
-<td>
-<code>$x = y$</code>
-</td>
-</tr>
-<tr>
-<td>
-<span class="math inline">\(x \neq y\)</span>
-</td>
-<td>
-<code>$x \neq y$</code>
-</td>
-</tr>
-<tr>
-<td>
-<span class="math inline">\(x \approx y\)</span>
-</td>
-<td>
-<code>$x \approx y$</code>
-</td>
-</tr>
-<tr>
-<td>
-<span class="math inline">\(x &lt; y\)</span>
-</td>
-<td>
-<code>$x &lt; y$</code>
-</td>
-</tr>
-<tr>
-<td>
-<span class="math inline">\(x &gt; y\)</span>
-</td>
-<td>
-<code>$x &gt; y$</code>
-</td>
-</tr>
-<tr>
-<td>
-<span class="math inline">\(x \le y\)</span>
-</td>
-<td>
-<code>$x \le y$</code>
-</td>
-</tr>
-<tr>
-<td>
-<span class="math inline">\(x \ge y\)</span>
-</td>
-<td>
-<code>$x \ge y$</code>
-</td>
-</tr>
-<tr>
-<td>
-<span class="math inline">\(x^{n}\)</span>
-</td>
-<td>
-<code>$x^{n}$</code>
-</td>
-</tr>
-<tr>
-<td>
-<span class="math inline">\(x_{n}\)</span>
-</td>
-<td>
-<code>$x_{n}$</code>
-</td>
-</tr>
-<tr>
-<td>
-<span class="math inline">\(\overline{x}\)</span>
-</td>
-<td>
-<code>$\overline{x}$</code>
-</td>
-</tr>
-<tr>
-<td>
-<span class="math inline">\(\hat{x}\)</span>
-</td>
-<td>
-<code>$\hat{x}$</code>
-</td>
-</tr>
-<tr>
-<td>
-<span class="math inline">\(\tilde{x}\)</span>
-</td>
-<td>
-<code>$\tilde{x}$</code>
-</td>
-</tr>
-<tr>
-<td>
-<span class="math inline">\(\frac{a}{b}\)</span>
-</td>
-<td>
-<code>$\frac{a}{b}$</code>
-</td>
-</tr>
-<tr>
-<td>
-<span class="math inline">\(\frac{\partial f}{\partial x}\)</span>
-</td>
-<td>
-<code>$\frac{\partial f}{\partial x}$</code>
-</td>
-</tr>
-<tr>
-<td>
-<span class="math inline">\(\displaystyle \frac{\partial f}{\partial x}\)</span>
-</td>
-<td>
-<code>$\displaystyle \frac{\partial f}{\partial x}$</code>
-</td>
-</tr>
-<tr>
-<td>
-<span class="math inline">\(\binom{n}{k}\)</span>
-</td>
-<td>
-<code>$\binom{n}{k}$</code>
-</td>
-</tr>
-<tr>
-<td>
-<span class="math inline">\(x_{1} + x_{2} + \cdots + x_{n}\)</span>
-</td>
-<td>
-<code>$x_{1} + x_{2} + \cdots + x_{n}$</code>
-</td>
-</tr>
-<tr>
-<td>
-<span class="math inline">\(x_{1}, x_{2}, \dots, x_{n}\)</span>
-</td>
-<td>
-<code>$x_{1}, x_{2}, \dots, x_{n}$</code>
-</td>
-</tr>
-<tr>
-<td>
-<span class="math inline">\(\mathbf{x} = \langle x_{1}, x_{2}, \dots, x_{n}\rangle\)</span>
-</td>
-<td>
-<code>\mathbf{x} = \langle x_{1}, x_{2}, \dots, x_{n}\rangle$</code> (<code>\bm</code> from the <code>bm</code> package would be better)
-</td>
-</tr>
-<tr>
-<td>
-<span class="math inline">\(x \in A\)</span>
-</td>
-<td>
-<code>$x \in A$</code>
-</td>
-</tr>
-<tr>
-<td>
-<span class="math inline">\(|A|\)</span>
-</td>
-<td>
-<code>$|A|$</code>
-</td>
-</tr>
-<tr>
-<td>
-<span class="math inline">\(x \in A\)</span>
-</td>
-<td>
-<code>$x \in A$</code>
-</td>
-</tr>
-<tr>
-<td>
-<span class="math inline">\(A \subset B\)</span>
-</td>
-<td>
-<code>$x \subset B$</code>
-</td>
-</tr>
-<tr>
-<td>
-<span class="math inline">\(A \subseteq B\)</span>
-</td>
-<td>
-<code>$x \subseteq B$</code>
-</td>
-</tr>
-<tr>
-<td>
-<span class="math inline">\(A \cup B\)</span>
-</td>
-<td>
-<code>$A \cup B$</code>
-</td>
-</tr>
-<tr>
-<td>
-<span class="math inline">\(A \cap B\)</span>
-</td>
-<td>
-<code>$A \cap B$</code>
-</td>
-</tr>
-<tr>
-<td>
-<span class="math inline">\(X \sim {\sf Binom}(n, \pi)\)</span>
-</td>
-<td>
-<code>$X \sim {\sf Binom}(n, \pi)$</code> (<code>sf</code> for “slide font”
-</td>
-</tr>
-<tr>
-<td>
-<span class="math inline">\(\mathrm{P}(X \le x) = {\tt pbinom}(x, n, \pi)\)</span>
-</td>
-<td>
-<code>$\mathrm{P}(X \le x) = {\tt pbinom}(x, n, \pi)$</code> (<code>tt</code> for “typewriter type”)
-</td>
-</tr>
-<tr>
-<td>
-<span class="math inline">\(P(A \mid B)\)</span>
-</td>
-<td>
-<code>$P(A \mid B)$</code>
-</td>
-</tr>
-<tr>
-<td>
-<span class="math inline">\(\mathrm{P}(A \mid B)\)</span>
-</td>
-<td>
-<code>$\mathrm{P}(A \mid B)$</code> (<code>mathrm</code> for “math roman font”)
-</td>
-</tr>
-<tr>
-<td>
-<span class="math inline">\(\{1, 2, 3\}\)</span>
-</td>
-<td>
-<code>$\{1, 2, 3\}$</code>
-</td>
-</tr>
-<tr>
-<td>
-<span class="math inline">\(\sin(x)\)</span>
-</td>
-<td>
-<code>$\sin(x)$</code>
-</td>
-</tr>
-<tr>
-<td>
-<span class="math inline">\(\log(x)\)</span>
-</td>
-<td>
-<code>$\log(x)$</code>
-</td>
-</tr>
-<tr>
-<td>
-<span class="math inline">\(\int_{a}^{b}\)</span>
-</td>
-<td>
-<code>$\int_{a}^{b}$</code>
-</td>
-</tr>
-<tr>
-<td>
-<span class="math inline">\(\left(\int_{a}^{b} f(x) \; dx\right)\)</span>
-</td>
-<td>
-<code>$\left(\int_{a}^{b} f(x) \; dx\right)$</code>
-</td>
-</tr>
-<tr>
-<td>
-<span class="math inline">\(\left[\int_{-\infty}^{\infty} f(x) \; dx\right]\)</span>
-</td>
-<td>
-<code>$\left[\int_{\-infty}^{\infty} f(x) \; dx\right]$</code>
-</td>
-</tr>
-<tr>
-<td>
-<span class="math inline">\(\left. F(x) \right|_{a}^{b}\)</span>
-</td>
-<td>
-<code>$\left. F(x) \right|_{a}^{b}$</code>
-</td>
-</tr>
-<tr>
-<td>
-<span class="math inline">\(\sum_{x = a}^{b} f(x)\)</span>
-</td>
-<td>
-<code>$\sum_{x = a}^{b} f(x)$</code>
-</td>
-</tr>
-<tr>
-<td>
-<span class="math inline">\(\prod_{x = a}^{b} f(x)\)</span>
-</td>
-<td>
-<code>$\prod_{x = a}^{b} f(x)$</code>
-</td>
-</tr>
-<tr>
-<td>
-<span class="math inline">\(\lim_{x \to \infty} f(x)\)</span>
-</td>
-<td>
-<code>$\lim_{x \to \infty} f(x)$</code>
-</td>
-</tr>
-<tr>
-<td>
-<span class="math inline">\(\displaystyle \lim_{x \to \infty} f(x)\)</span>
-</td>
-<td>
-<code>$\displaystyle \lim_{x \to \infty} f(x)$</code>
-</td>
-</tr>
-</tbody></table>
+<section id="working-from-a-different-template-document" class="level2">
+<h2 class="anchored" data-anchor-id="working-from-a-different-template-document">Working from a different template document</h2>
+<p>If you are provided a template document, there are two ways to use it.</p>
+<ol type="1">
+<li><p>You can save the file (with the .qmd extension) and open the file to begin editing it.</p></li>
+<li><p>You can copy the contents of the template document and then paste the contents into your existing document.</p>
+<p>:::{.callout-warning} ### Make sure you are using the Source Editor when pasting.</p>
+<p>You can switch back to Visual Editor if you like after pasting. :::</p></li>
+</ol>
 </section>
-<section id="greek-letters" class="level2">
-<h2 class="anchored" data-anchor-id="greek-letters">Greek Letters</h2>
-<table>
-<tbody><tr>
-<td>
-<span class="math inline">\(\alpha A\)</span>
-</td>
-<td>
-<code>$\alpha A$</code>
-</td>
-<td>
-<span class="math inline">\(\nu N\)</span>
-</td>
-<td>
-<code>$\nu N$</code>
-</td>
-</tr>
-<tr>
-<td>
-<span class="math inline">\(\beta B\)</span>
-</td>
-<td>
-<code>$\beta B$</code>
-</td>
-<td>
-<span class="math inline">\(\xi\Xi\)</span>
-</td>
-<td>
-<code>$\xi\Xi$</code>
-</td>
-</tr>
-<tr>
-<td>
-<span class="math inline">\(\gamma \Gamma\)</span>
-</td>
-<td>
-<code>$\gamma \Gamma$</code>
-</td>
-<td>
-<span class="math inline">\(o O\)</span>
-</td>
-<td>
-<code>$o O$</code> (omicron)
-</td>
-</tr>
-<tr>
-<td>
-<span class="math inline">\(\delta \Delta\)</span>
-</td>
-<td>
-<code>$\delta \Delta$</code>
-</td>
-<td>
-<span class="math inline">\(\pi \Pi\)</span>
-</td>
-<td>
-<code>$\pi \Pi$</code>
-</td>
-</tr>
-<tr>
-<td>
-<span class="math inline">\(\epsilon \varepsilon E\)</span>
-</td>
-<td>
-<code>$\epsilon \varepsilon E$</code>
-</td>
-<td>
-<span class="math inline">\(\rho\varrho P\)</span>
-</td>
-<td>
-<code>$\rho\varrho P$</code>
-</td>
-</tr>
-<tr>
-<td>
-<span class="math inline">\(\zeta Z\)</span>
-</td>
-<td>
-<code>$\zeta Z \sigma \,\!$</code>
-</td>
-<td>
-<span class="math inline">\(\sigma \Sigma\)</span>
-</td>
-<td>
-<code>$\sigma \Sigma$</code>
-</td>
-</tr>
-<tr>
-<td>
-<span class="math inline">\(\eta H\)</span>
-</td>
-<td>
-<code>$\eta H$</code>
-</td>
-<td>
-<span class="math inline">\(\tau T\)</span>
-</td>
-<td>
-<code>$\tau T$</code>
-</td>
-</tr>
-<tr>
-<td>
-<span class="math inline">\(\theta \vartheta \Theta\)</span>
-</td>
-<td>
-<code>$\theta \vartheta \Theta$</code>
-</td>
-<td>
-<span class="math inline">\(\upsilon \Upsilon\)</span>
-</td>
-<td>
-<code>$\upsilon \Upsilon$</code>
-</td>
-</tr>
-<tr>
-<td>
-<span class="math inline">\(\iota I\)</span>
-</td>
-<td>
-<code>$\iota I$</code>
-</td>
-<td>
-<span class="math inline">\(\phi \varphi \Phi\)</span>
-</td>
-<td>
-<code>$\phi \varphi \Phi$</code>
-</td>
-</tr>
-<tr>
-<td>
-<span class="math inline">\(\kappa K\)</span>
-</td>
-<td>
-<code>$\kappa K$</code>
-</td>
-<td>
-<span class="math inline">\(\chi X\)</span>
-</td>
-<td>
-<code>$\chi X$</code>
-</td>
-</tr>
-<tr>
-<td>
-<span class="math inline">\(\lambda \Lambda\)</span>
-</td>
-<td>
-<code>$\lambda \Lambda$</code>
-</td>
-<td>
-<span class="math inline">\(\psi \Psi\)</span>
-</td>
-<td>
-<code>$\psi \Psi$</code>
-</td>
-</tr>
-<tr>
-<td>
-<span class="math inline">\(\mu M\)</span>
-</td>
-<td>
-<code>$\mu M$</code>
-</td>
-<td>
-<span class="math inline">\(\omega \Omega\)</span>
-</td>
-<td>
-<code>$\omega \Omega$</code>
-</td>
-</tr>
-</tbody></table>
+<section id="editing-a-quarto-document" class="level2">
+<h2 class="anchored" data-anchor-id="editing-a-quarto-document">Editing a Quarto document</h2>
+<p>Quarto documents have 3 types of sections or blocks:</p>
+<ol type="1">
+<li><p>The YAML header.</p>
+<p>This is the top few lines of the document, surrounded by <code>---</code>.</p>
+<p>This section defines things like the title, author, format, and various other settings that apply to your document.</p>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Edit the YAML header with care
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>If there is a syntax error in the YAML header, the document will not render. If you get into this situation, here are three ways to fix things.</p>
+<ol type="a">
+<li><p>Edit the YAML header yourself if it is clear what the problem is.</p></li>
+<li><p>Copy the YAML header from a different document to replace the YAML header of the current document (and then make any edits that are necessary)</p></li>
+<li><p>Start a new document and paste in the contents (but not the YAML header) from your document with the broken YAML header.</p></li>
+</ol>
+</div>
+</div></li>
+<li><p>Text blocks.</p>
+<p>These have a white background and allow you to type text as you would in a Word or Google doc. If you use the visual editor, you will see some formatting options similar to other word processors you have used. In the source editor, you will indicate formatting using <strong>markup</strong> – things you type directly into the document that are interpreted as formatting.</p>
+<ol type="a">
+<li><p>Headers are indicated with a line that begins with some number of pound signs followed by a space: <code>#</code>, <code>##</code>, <code>###</code>, etc.</p></li>
+<li><p>Surround text with asterisks (<code>*</code>) or underscores (<code>_</code>) to indicate <em>italics</em>.</p></li>
+<li><p>Surround text with two asterisks (<code>**</code>) or underscores (<code>__</code>) to indicate <strong>bold</strong>.</p></li>
+<li><p>Surround text with dollar signs (<code>$</code>) to indicate mathematical notation.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Help with mathematical notation
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>For more about mathematical notation see <a href="../quarto/math-in-markdown.html">this document</a>.</p>
+</div>
+</div></li>
+</ol>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+No spaces allowed
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>For the last three of of these, there must not be a space between the marker (<code>*</code>, <code>_</code>, <code>$</code>) and the text it surrounds.</p>
+</div>
+</div>
+<ol start="5" type="a">
+<li><p>You can create bulleted lists using <code>*</code> or <code>-</code>.<br>
+Use indentation to indicate nesting.</p></li>
+<li><p>You can create enumerated lists using <code>1.</code>, <code>a.</code> etc. Use indentation to indicate nesting.</p></li>
+</ol>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>If you aren’t sure just how to do something, try switching to the visual editor and using the menu options there. Then switch back to the source editor to see how it was done.</p>
+</div>
+</div></li>
+<li><p>Code chunks.</p>
+<p>R code chunks begin ```<code>{r}</code> and end with three backticks. They are indicated in the editor with a gray background.</p>
+<p>In these sections you can type R code. This code will be executed when you render the document and (by default) both the R code and the results of executing it will be displayed in your rendered document.</p>
+<p>You can type the beginning and ending of the chunks yourself, or you can click on the green square with the letter C in it to insert a new code chunk at your cursor location.</p></li>
+</ol>
+<p>That’s about all there is to a basic Quarto document. For fancier things, see the <a href="https://quarto.org/">documentaiton at quarto.org</a>.</p>
 </section>
-<section id="macros" class="level2">
-<h2 class="anchored" data-anchor-id="macros">Macros</h2>
-<p>It is possible to define macros to make your mathematics easier to read. Macros are written in <strong>text chunks</strong> (because they are not R code).</p>
-<p>Example: The following text</p>
-<pre><code>\newcommand{\intersect}{\operatorname{\cap}}
-\newcommand{\union}{\operatorname{\cup}}
-\newcommand{\Prob}{\operatorname{P}}
-
-$$\Prob(A \union B) = \Prob(A) + \Prob(B) - \Prob(A \intersect B)$$</code></pre>
-<p>turns into</p>
-<p><span class="math display">\[\operatorname{P}(A \operatorname{\cup}B) = \operatorname{P}(A) + \operatorname{P}(B) - \operatorname{P}(A \operatorname{\cap}B)\]</span></p>
+<section id="some-tips" class="level2">
+<h2 class="anchored" data-anchor-id="some-tips">Some tips</h2>
+<ol type="1">
+<li><p>If a template document is provided, use it.</p></li>
+<li><p>Put text in text blocks, not in code comments.</p>
+<p>Code comments should be used for commenting code, not for introducing or discussing the results.</p></li>
+<li><p>Quarto documents must be self-contained.</p>
+<p>In order for the R code to execute, all the information required must be in the quarto document. This includes things like loading packages and data sets, defining variables you use, etc.</p></li>
+<li><p>You can run individual R chunks by pressing “play button” at the top of the chunk.</p>
+<p>This can be useful when you are working on an individual R section and don’t want to re-render the entire document each time you make a change.</p>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+The play button runs code in the console
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>When the document is rendered, it does not have access to your console. If code runs in your console but not when you render your document, it is most likely because you have forgotten to include in your document some code that you ran in the console.</p>
+</div>
+</div></li>
+<li><p>If you label your R chunks, it is easier to tell where any problems are.</p>
+<p>If you do not label them, you will see “unnamed-chunk-1”, “unnamed-chunk-2”, etc. as the document is rendered. You can give your chunks nicer names like this. (Notice the special comment indicator <code>#|</code>.)</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="in">#| label: my-nice-label</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="in"># This is a regular comment.</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div></li>
+</ol>
 
 
 </section>
@@ -1349,21 +969,9 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
-<nav class="page-navigation">
-  <div class="nav-page nav-page-previous">
-      <a href="../getting-started/vscode.html" class="pagination-link" aria-label="VS Code">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">VS Code</span>
-      </a>          
-  </div>
-  <div class="nav-page nav-page-next">
-      <a href="../quarto/r-and-python.html" class="pagination-link" aria-label="R and Python together">
-        <span class="nav-page-text">R and Python together</span> <i class="bi bi-arrow-right-short"></i>
-      </a>
-  </div>
-</nav>
 </div> <!-- /content -->
 
 
 
 
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/rpruim/r-reference/edit/main/quarto/math-in-markdown.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/rpruim/r-reference/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/rpruim/r-reference/edit/main/quarto/quarto-intro.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/rpruim/r-reference/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>

@@ -721,5 +721,74 @@
       "Quarto",
       "Mathematical notation"
     ]
+  },
+  {
+    "objectID": "getting-started/posit-cloud.html",
+    "href": "getting-started/posit-cloud.html",
+    "title": "posit.cloud",
+    "section": "",
+    "text": "Posit, the company that created RStudio, offers posit.cloud as an online service. Posit offers a number of free and paid teirs, including\n\nFree: If you are just experimenting and want to give it a try, you can sign up for a free account at https://posit.cloud/plans/free.\nStudent: If you are taking a class that uses posit.cloud, you will most likely need a student account. This will give you more resources on the server, add additional functionality, and also allow your instructor to provide data, documents, and package configuration for your class. You can sign up for a student account at https://posit.cloud/plans/student.\n\nFor other plans see https://posit.cloud/plans.",
+    "crumbs": [
+      "Home",
+      "Getting Started",
+      "Remote Options",
+      "Posit cloud"
+    ]
+  },
+  {
+    "objectID": "quarto/quarto-intro.html",
+    "href": "quarto/quarto-intro.html",
+    "title": "Introduction to Quarto",
+    "section": "",
+    "text": "Navigate to File &gt; New File &gt; Quarto Document.\n\nFrom there, you will see a menu like this one.\n\nYou have several options here.\n\nIf you fill in the title and author and hit  you will get the built-in template document with your title and author information inserted.\nIf you select , you will get a blank document. This is mainly useful if you are already familiar with Quarto and want to start from scratch, or if you know you will be deleting the contents and pasting in a template document in a moment anyway.\nAs you can see, there are also options for various types of documents. Feel free to experiment with these, but mainly we will start from the default (HTML) and change the format to typst later if we want to generate a PDF.\nYou can choose to launch with the visual editor here, but note\n\nYou can easily toggle between source and visual editors once you have the Quarto file open, and\nIf you are going to copy and paste in a template document, you will want to be in source mode for that step.\n\n\nIf you accept all the defaults and click , you will see a document that looks like this:\n\nThings to notice:\n\nIn the bottom right corner you should shee the word “Quarto”, indicating that RStudio knows you are working with a quarto document.\nJust above the file you will see the toggle for source vs. visual editor.\nAbove that you will see a menu of options, the most important of which is “Render”, which is used to process your file into its output format. Go ahead and click that now if you like to see the rendered version of your Quarto document.\n\n\nCongratulations, you have created a Quarto document."
+  },
+  {
+    "objectID": "quarto/quarto-intro.html#opening-a-new-quarto-file",
+    "href": "quarto/quarto-intro.html#opening-a-new-quarto-file",
+    "title": "Introduction to Quarto",
+    "section": "",
+    "text": "Navigate to File &gt; New &gt; Quarto document."
+  },
+  {
+    "objectID": "quarto/quarto-intro.html#opening-a-new-quarto-file-in-rstudio",
+    "href": "quarto/quarto-intro.html#opening-a-new-quarto-file-in-rstudio",
+    "title": "Introduction to Quarto",
+    "section": "",
+    "text": "Navigate to File &gt; New &gt; Quarto document.\n\nFrom there, you will see a menu like this one.\n\nYou have several options here."
+  },
+  {
+    "objectID": "quarto/quarto-intro.html#creating-a-new-quarto-file-in-rstudio",
+    "href": "quarto/quarto-intro.html#creating-a-new-quarto-file-in-rstudio",
+    "title": "Introduction to Quarto",
+    "section": "",
+    "text": "Navigate to File &gt; New File &gt; Quarto Document.\n\nFrom there, you will see a menu like this one.\n\nYou have several options here.\n\nIf you fill in the title and author and hit  you will get the built-in template document with your title and author information inserted.\nIf you select , you will get a blank document. This is mainly useful if you are already familiar with Quarto and want to start from scratch, or if you know you will be deleting the contents and pasting in a template document in a moment anyway.\nAs you can see, there are also options for various types of documents. Feel free to experiment with these, but mainly we will start from the default (HTML) and change the format to typst later if we want to generate a PDF.\nYou can choose to launch with the visual editor here, but note\n\nYou can easily toggle between source and visual editors once you have the Quarto file open, and\nIf you are going to copy and paste in a template document, you will want to be in source mode for that step.\n\n\nIf you accept all the defaults and click , you will see a document that looks like this:\n\nThings to notice:\n\nIn the bottom right corner you should shee the word “Quarto”, indicating that RStudio knows you are working with a quarto document.\nJust above the file you will see the toggle for source vs. visual editor.\nAbove that you will see a menu of options, the most important of which is “Render”, which is used to process your file into its output format. Go ahead and click that now if you like to see the rendered version of your Quarto document.\n\n\nCongratulations, you have created a Quarto document."
+  },
+  {
+    "objectID": "quarto/quarto-intro.html#working-from-a-different-template-document",
+    "href": "quarto/quarto-intro.html#working-from-a-different-template-document",
+    "title": "Introduction to Quarto",
+    "section": "Working from a different template document",
+    "text": "Working from a different template document\nIf you are provided a template document, there are two ways to use it.\n\nYou can save the file (with the .qmd extension) and open the file to begin editing it.\nYou can copy the contents of the template document and then paste the contents into your existing document.\n:::{.callout-warning} ### Make sure you are using the Source Editor when pasting.\nYou can switch back to Visual Editor if you like after pasting. :::"
+  },
+  {
+    "objectID": "quarto/quarto-intro.html#editing-a-quarto-document",
+    "href": "quarto/quarto-intro.html#editing-a-quarto-document",
+    "title": "Introduction to Quarto",
+    "section": "Editing a Quarto document",
+    "text": "Editing a Quarto document\nQuarto documents have 3 types of sections or blocks:\n\nThe YAML header.\nThis is the top few lines of the document, surrounded by ---.\nThis section defines things like the title, author, format, and various other settings that apply to your document.\n\n\n\n\n\n\nEdit the YAML header with care\n\n\n\nIf there is a syntax error in the YAML header, the document will not render. If you get into this situation, here are three ways to fix things.\n\nEdit the YAML header yourself if it is clear what the problem is.\nCopy the YAML header from a different document to replace the YAML header of the current document (and then make any edits that are necessary)\nStart a new document and paste in the contents (but not the YAML header) from your document with the broken YAML header.\n\n\n\nText blocks.\nThese have a white background and allow you to type text as you would in a Word or Google doc. If you use the visual editor, you will see some formatting options similar to other word processors you have used. In the source editor, you will indicate formatting using markup – things you type directly into the document that are interpreted as formatting.\n\nHeaders are indicated with a line that begins with some number of pound signs followed by a space: #, ##, ###, etc.\nSurround text with asterisks (*) or underscores (_) to indicate italics.\nSurround text with two asterisks (**) or underscores (__) to indicate bold.\nSurround text with dollar signs ($) to indicate mathematical notation.\n\n\n\n\n\n\nHelp with mathematical notation\n\n\n\nFor more about mathematical notation see this document.\n\n\n\n\n\n\n\n\n\nNo spaces allowed\n\n\n\nFor the last three of of these, there must not be a space between the marker (*, _, $) and the text it surrounds.\n\n\n\nYou can create bulleted lists using * or -.\nUse indentation to indicate nesting.\nYou can create enumerated lists using 1., a. etc. Use indentation to indicate nesting.\n\n\n\n\n\n\n\nTip\n\n\n\nIf you aren’t sure just how to do something, try switching to the visual editor and using the menu options there. Then switch back to the source editor to see how it was done.\n\n\nCode chunks.\nR code chunks begin ```{r} and end with three backticks. They are indicated in the editor with a gray background.\nIn these sections you can type R code. This code will be executed when you render the document and (by default) both the R code and the results of executing it will be displayed in your rendered document.\nYou can type the beginning and ending of the chunks yourself, or you can click on the green square with the letter C in it to insert a new code chunk at your cursor location.\n\nThat’s about all there is to a basic Quarto document. For fancier things, see the documentaiton at quarto.org."
+  },
+  {
+    "objectID": "quarto/quarto-intro.html#some-tips",
+    "href": "quarto/quarto-intro.html#some-tips",
+    "title": "Introduction to Quarto",
+    "section": "Some tips",
+    "text": "Some tips\n\nIf a template document is provided, use it.\nPut text in text blocks, not in code comments.\nCode comments should be used for commenting code, not for introducing or discussing the results.\nQuarto documents must be self-contained.\nIn order for the R code to execute, all the information required must be in the quarto document. This includes things like loading packages and data sets, defining variables you use, etc.\nYou can run individual R chunks by pressing “play button” at the top of the chunk.\nThis can be useful when you are working on an individual R section and don’t want to re-render the entire document each time you make a change.\n\n\n\n\n\n\nThe play button runs code in the console\n\n\n\nWhen the document is rendered, it does not have access to your console. If code runs in your console but not when you render your document, it is most likely because you have forgotten to include in your document some code that you ran in the console.\n\n\nIf you label your R chunks, it is easier to tell where any problems are.\nIf you do not label them, you will see “unnamed-chunk-1”, “unnamed-chunk-2”, etc. as the document is rendered. You can give your chunks nicer names like this. (Notice the special comment indicator #|.)\n\n```{r}\n#| label: my-nice-label\n# This is a regular comment.\n```"
+  },
+  {
+    "objectID": "quarto/quarto-intro.html#foo",
+    "href": "quarto/quarto-intro.html#foo",
+    "title": "Introduction to Quarto",
+    "section": "Foo",
+    "text": "Foo\n\n```{r}\n#| label: my-nice-label\n# R code goes here\n```"
   }
 ]

@@ -32,6 +32,8 @@ website:
             
       - section: Quarto
         contents: 
+          - href: quarto/quarto-intro.qmd
+            text: Intro to Quarto
           - href: quarto/math-in-markdown.qmd
             text: "Mathematical notation"
           - href: quarto/r-and-python.qmd

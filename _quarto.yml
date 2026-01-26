@@ -70,9 +70,12 @@ website:
 
 format:
   html:
-    theme: cosmo
+    theme: yeti
     css: styles.css
     toc: true
+  html-live:
+    theme: yeti
+    css: styles.css
     
 theme:
   light: yeti

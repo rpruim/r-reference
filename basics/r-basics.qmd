@@ -2,7 +2,9 @@
 title: "R Basics"
 author: "Randall Pruim"
 date: "last-modified"
-format: live-html
+format: 
+  live-html:
+    css: ../styles.css
 editor_options: 
   markdown: 
     wrap: 72
@@ -21,6 +23,7 @@ engine: "knitr"
 {{< include ../_extensions/r-wasm/live/_knitr.qmd >}}
 
 
+
 ```{webr}
 #| label: setup
 #| include: false
@@ -33,9 +36,8 @@ knitr::opts_chunk$set(
   echo = TRUE,
   fig.align = "center",
   fig.width = 6, fig.height = 2.5)
-MI_lead <- read.csv('https://sldr.netlify.app/data/MI_lead.csv')
-# file='http://sldr.netlify.app/data/MI_lead.csv')
-GDP <- read.csv('http://statistical-modeling-data.netlify.app/GDP.csv')
+MI_lead <- read.csv('https://rpruim.github.io/data/MI_lead.csv')
+GDP <- read.csv('http://rpruim.gihtub.io/data/GDP.csv')
 tutorial_options(exercise.eval = FALSE)
 ```
 
@@ -72,6 +74,7 @@ Hit the run button below to see how it works.
 
 #### Your turn: Experiment a little
 
+:::{#exr-arithmetic-your-turn}
 Edit the code below to compute some other things. Try subtraction, multiplication, division, etc.
 
 ```{webr}
@@ -88,6 +91,7 @@ Edit the code below to compute some other things. Try subtraction, multiplicatio
 20 / 3
 5^2
 ```
+:::
 :::
 
 ## Communicating with R
@@ -168,6 +172,7 @@ argument, they are separated by commas.
 Let's practice what you just learned, trying
 out the `sqrt()` and `round()` functions.
 
+:::{#exr-sqrt}
 Edit the code below to compute the square root of 64:
 
 ```{webr}
@@ -195,6 +200,9 @@ sqrt(64)
 :::
 :::
 
+:::
+
+:::{#exr-round-sqrt}
 Now try computing the square root of 44, then rounding it to the nearest
 integer:
 
@@ -245,6 +253,8 @@ round(sqrt(44)) # yes, you can nest functions. sometimes (not always) a good ide
 ::::
 :::
 
+:::
+
 ### Storing information in R: variables
 
 In the last section, you computed the square root of 44 and then rounded
@@ -279,6 +289,7 @@ I like to read `<-` as "gets": So `myroot <- sqrt(44))` is read as
 "`myroot` gets `sqrt(44)`".
 :::
 
+:::{#exr-name-a-variable}
 Try editing the code to change the name of the variable from my_root to
 something else, then run your new code:
 
@@ -286,6 +297,7 @@ something else, then run your new code:
 my_root <- sqrt(44)
 round(my_root)
 ```
+:::
 
 ### What if I have a list of numbers to store?
 
@@ -302,8 +314,9 @@ my_fave_numbers
 we printed the results to the screen by simply typing the variable name
 my_fave_numbers).
 
-Try making a list of your three favorite numbers, then using the
-function `sum` to add them all up:
+:::{#exr-c-and-sum}
+Make a list of your three favorite numbers. 
+Then use the `sum()` to add them all up.
 
 ```{webr}
 #| exercise: c-and-sum
@@ -319,6 +332,7 @@ sum(my_numbers)
 ```
 :::
 
+:::
 
 ### What about data that are not numeric?
 
@@ -360,7 +374,8 @@ A few key points to keep in mind:
     eliminate formatting designed to make it "pretty" (colors, shading,
     fonts...)
 -   Use short, simple variable names that do not contain any spaces or
-    special characters (like ?, \$, %, \_, etc.)
+    special characters (like ?, \$, %, etc.)
+    [Note: Underscores (_) and hyphens (-) are OK and even encouraged to make names more readable.]
 -   Use informative variable values rather than arbitrary numeric codes.
     For example, a variable Color should have values 'red', 'white', and
     'blue' rather than 1, 2, and 3.
@@ -418,12 +433,17 @@ library(______)
 Loading the mosaic package also loads dataset called `HELPrct`.
 
 If you just enter the dataset name (`HELPrct`) as a command, R will
-print some of the dataset out to the screen:  Give it a try:
+print some of the dataset out to the screen.  
+
+:::{#exr-show-HELPrct}
+
+Give it a try. Run the code below to see the `HELPrct` dataset.
 
 ```{webr}
 #| label: show-HELPrct
 HELPrct
 ```
+:::
 
 For a large data frame, this isn't the most useful thing. We'd like to
 be able to get some more useful information about the data set.
@@ -443,6 +463,7 @@ dataset:
     dataset
 -   `ncol()` reports the number of columns (variables) in the dataset
 
+:::{#exr-check-out-data}
 Try applying each of these functions to the `HELPrct` data and see what
 the output looks like each time:
 
@@ -460,13 +481,21 @@ head(HELPrct)
 glimpse(HELPrct)
 ```
 :::
-
+:::
 
 ### Getting more help
 
 You can get help related to R function, and built-in R datasets, using a
 special function: `?`. Just type `?` followed by the name of the function
-or dataset you want help on:
+or dataset you want help on.
+
+:::{#exr-get-help}
+
+Try getting help on the following:
+
+* the dataset `HELPrct`,
+* the function `round()`,
+* anything else that interests you.
 
 ```{webr}
 #| exercise: get-help
@@ -476,9 +505,11 @@ or dataset you want help on:
 :::{.hint exercise="get-help"}
 **Hint:** Try `?HELPrct`.
 
+
 ::::{.callout-note}
 The help output looks much nicer inside RStudio than it does inside a tutorial.
 ::::
+:::
 :::
 
 
@@ -487,11 +518,11 @@ The help output looks much nicer inside RStudio than it does inside a tutorial.
 For this class, you will often be asked to analyze data that is stored
 in files that are available online -- usually in csv format. It's simple
 to read them into R. For example, we can read in the file MI_lead.csv,
-which is stored at <https://sldr.netlify.app/data/MI_lead.csv>:
+which is stored at <https://rpruim.github.io/data/MI_lead.csv>:
 
 ```{webr}
 #| label: read-lead-data
-MI_lead <- read.csv('https://sldr.netlify.app/data/MI_lead.csv')
+MI_lead <- read.csv('https://rpruim.github.io/data/MI_lead.csv')
 ```
 
 ### Some common mistakes when reading files
@@ -500,16 +531,19 @@ The code below contains a couple of the **most common mistakes**
 students make when they try to read in a data file. See if you can find
 and correct them.
 
+:::{#exr-fix-file-load-errors}
 The code below is supposed to read in some GDP data from the file
-<http://statistical-modeling-data.netlify.app/GDP.csv>. But there are 
-some problems with the code that you need to fix. See if you can 
-figure out how to fix it.  Refer to the hints if you have trouble.
+<http://rpruim/github.io/data/GDP.csv>. 
+But there are some problems with the code that you 
+need to fix. 
+See if you can figure out how to fix it. 
+Refer to the hints if you have trouble.
 
 One you have the data loaded correctly, check to see how many rows and columns it has.
 
 ```{webr}
 #| example: gdp-mistakes
-read.csv(http://statistical-modeling-data.netlify.app/GPD)
+read.csv(http://rpruim.github.io/data/GPD)
 ```
 
 :::{.hint exercise="gdp-mistakes"}
@@ -533,7 +567,7 @@ read.csv(http://statistical-modeling-data.netlify.app/GPD)
 
 ```{webr gdp-mistakes-hint-6}
 # load and save the data
-GDP <- read.csv('http://statistical-modeling-data.netlify.app/GDP.csv')
+GDP <- read.csv('http://rpruim.github.io/data/GDP.csv')
 
 # glimpse() shows the number of rows and columns and also shows us the 
 # first few values of each variable. You could also use `nrow()` and `ncol()` 
@@ -544,6 +578,7 @@ glimpse(GDP)
 ::::
 :::
 
+:::
 
 #### Your turn: quick review
 
@@ -567,7 +602,7 @@ You just need to change the input to `read.csv()` -- instead of a URL,
 you provide a path and filename (in quotes). For example, we might change
 
 ```{r, eval = FALSE}
-read.csv('https://sldr.netlify.app/data/MI_lead.csv')
+read.csv('https://rpruim.github.io/data/MI_lead.csv')
 ```
 
 to 
@@ -603,13 +638,13 @@ there are two ways we can provide the information to R --
 with the name:
 
 ```{webr}
-MI_lead <- read.csv(file = 'https://sldr.netlify.app/data/MI_lead.csv')
+MI_lead <- read.csv(file = 'https://rpruim.github.io/data/MI_lead.csv')
 ```
 
 or without the name:
 
 ```{webr}
-MI_lead <- read.csv('https://sldr.netlify.app/data/MI_lead.csv')
+MI_lead <- read.csv('https://rpruim.github.io/data/MI_lead.csv')
 ```
 
 If a function only has one argument, it doesn't really matter which way 
@@ -645,7 +680,7 @@ of arguments including `sep` (the column-separator) and `dec` (the decimal
 point).  So we can read this file using
 
 ```{webr}
-url <- 'https://calvin-mgmt535.netlify.app/data/german.dat'
+url <- 'https://rpruim.github.io/data/german.dat'
 
 german_data <- read.csv(url, sep = ";", dec = ",")
 ```

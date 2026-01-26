@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Randall Pruim">
-<meta name="dcterms.date" content="2024-10-26">
+<meta name="dcterms.date" content="2026-01-26">
 
 <title>R Basics – R Reference</title>
 <style>
@@ -112,6 +112,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../site_libs/quarto-ojs/quarto-ojs.css" rel="stylesheet">
 
 
+<link rel="stylesheet" href="../styles.css">
 </head>
 
 <body class="nav-sidebar floating nav-fixed fullcontent">
@@ -249,6 +250,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           </a> 
       </div>
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../quarto/quarto-intro.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Intro to Quarto</span></a>
+  </div>
+</li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../quarto/math-in-markdown.html" class="sidebar-item-text sidebar-link">
@@ -391,7 +398,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">October 26, 2024</p>
+      <p class="date">January 26, 2026</p>
     </div>
   </div>
   
@@ -409,7 +416,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 </div>
 <script type="webr-1-contents">
-eyJhdHRyIjp7ImVjaG8iOmZhbHNlLCJlZGl0IjpmYWxzZSwiZXZhbCI6dHJ1ZSwiaW5jbHVkZSI6ZmFsc2UsImxhYmVsIjoic2V0dXAiLCJvdXRwdXQiOmZhbHNlfSwiY29kZSI6ImxpYnJhcnkodGlkeXZlcnNlKVxuIyBsaWJyYXJ5KGdnZm9ybXVsYSlcbmxpYnJhcnkobW9zYWljKVxudGhlbWVfc2V0KHRoZW1lX2J3KCkpXG4jIGtuaXRyOjpvcHRzX2NodW5rJHNldChleGVyY2lzZS5jaGVja2VyID0gY2hlY2tyOjpjaGVja3JfdHV0b3IpXG5rbml0cjo6b3B0c19jaHVuayRzZXQoXG4gIGVjaG8gPSBUUlVFLFxuICBmaWcuYWxpZ24gPSBcImNlbnRlclwiLFxuICBmaWcud2lkdGggPSA2LCBmaWcuaGVpZ2h0ID0gMi41KVxuTUlfbGVhZCA8LSByZWFkLmNzdignaHR0cHM6Ly9zbGRyLm5ldGxpZnkuYXBwL2RhdGEvTUlfbGVhZC5jc3YnKVxuIyBmaWxlPSdodHRwOi8vc2xkci5uZXRsaWZ5LmFwcC9kYXRhL01JX2xlYWQuY3N2JylcbkdEUCA8LSByZWFkLmNzdignaHR0cDovL3N0YXRpc3RpY2FsLW1vZGVsaW5nLWRhdGEubmV0bGlmeS5hcHAvR0RQLmNzdicpXG50dXRvcmlhbF9vcHRpb25zKGV4ZXJjaXNlLmV2YWwgPSBGQUxTRSkifQ==
+eyJhdHRyIjp7ImVjaG8iOmZhbHNlLCJlZGl0IjpmYWxzZSwiZXZhbCI6dHJ1ZSwiaW5jbHVkZSI6ZmFsc2UsImxhYmVsIjoic2V0dXAiLCJvdXRwdXQiOmZhbHNlfSwiY29kZSI6ImxpYnJhcnkodGlkeXZlcnNlKVxuIyBsaWJyYXJ5KGdnZm9ybXVsYSlcbmxpYnJhcnkobW9zYWljKVxudGhlbWVfc2V0KHRoZW1lX2J3KCkpXG4jIGtuaXRyOjpvcHRzX2NodW5rJHNldChleGVyY2lzZS5jaGVja2VyID0gY2hlY2tyOjpjaGVja3JfdHV0b3IpXG5rbml0cjo6b3B0c19jaHVuayRzZXQoXG4gIGVjaG8gPSBUUlVFLFxuICBmaWcuYWxpZ24gPSBcImNlbnRlclwiLFxuICBmaWcud2lkdGggPSA2LCBmaWcuaGVpZ2h0ID0gMi41KVxuTUlfbGVhZCA8LSByZWFkLmNzdignaHR0cHM6Ly9ycHJ1aW0uZ2l0aHViLmlvL2RhdGEvTUlfbGVhZC5jc3YnKVxuR0RQIDwtIHJlYWQuY3N2KCdodHRwOi8vcnBydWltLmdpaHR1Yi5pby9kYXRhL0dEUC5jc3YnKVxudHV0b3JpYWxfb3B0aW9ucyhleGVyY2lzZS5ldmFsID0gRkFMU0UpIn0=
 </script>
 </div>
 </div>
@@ -440,7 +447,8 @@ eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoiMTUgKyAyNyJ9
 </div>
 <section id="your-turn-experiment-a-little" class="level4">
 <h4 class="anchored" data-anchor-id="your-turn-experiment-a-little">Your turn: Experiment a little</h4>
-<p>Edit the code below to compute some other things. Try subtraction, multiplication, division, etc.</p>
+<div id="exr-arithmetic-your-turn" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 1</strong></span> Edit the code below to compute some other things. Try subtraction, multiplication, division, etc.</p>
 <div class="cell" data-exercise="arithmetic-your-turn">
 <div>
 <div id="webr-3" class="exercise-cell">
@@ -457,6 +465,7 @@ eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWUsImV4ZXJjaXNlIjoiYXJpdGhtZXRpYy15b3Vy
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="dv">5</span> <span class="sc">*</span> <span class="dv">5</span></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="dv">20</span> <span class="sc">/</span> <span class="dv">3</span></span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="dv">5</span><span class="sc">^</span><span class="dv">2</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 </div>
 </section>
 </section>
@@ -502,7 +511,8 @@ eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWUsImV4ZXJjaXNlIjoiYXJpdGhtZXRpYy15b3Vy
 <section id="using-simple-functions" class="level3">
 <h3 class="anchored" data-anchor-id="using-simple-functions">Using simple functions</h3>
 <p>Let’s practice what you just learned, trying out the <code>sqrt()</code> and <code>round()</code> functions.</p>
-<p>Edit the code below to compute the square root of 64:</p>
+<div id="exr-sqrt" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 2</strong></span> Edit the code below to compute the square root of 64:</p>
 <div class="cell" data-exercese="find-sqrt">
 <div>
 <div id="webr-4" class="exercise-cell">
@@ -549,7 +559,9 @@ Solution
 </div>
 </div>
 </div>
-<p>Now try computing the square root of 44, then rounding it to the nearest integer:</p>
+</div>
+<div id="exr-round-sqrt" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 3</strong></span> Now try computing the square root of 44, then rounding it to the nearest integer:</p>
 <div class="cell" data-exercise="round-sqrt">
 <div>
 <div id="webr-5" class="exercise-cell">
@@ -637,6 +649,7 @@ Hint 4
 </div>
 </div>
 </div>
+</div>
 </section>
 <section id="storing-information-in-r-variables" class="level3">
 <h3 class="anchored" data-anchor-id="storing-information-in-r-variables">Storing information in R: variables</h3>
@@ -677,7 +690,8 @@ Tip
 <p>I like to read <code>&lt;-</code> as “gets”: So <code>myroot &lt;- sqrt(44))</code> is read as “<code>myroot</code> gets <code>sqrt(44)</code>”.</p>
 </div>
 </div>
-<p>Try editing the code to change the name of the variable from my_root to something else, then run your new code:</p>
+<div id="exr-name-a-variable" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 4</strong></span> Try editing the code to change the name of the variable from my_root to something else, then run your new code:</p>
 <div class="cell" data-exercise="true">
 <div>
 <div id="webr-9" class="exercise-cell">
@@ -686,6 +700,7 @@ Tip
 <script type="webr-9-contents">
 eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoibXlfcm9vdCA8LSBzcXJ0KDQ0KVxucm91bmQobXlfcm9vdCkifQ==
 </script>
+</div>
 </div>
 </div>
 </section>
@@ -703,7 +718,8 @@ eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoibXlfZmF2ZV9udW1iZXJzIDwt
 </div>
 </div>
 <p>(First we stored the list of numbers, calling it my_fave_numbers; then we printed the results to the screen by simply typing the variable name my_fave_numbers).</p>
-<p>Try making a list of your three favorite numbers, then using the function <code>sum</code> to add them all up:</p>
+<div id="exr-c-and-sum" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 5</strong></span> Make a list of your three favorite numbers. Then use the <code>sum()</code> to add them all up.</p>
 <div class="cell" data-exercise="c-and-sum">
 <div>
 <div id="webr-11" class="exercise-cell">
@@ -717,6 +733,7 @@ eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWUsImV4ZXJjaXNlIjoiYy1hbmQtc3VtIn0sImNv
 <div class="webr-ojs-exercise exercise-solution d-none" data-exercise="c-and-sum">
 <div class="sourceCode" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>my_numbers <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">14</span>, <span class="dv">27</span>, <span class="dv">455</span>)</span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="fu">sum</span>(my_numbers)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 </div>
 </section>
 <section id="what-about-data-that-are-not-numeric" class="level3">
@@ -747,7 +764,7 @@ eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWUsImxhYmVsIjoiY2F0LXZhciJ9LCJjb2RlIjoi
 <ul>
 <li>Organize the table so there is <strong>one column for every variable</strong> (piece of information being recorded), and <strong>one row for every observation</strong> (person/place/thing for which data were collected).</li>
 <li>This data table is for the computer to read, not for humans! So eliminate formatting designed to make it “pretty” (colors, shading, fonts…)</li>
-<li>Use short, simple variable names that do not contain any spaces or special characters (like ?, $, %, _, etc.)</li>
+<li>Use short, simple variable names that do not contain any spaces or special characters (like ?, $, %, etc.) [Note: Underscores (_) and hyphens (-) are OK and even encouraged to make names more readable.]</li>
 <li>Use informative variable values rather than arbitrary numeric codes. For example, a variable Color should have values ‘red’, ‘white’, and ‘blue’ rather than 1, 2, and 3.</li>
 </ul>
 <p>You will have chances to practice making your own data files and importing them into R outside this tutorial.</p>
@@ -787,7 +804,9 @@ eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWUsImV4ZXJjaXNlIjoicmVxdWlyZS1wYWNrYWdl
 <section id="viewing-a-dataset" class="level3">
 <h3 class="anchored" data-anchor-id="viewing-a-dataset">Viewing a dataset</h3>
 <p>Loading the mosaic package also loads dataset called <code>HELPrct</code>.</p>
-<p>If you just enter the dataset name (<code>HELPrct</code>) as a command, R will print some of the dataset out to the screen: Give it a try:</p>
+<p>If you just enter the dataset name (<code>HELPrct</code>) as a command, R will print some of the dataset out to the screen.</p>
+<div id="exr-show-HELPrct" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 6</strong></span> Give it a try. Run the code below to see the <code>HELPrct</code> dataset.</p>
 <div class="cell">
 <div>
 <div id="webr-14" class="exercise-cell">
@@ -796,6 +815,7 @@ eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWUsImV4ZXJjaXNlIjoicmVxdWlyZS1wYWNrYWdl
 <script type="webr-14-contents">
 eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWUsImxhYmVsIjoic2hvdy1IRUxQcmN0In0sImNvZGUiOiJIRUxQcmN0In0=
 </script>
+</div>
 </div>
 </div>
 <p>For a large data frame, this isn’t the most useful thing. We’d like to be able to get some more useful information about the data set.</p>
@@ -811,7 +831,8 @@ eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWUsImxhYmVsIjoic2hvdy1IRUxQcmN0In0sImNv
 <li><code>nrow()</code> reports the number of rows (observations or cases) in the dataset</li>
 <li><code>ncol()</code> reports the number of columns (variables) in the dataset</li>
 </ul>
-<p>Try applying each of these functions to the <code>HELPrct</code> data and see what the output looks like each time:</p>
+<div id="exr-check-out-data" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 7</strong></span> Try applying each of these functions to the <code>HELPrct</code> data and see what the output looks like each time:</p>
 <div class="cell" data-exercise="check-out-data">
 <div>
 <div id="webr-15" class="exercise-cell">
@@ -827,10 +848,18 @@ eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWUsImV4ZXJjaXNlIjoiY2hlY2stb3V0LWRhdGEi
 <div class="sourceCode" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(HELPrct)</span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="fu">glimpse</span>(HELPrct)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+</div>
 </section>
 <section id="getting-more-help" class="level3">
 <h3 class="anchored" data-anchor-id="getting-more-help">Getting more help</h3>
-<p>You can get help related to R function, and built-in R datasets, using a special function: <code>?</code>. Just type <code>?</code> followed by the name of the function or dataset you want help on:</p>
+<p>You can get help related to R function, and built-in R datasets, using a special function: <code>?</code>. Just type <code>?</code> followed by the name of the function or dataset you want help on.</p>
+<div id="exr-get-help" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 8</strong></span> Try getting help on the following:</p>
+<ul>
+<li>the dataset <code>HELPrct</code>,</li>
+<li>the function <code>round()</code>,</li>
+<li>anything else that interests you.</li>
+</ul>
 <div class="cell" data-exercise="get-help">
 <div>
 <div id="webr-16" class="exercise-cell">
@@ -857,25 +886,27 @@ Note
 </div>
 </div>
 </div>
+</div>
 </section>
 </section>
 <section id="reading-in-data-from-a-file" class="level2">
 <h2 class="anchored" data-anchor-id="reading-in-data-from-a-file">Reading in data from a file</h2>
-<p>For this class, you will often be asked to analyze data that is stored in files that are available online – usually in csv format. It’s simple to read them into R. For example, we can read in the file MI_lead.csv, which is stored at <a href="https://sldr.netlify.app/data/MI_lead.csv" class="uri">https://sldr.netlify.app/data/MI_lead.csv</a>:</p>
+<p>For this class, you will often be asked to analyze data that is stored in files that are available online – usually in csv format. It’s simple to read them into R. For example, we can read in the file MI_lead.csv, which is stored at <a href="https://rpruim.github.io/data/MI_lead.csv" class="uri">https://rpruim.github.io/data/MI_lead.csv</a>:</p>
 <div class="cell">
 <div>
 <div id="webr-17" class="exercise-cell">
 
 </div>
 <script type="webr-17-contents">
-eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWUsImxhYmVsIjoicmVhZC1sZWFkLWRhdGEifSwiY29kZSI6Ik1JX2xlYWQgPC0gcmVhZC5jc3YoJ2h0dHBzOi8vc2xkci5uZXRsaWZ5LmFwcC9kYXRhL01JX2xlYWQuY3N2JykifQ==
+eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWUsImxhYmVsIjoicmVhZC1sZWFkLWRhdGEifSwiY29kZSI6Ik1JX2xlYWQgPC0gcmVhZC5jc3YoJ2h0dHBzOi8vcnBydWltLmdpdGh1Yi5pby9kYXRhL01JX2xlYWQuY3N2JykifQ==
 </script>
 </div>
 </div>
 <section id="some-common-mistakes-when-reading-files" class="level3">
 <h3 class="anchored" data-anchor-id="some-common-mistakes-when-reading-files">Some common mistakes when reading files</h3>
 <p>The code below contains a couple of the <strong>most common mistakes</strong> students make when they try to read in a data file. See if you can find and correct them.</p>
-<p>The code below is supposed to read in some GDP data from the file <a href="http://statistical-modeling-data.netlify.app/GDP.csv" class="uri">http://statistical-modeling-data.netlify.app/GDP.csv</a>. But there are some problems with the code that you need to fix. See if you can figure out how to fix it. Refer to the hints if you have trouble.</p>
+<div id="exr-fix-file-load-errors" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 9</strong></span> The code below is supposed to read in some GDP data from the file <a href="http://rpruim/github.io/data/GDP.csv" class="uri">http://rpruim/github.io/data/GDP.csv</a>. But there are some problems with the code that you need to fix. See if you can figure out how to fix it. Refer to the hints if you have trouble.</p>
 <p>One you have the data loaded correctly, check to see how many rows and columns it has.</p>
 <div class="cell" data-example="gdp-mistakes">
 <div>
@@ -883,7 +914,7 @@ eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWUsImxhYmVsIjoicmVhZC1sZWFkLWRhdGEifSwi
 
 </div>
 <script type="webr-18-contents">
-eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWUsImV4YW1wbGUiOiJnZHAtbWlzdGFrZXMifSwiY29kZSI6InJlYWQuY3N2KGh0dHA6Ly9zdGF0aXN0aWNhbC1tb2RlbGluZy1kYXRhLm5ldGxpZnkuYXBwL0dQRCkifQ==
+eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWUsImV4YW1wbGUiOiJnZHAtbWlzdGFrZXMifSwiY29kZSI6InJlYWQuY3N2KGh0dHA6Ly9ycHJ1aW0uZ2l0aHViLmlvL2RhdGEvR1BEKSJ9
 </script>
 </div>
 </div>
@@ -929,8 +960,9 @@ Solution
 
 </div>
 <script type="webr-19-contents">
-eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoiIyBsb2FkIGFuZCBzYXZlIHRoZSBkYXRhXG5HRFAgPC0gcmVhZC5jc3YoJ2h0dHA6Ly9zdGF0aXN0aWNhbC1tb2RlbGluZy1kYXRhLm5ldGxpZnkuYXBwL0dEUC5jc3YnKVxuXG4jIGdsaW1wc2UoKSBzaG93cyB0aGUgbnVtYmVyIG9mIHJvd3MgYW5kIGNvbHVtbnMgYW5kIGFsc28gc2hvd3MgdXMgdGhlIFxuIyBmaXJzdCBmZXcgdmFsdWVzIG9mIGVhY2ggdmFyaWFibGUuIFlvdSBjb3VsZCBhbHNvIHVzZSBgbnJvdygpYCBhbmQgYG5jb2woKWAgXG4jIHRvIGZpbmQgdGhlIG51bWJlciBvZiByb3dzIGFuZCBjb2x1bW5zLlxuXG5nbGltcHNlKEdEUCkifQ==
+eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoiIyBsb2FkIGFuZCBzYXZlIHRoZSBkYXRhXG5HRFAgPC0gcmVhZC5jc3YoJ2h0dHA6Ly9ycHJ1aW0uZ2l0aHViLmlvL2RhdGEvR0RQLmNzdicpXG5cbiMgZ2xpbXBzZSgpIHNob3dzIHRoZSBudW1iZXIgb2Ygcm93cyBhbmQgY29sdW1ucyBhbmQgYWxzbyBzaG93cyB1cyB0aGUgXG4jIGZpcnN0IGZldyB2YWx1ZXMgb2YgZWFjaCB2YXJpYWJsZS4gWW91IGNvdWxkIGFsc28gdXNlIGBucm93KClgIGFuZCBgbmNvbCgpYCBcbiMgdG8gZmluZCB0aGUgbnVtYmVyIG9mIHJvd3MgYW5kIGNvbHVtbnMuXG5cbmdsaW1wc2UoR0RQKSJ9
 </script>
+</div>
 </div>
 </div>
 </div>
@@ -959,7 +991,7 @@ eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWUsImV4ZXJjaXNlIjoiTUlfbGVhZC1pbmZvIn0s
 <h3 class="anchored" data-anchor-id="what-about-local-files">What about local files?</h3>
 <p>The same function, <code>read.csv()</code>, can be used to read in a local file. You just need to change the input to <code>read.csv()</code> – instead of a URL, you provide a path and filename (in quotes). For example, we might change</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">read.csv</span>(<span class="st">'https://sldr.netlify.app/data/MI_lead.csv'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">read.csv</span>(<span class="st">'https://rpruim.github.io/data/MI_lead.csv'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>to</p>
 <div class="cell">
@@ -991,7 +1023,7 @@ Caution
 
 </div>
 <script type="webr-21-contents">
-eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoiTUlfbGVhZCA8LSByZWFkLmNzdihmaWxlID0gJ2h0dHBzOi8vc2xkci5uZXRsaWZ5LmFwcC9kYXRhL01JX2xlYWQuY3N2JykifQ==
+eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoiTUlfbGVhZCA8LSByZWFkLmNzdihmaWxlID0gJ2h0dHBzOi8vcnBydWltLmdpdGh1Yi5pby9kYXRhL01JX2xlYWQuY3N2JykifQ==
 </script>
 </div>
 </div>
@@ -1002,7 +1034,7 @@ eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoiTUlfbGVhZCA8LSByZWFkLmNz
 
 </div>
 <script type="webr-22-contents">
-eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoiTUlfbGVhZCA8LSByZWFkLmNzdignaHR0cHM6Ly9zbGRyLm5ldGxpZnkuYXBwL2RhdGEvTUlfbGVhZC5jc3YnKSJ9
+eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoiTUlfbGVhZCA8LSByZWFkLmNzdignaHR0cHM6Ly9ycHJ1aW0uZ2l0aHViLmlvL2RhdGEvTUlfbGVhZC5jc3YnKSJ9
 </script>
 </div>
 </div>
@@ -1034,7 +1066,7 @@ Tip
 
 </div>
 <script type="webr-23-contents">
-eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoidXJsIDwtICdodHRwczovL2NhbHZpbi1tZ210NTM1Lm5ldGxpZnkuYXBwL2RhdGEvZ2VybWFuLmRhdCdcblxuZ2VybWFuX2RhdGEgPC0gcmVhZC5jc3YodXJsLCBzZXAgPSBcIjtcIiwgZGVjID0gXCIsXCIpIn0=
+eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoidXJsIDwtICdodHRwczovL3JwcnVpbS5naXRodWIuaW8vZGF0YS9nZXJtYW4uZGF0J1xuXG5nZXJtYW5fZGF0YSA8LSByZWFkLmNzdih1cmwsIHNlcCA9IFwiO1wiLCBkZWMgPSBcIixcIikifQ==
 </script>
 </div>
 </div>

@@ -47,8 +47,12 @@ tutorial_options(exercise.eval = FALSE)
 The purpose of this tutorial is to help you start to get familiar with
 the way R works, and some basic R commands.
 
-*__Note:__ You won't need to use the RStudio server for this tutorial. But it will
-help you use RStudio later.*
+:::{.callout-note}
+### RStudio not required
+
+You won't need to use RStudio for this tutorial. 
+But it will help you use RStudio later.
+:::
 
 <!-- But you may have noticed that *you are not even using R.* At least, you -->
 <!-- haven't logged in to the RStudio server. -->
@@ -137,7 +141,8 @@ operations:
 * the function `round()` rounds a number (by default, it rounds to the
 nearest integer).
 
-or read in data
+There are also functions that allow us to read in data,
+for example:
 
 * the function `read.csv()` reads in data in comma separated value format (a very
 common data format that works in many types of software, including Excel.)
@@ -163,9 +168,18 @@ info2, ...</span> ) </strong>
 </center>
 
 The `...` indicates that there may be some additional *arguments*
-(input information we could provide to R) we could add eventually. Some
-functions need only one input, but if a function takes more than one
+(input information we could provide to R) we could add eventually. 
+
+:::{.callout-note}
+### Parentheses and Commas
+
+* A function name is always followed by parentheses: `()` 
+* The information the function needs to know is placed inside the parentheses. 
+  We'll call these **inputs** or **arguments**.
+* Some functions need only one input, but if a function takes more than one
 argument, they are separated by commas.
+* If a function doesn't need any additional information, the parentheses are still required.
+:::
 
 ### Using simple functions 
 
@@ -272,7 +286,7 @@ pain!
 A better alternative, if you are computing a value that you will want to
 use later on, is to store it as a named variable in R. In the previous
 example, you might want to store the square root of 44 in a variable
-called my_root; then you can provide my_root to the `round` function
+called `my_root`; then you can provide my_root to the `round` function
 without checking the result of the `sqrt` calculation first:
 
 ```{webr naming-variable, echo=TRUE}
@@ -290,14 +304,21 @@ I like to read `<-` as "gets": So `myroot <- sqrt(44))` is read as
 :::
 
 :::{#exr-name-a-variable}
-Try editing the code to change the name of the variable from my_root to
-something else, then run your new code:
+Edit the code to change the name of the variable from `my_root` to
+something else (your choice), then run your new code:
 
 ```{webr name-a-variable, exercise=TRUE}
 my_root <- sqrt(44)
 round(my_root)
 ```
 :::
+
+:::{.callout-note}
+### Capitalization matters
+
+In R, capitalization always matters.  `my_root` and `My_Root` are two different variables.
+:::
+
 
 ### What if I have a list of numbers to store?
 
@@ -346,20 +367,25 @@ my_words <- c('RStudio', 'is', 'awesome')
 my_words
 ```
 
-### What if I have a LOT more data to store?
+:::{.callout-note}
+### Quotation marks
 
-`c` works great for creating small lists of just a few values, but it is
-not a good way to enter or store large data sets. 
+You can use either single (`'`) or double (`"`) quotation marks in R.  You just need to use
+the same type of quotation mark and the beginning and at the end.
+:::
+
+## Data sets in R
 
 In R, the most common way to store data is in an object called a 
 **data frame**. 
-The next sections will get you started using data frames in R.
+This section will get you started using data frames in R.
 
-## How should data tables be organized for statistical analysis?
+### How should data tables be organized for statistical analysis?
 
-*This section is about **rectangular** data -- data that can be stored in
+Data frames are used to store  **rectangular** data -- data that can be stored in
 a rectangular grid of rows and columns, like in an Excel spreadsheet.
-This is by the far the most common sort of data used in business and in statistical analysis, but it is not the only kind of data.*
+This is by the far the most common sort of data used in business and in statistical analysis, 
+but it is not the only kind of data.
 
 A comprehensive guide to good practices for formatting data tables is
 available at <http://kbroman.org/dataorg/>.
@@ -372,18 +398,21 @@ A few key points to keep in mind:
     were collected).
 -   This data table is for the computer to read, not for humans! So
     eliminate formatting designed to make it "pretty" (colors, shading,
-    fonts...)
+    fonts...).
 -   Use short, simple variable names that do not contain any spaces or
-    special characters (like ?, \$, %, etc.)
-    [Note: Underscores (_) and hyphens (-) are OK and even encouraged to make names more readable.]
+    special characters (like ?, \$, %, -, etc.)
+
+    Note: Underscores (_) are OK and even encouraged to make names more readable.
+
 -   Use informative variable values rather than arbitrary numeric codes.
     For example, a variable Color should have values 'red', 'white', and
     'blue' rather than 1, 2, and 3.
 
 You will have chances to practice making your own data files and
-importing them into R outside this tutorial.
+importing them into R outside this tutorial.  In this tutorial, we will
+focus on using data that have already been prepared for you.
 
-## Using built-in datasets in R
+### Using built-in datasets in R
 
 R has a number of built-in datasets that are accessible to you as soon
 as you start RStudio.
@@ -426,6 +455,17 @@ library(______)
 
 :::{.hint exercise="require-package"}
 **Hint:** You want to load the `mosaic` package.
+:::
+
+
+:::{.callout-warning}
+### Object not found errors
+
+If you see an error message with "object not found" in it, this means that R cannot find 
+an object that you have referred to by name.  Common reasons for this include
+
+* Typos.  (Remember, capitalization matters.)
+* Not loading the package that contains the object.
 :::
 
 ### Viewing a dataset
@@ -513,7 +553,7 @@ The help output looks much nicer inside RStudio than it does inside a tutorial.
 :::
 
 
-## Reading in data from a file
+### Reading in data from a file
 
 For this class, you will often be asked to analyze data that is stored
 in files that are available online -- usually in csv format. It's simple
@@ -522,7 +562,8 @@ which is stored at <https://rpruim.github.io/data/MI_lead.csv>:
 
 ```{webr}
 #| label: read-lead-data
-MI_lead <- read.csv('https://rpruim.github.io/data/MI_lead.csv')
+MI_lead <- 
+  read.csv('https://rpruim.github.io/data/MI_lead.csv')
 ```
 
 ### Some common mistakes when reading files
@@ -580,20 +621,26 @@ glimpse(GDP)
 
 :::
 
-#### Your turn: quick review
+### More practice
 
-Now that we have loaded the MI lead data set,
-use one of the functions you learned earlier to find out how many
+:::{#exr-MI-lead-info}
+Use one of the functions you learned earlier to find out how many
 variables are in the MI_lead dataset, and what their names are.
 
 ```{webr}
 #| exercise: MI_lead-info
+
+MI_lead <- 
+  read.csv('https://rpruim.github.io/data/MI_lead.csv')
 
 ```
 
 :::{.hint exercise="MI_lead-info"}
 **Hint:** Try `glimpse()` or `names()`.
 :::
+
+:::
+
 
 ### What about local files?
 
@@ -625,12 +672,16 @@ We won't do an example using a local file in this tutorial because there isn't
 a way to work with local files within a tutorial environment, but you can
 practice it once you are working independently in RStudio.
 
-If you are working on [r.cs.calvin.edu](https://r.cs.calvin.edu), 
+:::{.callout-warning}
+### File access in RStudio
+
+If you are working on [r.stem.calvin.edu](https://r.stem.calvin.edu), 
 you will have to *upload* files to your cloud space on the server before you 
 can read them in (RStudio on the server cannot access files on your computer's
 hard drive).
+:::
 
-### Side note: named input arguments
+## Side note: named input arguments
 
 The input argument we provided to R is the URL (in quotes -- either
 single or double quotes are fine). The *name* of this argument is `file`, and
@@ -638,13 +689,15 @@ there are two ways we can provide the information to R --
 with the name:
 
 ```{webr}
-MI_lead <- read.csv(file = 'https://rpruim.github.io/data/MI_lead.csv')
+MI_lead <- 
+  read.csv(file = 'https://rpruim.github.io/data/MI_lead.csv')
 ```
 
 or without the name:
 
 ```{webr}
-MI_lead <- read.csv('https://rpruim.github.io/data/MI_lead.csv')
+MI_lead <- 
+  read.csv('https://rpruim.github.io/data/MI_lead.csv')
 ```
 
 If a function only has one argument, it doesn't really matter which way 
@@ -698,6 +751,7 @@ readable.
 
 #### Your turn
 
+:::{#exr-round-digits}
 Edit the code below so that it rounds to 1 decimal place.  Do this by 
 specifying an additional argument: `digits = 1`:
 
@@ -714,6 +768,7 @@ round(1234.567)
 round(1234.567, digits = 1)
 ```
 ::::
+:::
 :::
 
 <!-- It is good to get in the habit of providing names for the inputs so you don't  -->
@@ -824,10 +879,11 @@ Its new name should be `prop_elevated_lead_2005`.
 *See...you can already start to make sense of even some pretty
 complicated (and useful) code.*
 
-## Check out the data
+## Check out MI_lead
 
 OK, back to business -- simple functions and datasets in R.
 
+:::{#exr-look-at-MI_lead}
 It's your turn to practice now. Use one of the functions you have
 learned so far to extract some information about the `MI_lead` dataset.
 *Remember, `?` won't work on MI_lead because it's not a built-in R
@@ -837,6 +893,7 @@ dataset.*
 #| exercise: look-at-MI_lead
 
 ```
+:::
 
 ## Review
 

@@ -9,11 +9,14 @@ webr:
     - ggformula
   cell-options:
     autorun: false
+    fig-width: 6
+    fig-height: 3
 engine: "knitr"
 
 ---
 
 {{< include ../_extensions/r-wasm/live/_knitr.qmd >}}
+
 
 
 # Formula-driven graphics
@@ -22,7 +25,7 @@ There are several excellent graphics packages provided for R. The
 `ggformula` package currently builds on one of them, `ggplot2`, but
 provides a very different user interface for creating plots. The interface
 is based on formulas (much like the `lattice` interface) and the use of 
-the chaining operator (`|>`) to build more complex graphics from simpler 
+the pipe operator (`|>`) to build more complex graphics from simpler 
 components.
 
 
@@ -37,9 +40,34 @@ The `ggformula` graphics were designed with several user groups in mind:
   * those who prefer a formula interface, perhaps because it is 
   familiar from use with functions like `lm()` or from use of 
   the `mosaic` package for numerical summaries.
-  
 
-## The basic formula template
+Here's a little code to tell R we want to use `ggformula` and to set the theme 
+for our graphs.
+
+```{webr}
+#| label: setup
+#| autorun: true
+#| edit: false
+library(ggformula)
+theme_set(theme_bw(base_size = 16))
+```
+
+## Our first example
+
+Here is a simple example.
+
+First, we load the {ggformula} package.
+Then we create a plot.
+
+```{webr, simple-example, message = FALSE}
+#| autorun: true
+library(ggformula)
+gf_point(mpg ~ hp, data = mtcars)
+```
+
+Now let's break this down to see what's going on.
+
+### The basic formula template
 
 The basic template for creating a plot with `ggformula` is
 
@@ -71,28 +99,8 @@ The first form of the tempate is useful for simple plots or for multi-layered pl
 where different layers use different data.  The second form is useful for multi-layered
 plots or plots with many arguments.
 
-Here is a simple example.
 
-First, we load the {ggformula} package.
-
-```{webr, load-ggformula, message = FALSE}
-#| autorun: true
-#| edit: false
- 
-library(ggformula)
-```
-
-Then we create a plot (using both styles indicated above).
-
-```{webr, simple-example, message = FALSE}
-#| autorun: true
-library(ggformula)
-gf_point(mpg ~ hp, data = mtcars)
-mtcars |> gf_point(mpg ~ hp)
-```
-
-
-## Selecting the glyph type
+## Selecting the graphic type
 
 The "kind of graphic" is specified by the name of the graphics function. All of
 the `ggformula` data graphics functions have names starting with
@@ -107,6 +115,10 @@ Commonly used functions include
 - `gf_counts()` for bar-graph style depictions of counts.
 - `gf_bar()` for more general bar-graph style graphics
 
+
+:::{.callout-note}
+### For those who already know `ggplot2`
+
 The function names generally match a corresponding function name from `ggplot2`,
 although 
 
@@ -120,12 +132,13 @@ operation. (In `ggplot2` nomenclature, `gf_` functions create a frame and add a
 layer, all in one operation.)  This is what happens for the first
 `gf_` function in a chain.  For subsequent `gf_` functions, new layers are added,
 each one "on top of" the previous layers.
+:::
 
 ## Attributes
 
 Each of the marks in the plot is a *glyph*. Every glyph has graphical *attributes*
 (called aesthetics in `ggplot2`) that tell where and how to draw the glyph. 
-In the above plot, the obvious attributes are x- and y-position:  
+In the above plot, the obvious attributes are x- and y-position: 
 We've told R to put `mpg` along the y-axis and `hp` along the x-asis, as is clear
 from the plot.
 
@@ -168,7 +181,8 @@ The following plot, for instance,
  all glyphs in this layer.
  
 ```{webr, mapping-setting}
-gf_point(mpg ~ hp, color = ~ cyl, size = ~ carb, alpha = 0.50, data = mtcars) 
+gf_point(mpg ~ hp, data = mtcars,
+  color = ~ cyl, size = ~ carb, alpha = 0.50)
 ```
 
 ### On-the-fly calculations
@@ -183,7 +197,8 @@ using `|>`.
 
 ```{webr, on-the-fly}
 library(dplyr)
-gf_point(mpg ~ hp,  color = ~ factor(cyl), size = ~ carb, alpha = 0.75, data = mtcars)
+gf_point(mpg ~ hp,  data = mtcars,
+  color = ~ factor(cyl), size = ~ carb, alpha = 0.75)
 mtcars |> 
   mutate(cylinders = factor(cyl)) |> 
   gf_point(mpg ~ hp,  color = ~ cylinders, size = ~ carb, alpha = 0.75)
@@ -201,12 +216,17 @@ To illustrate, we'll use density plots, but the same ideas apply to
 ```{webr penguins, warning=FALSE}
 data(penguins, package = "palmerpenguins")   
 gf_density( ~ bill_length_mm, data = penguins)
-gf_density( ~ bill_length_mm,  fill = ~ species,  alpha = 0.5, data = penguins)
-# gf_dens() is similar, but there is no line at bottom/sides and the plot is not fillable
-gf_dens( ~ bill_length_mm, color = ~ species,  alpha = 0.7, data = penguins)
+gf_density( ~ bill_length_mm,  data = penguins,
+  fill = ~ species,  alpha = 0.5)
+
+# gf_dens() is similar, but there is no line at bottom/sides 
+# and the plot is not fillable
+gf_dens( ~ bill_length_mm, data = penguinsr,
+  color = ~ species,  alpha = 0.7) 
+
 # gf_dens2() is like gf_dens() but is fillable
-gf_dens2( ~ bill_length_mm, fill = ~ species, data = penguins,
-          color = "gray50", alpha = 0.4) 
+gf_dens2( ~ bill_length_mm, data = penguins,
+  fill = ~ species, color = "gray50", alpha = 0.4) 
 ```
 
 Several of the plotting functions include additional arguments that do not modify

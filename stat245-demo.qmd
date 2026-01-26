@@ -1,0 +1,21 @@
+---
+title: "Example for Stat 245"
+editor: source
+format: html
+---
+
+# Section 1
+
+Stat 245 is the **greatest** class *ever*!
+
+1. It's not at 8:00
+2. We learn alot.
+3. My friends are in the class.
+4. The subsitute is great.
+
+```{r}
+#| echo: false
+library(ggformula)
+gf_histogram( ~ rnorm(100))
+```
+

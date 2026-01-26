@@ -423,7 +423,19 @@ eyJhdHRyIjp7ImVjaG8iOmZhbHNlLCJlZGl0IjpmYWxzZSwiZXZhbCI6dHJ1ZSwiaW5jbHVkZSI6ZmFs
 <section id="your-mission" class="level2">
 <h2 class="anchored" data-anchor-id="your-mission">Your Mission</h2>
 <p>The purpose of this tutorial is to help you start to get familiar with the way R works, and some basic R commands.</p>
-<p><em><strong>Note:</strong> You won’t need to use the RStudio server for this tutorial. But it will help you use RStudio later.</em></p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+RStudio not required
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>You won’t need to use RStudio for this tutorial. But it will help you use RStudio later.</p>
+</div>
+</div>
 <!-- But you may have noticed that *you are not even using R.* At least, you -->
 <!-- haven't logged in to the RStudio server. -->
 <p>This tutorial environment lets you read some helpful information, then practice writing and running your own R code <em>right inside the tutorial!</em> Here’s hoping it provides a nice, gentle introduction in a controlled environment!</p>
@@ -495,7 +507,7 @@ eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWUsImV4ZXJjaXNlIjoiYXJpdGhtZXRpYy15b3Vy
 <li>the function <code>sqrt()</code> computes the square root of a number,</li>
 <li>the function <code>round()</code> rounds a number (by default, it rounds to the nearest integer).</li>
 </ul>
-<p>or read in data</p>
+<p>There are also functions that allow us to read in data, for example:</p>
 <ul>
 <li>the function <code>read.csv()</code> reads in data in comma separated value format (a very common data format that works in many types of software, including Excel.)</li>
 </ul>
@@ -506,7 +518,25 @@ eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWUsImV4ZXJjaXNlIjoiYXJpdGhtZXRpYy15b3Vy
 <p><strong><span class="boxed">function</span> ( <span class="boxed"> info1, info2, …</span> ) </strong></p>
 </h2>
 </center>
-<p>The <code>...</code> indicates that there may be some additional <em>arguments</em> (input information we could provide to R) we could add eventually. Some functions need only one input, but if a function takes more than one argument, they are separated by commas.</p>
+<p>The <code>...</code> indicates that there may be some additional <em>arguments</em> (input information we could provide to R) we could add eventually.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Parentheses and Commas
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li>A function name is always followed by parentheses: <code>()</code></li>
+<li>The information the function needs to know is placed inside the parentheses. We’ll call these <strong>inputs</strong> or <strong>arguments</strong>.</li>
+<li>Some functions need only one input, but if a function takes more than one argument, they are separated by commas.</li>
+<li>If a function doesn’t need any additional information, the parentheses are still required.</li>
+</ul>
+</div>
+</div>
 </section>
 <section id="using-simple-functions" class="level3">
 <h3 class="anchored" data-anchor-id="using-simple-functions">Using simple functions</h3>
@@ -525,7 +555,7 @@ eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWUsImV4ZXJjZXNlIjoiZmluZC1zcXJ0In0sImNv
 </div>
 <div class="hint webr-ojs-exercise exercise-hint d-none" data-exercise="find-sqrt">
 <div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -534,7 +564,7 @@ Hint
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div class="sourceCode" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sqrt</span>(information_R_needs)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
@@ -543,7 +573,7 @@ Hint
 </div>
 <div class="webr-ojs-exercise exercise-solution d-none" data-exercise="find-sqrt">
 <div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -552,7 +582,7 @@ Solution
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div id="callout-4" class="callout-4-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div class="sourceCode" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sqrt</span>(<span class="dv">64</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
@@ -574,7 +604,7 @@ eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWUsImV4ZXJjaXNlIjoicm91bmQtc3FydCJ9LCJj
 </div>
 <div class="hint webr-ojs-exercise exercise-hint d-none" data-exercise="round-sqrt">
 <div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -583,7 +613,7 @@ Hint 1
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div id="callout-5" class="callout-5-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div class="sourceCode" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sqrt</span>(information_R_needs)</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">function2</span>(information_R_needs)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -591,7 +621,7 @@ Hint 1
 </div>
 </div>
 <div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -600,14 +630,14 @@ Hint 2
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-4" class="callout-4-contents callout-collapse collapse">
+<div id="callout-6" class="callout-6-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p><code>{ sqrt(44) function2(information_R_needs)</code></p>
 </div>
 </div>
 </div>
 <div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -616,7 +646,7 @@ Hint 3
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-5" class="callout-5-contents callout-collapse collapse">
+<div id="callout-7" class="callout-7-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div class="cell">
 <div>
@@ -632,7 +662,7 @@ eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoic3FydCg0NClcbnJvdW5kKGlu
 </div>
 </div>
 <div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-8-contents" aria-controls="callout-8" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -641,7 +671,7 @@ Hint 4
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-6" class="callout-6-contents callout-collapse collapse">
+<div id="callout-8" class="callout-8-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div class="sourceCode" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sqrt</span>(<span class="dv">44</span>)</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="fu">round</span>(<span class="fu">sqrt</span>(<span class="dv">44</span>)) <span class="co"># yes, you can nest functions. sometimes (not always) a good idea.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -665,7 +695,7 @@ eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoic3FydCg0NClcbnJvdW5kKDYu
 </div>
 </div>
 <p>But to do that, you probably had to first find the root, make a note of the result, and then provide that number to the <code>round</code> function. What a pain!</p>
-<p>A better alternative, if you are computing a value that you will want to use later on, is to store it as a named variable in R. In the previous example, you might want to store the square root of 44 in a variable called my_root; then you can provide my_root to the <code>round</code> function without checking the result of the <code>sqrt</code> calculation first:</p>
+<p>A better alternative, if you are computing a value that you will want to use later on, is to store it as a named variable in R. In the previous example, you might want to store the square root of 44 in a variable called <code>my_root</code>; then you can provide my_root to the <code>round</code> function without checking the result of the <code>sqrt</code> calculation first:</p>
 <div class="cell">
 <div>
 <div id="webr-8" class="exercise-cell">
@@ -691,7 +721,7 @@ Tip
 </div>
 </div>
 <div id="exr-name-a-variable" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 4</strong></span> Try editing the code to change the name of the variable from my_root to something else, then run your new code:</p>
+<p><span class="theorem-title"><strong>Exercise 4</strong></span> Edit the code to change the name of the variable from <code>my_root</code> to something else (your choice), then run your new code:</p>
 <div class="cell" data-exercise="true">
 <div>
 <div id="webr-9" class="exercise-cell">
@@ -701,6 +731,19 @@ Tip
 eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoibXlfcm9vdCA8LSBzcXJ0KDQ0KVxucm91bmQobXlfcm9vdCkifQ==
 </script>
 </div>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Capitalization matters
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>In R, capitalization always matters. <code>my_root</code> and <code>My_Root</code> are two different variables.</p>
 </div>
 </div>
 </section>
@@ -749,28 +792,40 @@ eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWUsImxhYmVsIjoiY2F0LXZhciJ9LCJjb2RlIjoi
 </script>
 </div>
 </div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Quotation marks
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>You can use either single (<code>'</code>) or double (<code>"</code>) quotation marks in R. You just need to use the same type of quotation mark and the beginning and at the end.</p>
+</div>
+</div>
 </section>
-<section id="what-if-i-have-a-lot-more-data-to-store" class="level3">
-<h3 class="anchored" data-anchor-id="what-if-i-have-a-lot-more-data-to-store">What if I have a LOT more data to store?</h3>
-<p><code>c</code> works great for creating small lists of just a few values, but it is not a good way to enter or store large data sets.</p>
-<p>In R, the most common way to store data is in an object called a <strong>data frame</strong>. The next sections will get you started using data frames in R.</p>
 </section>
-</section>
-<section id="how-should-data-tables-be-organized-for-statistical-analysis" class="level2">
-<h2 class="anchored" data-anchor-id="how-should-data-tables-be-organized-for-statistical-analysis">How should data tables be organized for statistical analysis?</h2>
-<p><em>This section is about <strong>rectangular</strong> data – data that can be stored in a rectangular grid of rows and columns, like in an Excel spreadsheet. This is by the far the most common sort of data used in business and in statistical analysis, but it is not the only kind of data.</em></p>
+<section id="data-sets-in-r" class="level2">
+<h2 class="anchored" data-anchor-id="data-sets-in-r">Data sets in R</h2>
+<p>In R, the most common way to store data is in an object called a <strong>data frame</strong>. This section will get you started using data frames in R.</p>
+<section id="how-should-data-tables-be-organized-for-statistical-analysis" class="level3">
+<h3 class="anchored" data-anchor-id="how-should-data-tables-be-organized-for-statistical-analysis">How should data tables be organized for statistical analysis?</h3>
+<p>Data frames are used to store <strong>rectangular</strong> data – data that can be stored in a rectangular grid of rows and columns, like in an Excel spreadsheet. This is by the far the most common sort of data used in business and in statistical analysis, but it is not the only kind of data.</p>
 <p>A comprehensive guide to good practices for formatting data tables is available at <a href="http://kbroman.org/dataorg/" class="uri">http://kbroman.org/dataorg/</a>.</p>
 <p>A few key points to keep in mind:</p>
 <ul>
-<li>Organize the table so there is <strong>one column for every variable</strong> (piece of information being recorded), and <strong>one row for every observation</strong> (person/place/thing for which data were collected).</li>
-<li>This data table is for the computer to read, not for humans! So eliminate formatting designed to make it “pretty” (colors, shading, fonts…)</li>
-<li>Use short, simple variable names that do not contain any spaces or special characters (like ?, $, %, etc.) [Note: Underscores (_) and hyphens (-) are OK and even encouraged to make names more readable.]</li>
-<li>Use informative variable values rather than arbitrary numeric codes. For example, a variable Color should have values ‘red’, ‘white’, and ‘blue’ rather than 1, 2, and 3.</li>
+<li><p>Organize the table so there is <strong>one column for every variable</strong> (piece of information being recorded), and <strong>one row for every observation</strong> (person/place/thing for which data were collected).</p></li>
+<li><p>This data table is for the computer to read, not for humans! So eliminate formatting designed to make it “pretty” (colors, shading, fonts…).</p></li>
+<li><p>Use short, simple variable names that do not contain any spaces or special characters (like ?, $, %, -, etc.)</p>
+<p>Note: Underscores (_) are OK and even encouraged to make names more readable.</p></li>
+<li><p>Use informative variable values rather than arbitrary numeric codes. For example, a variable Color should have values ‘red’, ‘white’, and ‘blue’ rather than 1, 2, and 3.</p></li>
 </ul>
-<p>You will have chances to practice making your own data files and importing them into R outside this tutorial.</p>
+<p>You will have chances to practice making your own data files and importing them into R outside this tutorial. In this tutorial, we will focus on using data that have already been prepared for you.</p>
 </section>
-<section id="using-built-in-datasets-in-r" class="level2">
-<h2 class="anchored" data-anchor-id="using-built-in-datasets-in-r">Using built-in datasets in R</h2>
+<section id="using-built-in-datasets-in-r" class="level3">
+<h3 class="anchored" data-anchor-id="using-built-in-datasets-in-r">Using built-in datasets in R</h3>
 <p>R has a number of built-in datasets that are accessible to you as soon as you start RStudio.</p>
 <p>In addition to the datasets that are included with base R, there are add-on <em>packages</em> for R that contain additional software tools and sometimes datasets.</p>
 <p>To use datasets contained in a package, you have to load the package by running the command:</p>
@@ -781,6 +836,7 @@ eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWUsImxhYmVsIjoiY2F0LXZhciJ9LCJjb2RlIjoi
 <div class="cell">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">require</span>(packagename)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+</section>
 <section id="example-of-loading-a-package" class="level3">
 <h3 class="anchored" data-anchor-id="example-of-loading-a-package">Example of loading a package</h3>
 <p>For example, we will practice looking at a dataset from the package <code>mosaic</code>.</p>
@@ -799,6 +855,23 @@ eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWUsImV4ZXJjaXNlIjoicmVxdWlyZS1wYWNrYWdl
 </div>
 <div class="hint webr-ojs-exercise exercise-hint d-none" data-exercise="require-package">
 <p><strong>Hint:</strong> You want to load the <code>mosaic</code> package.</p>
+</div>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Object not found errors
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>If you see an error message with “object not found” in it, this means that R cannot find an object that you have referred to by name. Common reasons for this include</p>
+<ul>
+<li>Typos. (Remember, capitalization matters.)</li>
+<li>Not loading the package that contains the object.</li>
+</ul>
+</div>
 </div>
 </section>
 <section id="viewing-a-dataset" class="level3">
@@ -888,9 +961,8 @@ Note
 </div>
 </div>
 </section>
-</section>
-<section id="reading-in-data-from-a-file" class="level2">
-<h2 class="anchored" data-anchor-id="reading-in-data-from-a-file">Reading in data from a file</h2>
+<section id="reading-in-data-from-a-file" class="level3">
+<h3 class="anchored" data-anchor-id="reading-in-data-from-a-file">Reading in data from a file</h3>
 <p>For this class, you will often be asked to analyze data that is stored in files that are available online – usually in csv format. It’s simple to read them into R. For example, we can read in the file MI_lead.csv, which is stored at <a href="https://rpruim.github.io/data/MI_lead.csv" class="uri">https://rpruim.github.io/data/MI_lead.csv</a>:</p>
 <div class="cell">
 <div>
@@ -898,10 +970,11 @@ Note
 
 </div>
 <script type="webr-17-contents">
-eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWUsImxhYmVsIjoicmVhZC1sZWFkLWRhdGEifSwiY29kZSI6Ik1JX2xlYWQgPC0gcmVhZC5jc3YoJ2h0dHBzOi8vcnBydWltLmdpdGh1Yi5pby9kYXRhL01JX2xlYWQuY3N2JykifQ==
+eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWUsImxhYmVsIjoicmVhZC1sZWFkLWRhdGEifSwiY29kZSI6Ik1JX2xlYWQgPC0gXG4gIHJlYWQuY3N2KCdodHRwczovL3JwcnVpbS5naXRodWIuaW8vZGF0YS9NSV9sZWFkLmNzdicpIn0=
 </script>
 </div>
 </div>
+</section>
 <section id="some-common-mistakes-when-reading-files" class="level3">
 <h3 class="anchored" data-anchor-id="some-common-mistakes-when-reading-files">Some common mistakes when reading files</h3>
 <p>The code below contains a couple of the <strong>most common mistakes</strong> students make when they try to read in a data file. See if you can find and correct them.</p>
@@ -920,7 +993,7 @@ eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWUsImV4YW1wbGUiOiJnZHAtbWlzdGFrZXMifSwi
 </div>
 <div class="hint webr-ojs-exercise exercise-hint d-none" data-exercise="gdp-mistakes">
 <div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-9-contents" aria-controls="callout-9" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-14-contents" aria-controls="callout-14" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -929,7 +1002,7 @@ Hints
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-9" class="callout-9-contents callout-collapse collapse">
+<div id="callout-14" class="callout-14-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <ol type="1">
 <li><p>Be sure to type the file name or url correctly.</p></li>
@@ -943,7 +1016,7 @@ Hints
 </div>
 <div class="webr-ojs-exercise exercise-solution d-none" data-exercise="gdp-mistakes">
 <div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-10-contents" aria-controls="callout-10" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-15-contents" aria-controls="callout-15" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -952,7 +1025,7 @@ Solution
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-10" class="callout-10-contents callout-collapse collapse">
+<div id="callout-15" class="callout-15-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div class="cell">
 <div>
@@ -969,23 +1042,25 @@ eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoiIyBsb2FkIGFuZCBzYXZlIHRo
 </div>
 </div>
 </div>
-<section id="your-turn-quick-review" class="level4">
-<h4 class="anchored" data-anchor-id="your-turn-quick-review">Your turn: quick review</h4>
-<p>Now that we have loaded the MI lead data set, use one of the functions you learned earlier to find out how many variables are in the MI_lead dataset, and what their names are.</p>
+</section>
+<section id="more-practice" class="level3">
+<h3 class="anchored" data-anchor-id="more-practice">More practice</h3>
+<div id="exr-MI-lead-info" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 10</strong></span> Use one of the functions you learned earlier to find out how many variables are in the MI_lead dataset, and what their names are.</p>
 <div class="cell" data-exercise="MI_lead-info">
 <div>
 <div id="webr-20" class="exercise-cell">
 
 </div>
 <script type="webr-20-contents">
-eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWUsImV4ZXJjaXNlIjoiTUlfbGVhZC1pbmZvIn0sImNvZGUiOiIifQ==
+eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWUsImV4ZXJjaXNlIjoiTUlfbGVhZC1pbmZvIn0sImNvZGUiOiJcbk1JX2xlYWQgPC0gXG4gIHJlYWQuY3N2KCdodHRwczovL3JwcnVpbS5naXRodWIuaW8vZGF0YS9NSV9sZWFkLmNzdicpIn0=
 </script>
 </div>
 </div>
 <div class="hint webr-ojs-exercise exercise-hint d-none" data-exercise="MI_lead-info">
 <p><strong>Hint:</strong> Try <code>glimpse()</code> or <code>names()</code>.</p>
 </div>
-</section>
+</div>
 </section>
 <section id="what-about-local-files" class="level3">
 <h3 class="anchored" data-anchor-id="what-about-local-files">What about local files?</h3>
@@ -1012,10 +1087,23 @@ Caution
 </div>
 </div>
 <p>We won’t do an example using a local file in this tutorial because there isn’t a way to work with local files within a tutorial environment, but you can practice it once you are working independently in RStudio.</p>
-<p>If you are working on <a href="https://r.cs.calvin.edu">r.cs.calvin.edu</a>, you will have to <em>upload</em> files to your cloud space on the server before you can read them in (RStudio on the server cannot access files on your computer’s hard drive).</p>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+File access in RStudio
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>If you are working on <a href="https://r.stem.calvin.edu">r.stem.calvin.edu</a>, you will have to <em>upload</em> files to your cloud space on the server before you can read them in (RStudio on the server cannot access files on your computer’s hard drive).</p>
+</div>
+</div>
 </section>
-<section id="side-note-named-input-arguments" class="level3">
-<h3 class="anchored" data-anchor-id="side-note-named-input-arguments">Side note: named input arguments</h3>
+</section>
+<section id="side-note-named-input-arguments" class="level2">
+<h2 class="anchored" data-anchor-id="side-note-named-input-arguments">Side note: named input arguments</h2>
 <p>The input argument we provided to R is the URL (in quotes – either single or double quotes are fine). The <em>name</em> of this argument is <code>file</code>, and there are two ways we can provide the information to R – with the name:</p>
 <div class="cell">
 <div>
@@ -1023,7 +1111,7 @@ Caution
 
 </div>
 <script type="webr-21-contents">
-eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoiTUlfbGVhZCA8LSByZWFkLmNzdihmaWxlID0gJ2h0dHBzOi8vcnBydWltLmdpdGh1Yi5pby9kYXRhL01JX2xlYWQuY3N2JykifQ==
+eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoiTUlfbGVhZCA8LSBcbiAgcmVhZC5jc3YoZmlsZSA9ICdodHRwczovL3JwcnVpbS5naXRodWIuaW8vZGF0YS9NSV9sZWFkLmNzdicpIn0=
 </script>
 </div>
 </div>
@@ -1034,7 +1122,7 @@ eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoiTUlfbGVhZCA8LSByZWFkLmNz
 
 </div>
 <script type="webr-22-contents">
-eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoiTUlfbGVhZCA8LSByZWFkLmNzdignaHR0cHM6Ly9ycHJ1aW0uZ2l0aHViLmlvL2RhdGEvTUlfbGVhZC5jc3YnKSJ9
+eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoiTUlfbGVhZCA8LSBcbiAgcmVhZC5jc3YoJ2h0dHBzOi8vcnBydWltLmdpdGh1Yi5pby9kYXRhL01JX2xlYWQuY3N2JykifQ==
 </script>
 </div>
 </div>
@@ -1086,7 +1174,8 @@ Tip
 </div>
 <section id="your-turn" class="level4">
 <h4 class="anchored" data-anchor-id="your-turn">Your turn</h4>
-<p>Edit the code below so that it rounds to 1 decimal place. Do this by specifying an additional argument: <code>digits = 1</code>:</p>
+<div id="exr-round-digits" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 11</strong></span> Edit the code below so that it rounds to 1 decimal place. Do this by specifying an additional argument: <code>digits = 1</code>:</p>
 <div class="cell" data-exercise="round-arguments">
 <div>
 <div id="webr-24" class="exercise-cell">
@@ -1099,7 +1188,7 @@ eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWUsImV4ZXJjaXNlIjoicm91bmQtYXJndW1lbnRz
 </div>
 <div class="webr-ojs-exercise exercise-solution d-none" data-exercise="round-arguments">
 <div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-14-contents" aria-controls="callout-14" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-20-contents" aria-controls="callout-20" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1108,9 +1197,10 @@ Solution
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-14" class="callout-14-contents callout-collapse collapse">
+<div id="callout-20" class="callout-20-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div class="sourceCode" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">round</span>(<span class="fl">1234.567</span>, <span class="at">digits =</span> <span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 </div>
 </div>
 </div>
@@ -1120,7 +1210,6 @@ Solution
 <!-- provide names, then the order in which you list the inputs doesn't -->
 <!-- matter; without names, **the order matters** and you have to use ? to -->
 <!-- figure out what order R expects! -->
-</section>
 </section>
 </section>
 <section id="some-bonus-topics" class="level2">
@@ -1164,7 +1253,7 @@ eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWUsImV4ZXJjaXNlIjoicGlwZSJ9LCJjb2RlIjoi
 </div>
 <div class="webr-ojs-exercise exercise-solution d-none" data-exercise="pipe">
 <div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-15-contents" aria-controls="callout-15" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-21-contents" aria-controls="callout-21" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1173,7 +1262,7 @@ Solution
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-15" class="callout-15-contents callout-collapse collapse">
+<div id="callout-21" class="callout-21-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div class="sourceCode" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>MI_lead <span class="sc">|&gt;</span> <span class="fu">glimpse</span>()</span>
 <span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a><span class="dv">80</span> <span class="sc">|&gt;</span> <span class="fu">sqrt</span>() <span class="sc">|&gt;</span> <span class="fu">round</span>(<span class="at">digits =</span> <span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -1221,10 +1310,11 @@ eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWUsImxhYmVsIjoicmVuYW1lLU1JX2xlYWQifSwi
 <p><em>See…you can already start to make sense of even some pretty complicated (and useful) code.</em></p>
 </section>
 </section>
-<section id="check-out-the-data" class="level2">
-<h2 class="anchored" data-anchor-id="check-out-the-data">Check out the data</h2>
+<section id="check-out-mi_lead" class="level2">
+<h2 class="anchored" data-anchor-id="check-out-mi_lead">Check out MI_lead</h2>
 <p>OK, back to business – simple functions and datasets in R.</p>
-<p>It’s your turn to practice now. Use one of the functions you have learned so far to extract some information about the <code>MI_lead</code> dataset. <em>Remember, <code>?</code> won’t work on MI_lead because it’s not a built-in R dataset.</em></p>
+<div id="exr-look-at-MI_lead" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 12</strong></span> It’s your turn to practice now. Use one of the functions you have learned so far to extract some information about the <code>MI_lead</code> dataset. <em>Remember, <code>?</code> won’t work on MI_lead because it’s not a built-in R dataset.</em></p>
 <div class="cell" data-exercise="look-at-MI_lead">
 <div>
 <div id="webr-27" class="exercise-cell">
@@ -1233,6 +1323,7 @@ eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWUsImxhYmVsIjoicmVuYW1lLU1JX2xlYWQifSwi
 <script type="webr-27-contents">
 eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWUsImV4ZXJjaXNlIjoibG9vay1hdC1NSV9sZWFkIn0sImNvZGUiOiIifQ==
 </script>
+</div>
 </div>
 </div>
 </section>

@@ -248,6 +248,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../quarto/quarto-intro.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Intro to Quarto</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../quarto/math-in-markdown.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Mathematical notation</span></a>
   </div>
@@ -390,15 +396,41 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <section id="formula-driven-graphics" class="level1">
 <h1>Formula-driven graphics</h1>
-<p>There are several excellent graphics packages provided for R. The <code>ggformula</code> package currently builds on one of them, <code>ggplot2</code>, but provides a very different user interface for creating plots. The interface is based on formulas (much like the <code>lattice</code> interface) and the use of the chaining operator (<code>|&gt;</code>) to build more complex graphics from simpler components.</p>
+<p>There are several excellent graphics packages provided for R. The <code>ggformula</code> package currently builds on one of them, <code>ggplot2</code>, but provides a very different user interface for creating plots. The interface is based on formulas (much like the <code>lattice</code> interface) and the use of the pipe operator (<code>|&gt;</code>) to build more complex graphics from simpler components.</p>
 <p>The <code>ggformula</code> graphics were designed with several user groups in mind:</p>
 <ul>
 <li><p>beginners who want to get started quickly and may find the syntax of <code>ggplot2()</code> a bit offputting,</p></li>
 <li><p>those familiar with <code>lattice</code> graphics, but wanting to be able to easily create multilayered plots,</p></li>
 <li><p>those who prefer a formula interface, perhaps because it is familiar from use with functions like <code>lm()</code> or from use of the <code>mosaic</code> package for numerical summaries.</p></li>
 </ul>
-<section id="the-basic-formula-template" class="level2">
-<h2 class="anchored" data-anchor-id="the-basic-formula-template">The basic formula template</h2>
+<p>Here’s a little code to tell R we want to use <code>ggformula</code> and to set the theme for our graphs.</p>
+<div class="cell" data-autorun="true" data-edit="false">
+<div>
+<div id="webr-1" class="exercise-cell">
+
+</div>
+<script type="webr-1-contents">
+eyJhdHRyIjp7ImF1dG9ydW4iOnRydWUsImVkaXQiOmZhbHNlLCJldmFsIjp0cnVlLCJmaWctaGVpZ2h0IjoiMyIsImZpZy13aWR0aCI6IjYiLCJsYWJlbCI6InNldHVwIn0sImNvZGUiOiJsaWJyYXJ5KGdnZm9ybXVsYSlcbnRoZW1lX3NldCh0aGVtZV9idyhiYXNlX3NpemUgPSAxNikpIn0=
+</script>
+</div>
+</div>
+<section id="our-first-example" class="level2">
+<h2 class="anchored" data-anchor-id="our-first-example">Our first example</h2>
+<p>Here is a simple example.</p>
+<p>First, we load the {ggformula} package. Then we create a plot.</p>
+<div class="cell" data-autorun="true">
+<div>
+<div id="webr-2" class="exercise-cell">
+
+</div>
+<script type="webr-2-contents">
+eyJhdHRyIjp7ImF1dG9ydW4iOnRydWUsImVkaXQiOnRydWUsImV2YWwiOnRydWUsImZpZy1oZWlnaHQiOiIzIiwiZmlnLXdpZHRoIjoiNiJ9LCJjb2RlIjoibGlicmFyeShnZ2Zvcm11bGEpXG5nZl9wb2ludChtcGcgfiBocCwgZGF0YSA9IG10Y2FycykifQ==
+</script>
+</div>
+</div>
+<p>Now let’s break this down to see what’s going on.</p>
+<section id="the-basic-formula-template" class="level3">
+<h3 class="anchored" data-anchor-id="the-basic-formula-template">The basic formula template</h3>
 <p>The basic template for creating a plot with <code>ggformula</code> is</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">gf_plottype</span>(formula, <span class="at">data =</span> mydata)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -415,32 +447,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ul>
 <p>For example, in a bivariate plot, <code>formula</code> will take the form <code>y ~ x</code>, where <code>y</code> is the name of a variable to be plotted on the y-axis and <code>x</code> is the name of a variable to be plotted on the x-axis. (It is also possible to use expressions that can be evaluated using variables in the data frame as well.)</p>
 <p>The first form of the tempate is useful for simple plots or for multi-layered plots where different layers use different data. The second form is useful for multi-layered plots or plots with many arguments.</p>
-<p>Here is a simple example.</p>
-<p>First, we load the {ggformula} package.</p>
-<div class="cell" data-autorun="true" data-edit="false">
-<div>
-<div id="webr-1" class="exercise-cell">
-
-</div>
-<script type="webr-1-contents">
-eyJhdHRyIjp7ImF1dG9ydW4iOnRydWUsImVkaXQiOmZhbHNlLCJldmFsIjp0cnVlfSwiY29kZSI6IlxubGlicmFyeShnZ2Zvcm11bGEpIn0=
-</script>
-</div>
-</div>
-<p>Then we create a plot (using both styles indicated above).</p>
-<div class="cell" data-autorun="true">
-<div>
-<div id="webr-2" class="exercise-cell">
-
-</div>
-<script type="webr-2-contents">
-eyJhdHRyIjp7ImF1dG9ydW4iOnRydWUsImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoibGlicmFyeShnZ2Zvcm11bGEpXG5nZl9wb2ludChtcGcgfiBocCwgZGF0YSA9IG10Y2Fycylcbm10Y2FycyB8PiBnZl9wb2ludChtcGcgfiBocCkifQ==
-</script>
-</div>
-</div>
 </section>
-<section id="selecting-the-glyph-type" class="level2">
-<h2 class="anchored" data-anchor-id="selecting-the-glyph-type">Selecting the glyph type</h2>
+</section>
+<section id="selecting-the-graphic-type" class="level2">
+<h2 class="anchored" data-anchor-id="selecting-the-graphic-type">Selecting the graphic type</h2>
 <p>The “kind of graphic” is specified by the name of the graphics function. All of the <code>ggformula</code> data graphics functions have names starting with <code>gf_</code>, which is intended to remind the user that they are formula-based interfaces to <code>ggplot2</code>: <code>g</code> for <code>ggplot2</code> and <code>f</code> for “formula.” Commonly used functions include</p>
 <ul>
 <li><code>gf_point()</code> for scatter plots</li>
@@ -450,6 +460,16 @@ eyJhdHRyIjp7ImF1dG9ydW4iOnRydWUsImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoibGli
 <li><code>gf_counts()</code> for bar-graph style depictions of counts.</li>
 <li><code>gf_bar()</code> for more general bar-graph style graphics</li>
 </ul>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+For those who already know <code>ggplot2</code>
+</div>
+</div>
+<div class="callout-body-container callout-body">
 <p>The function names generally match a corresponding function name from <code>ggplot2</code>, although</p>
 <ul>
 <li><code>gf_counts()</code> is a simplified special case of <code>geom_bar()</code>,</li>
@@ -457,11 +477,12 @@ eyJhdHRyIjp7ImF1dG9ydW4iOnRydWUsImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoibGli
 <li><code>gf_dhistogram()</code> produces a density histogram rather than a count histogram.</li>
 </ul>
 <p>Each of the <code>gf_</code> functions can create the coordinate axes and fill it in one operation. (In <code>ggplot2</code> nomenclature, <code>gf_</code> functions create a frame and add a layer, all in one operation.) This is what happens for the first <code>gf_</code> function in a chain. For subsequent <code>gf_</code> functions, new layers are added, each one “on top of” the previous layers.</p>
+</div>
+</div>
 </section>
 <section id="attributes" class="level2">
 <h2 class="anchored" data-anchor-id="attributes">Attributes</h2>
-<p>Each of the marks in the plot is a <em>glyph</em>. Every glyph has graphical <em>attributes</em> (called aesthetics in <code>ggplot2</code>) that tell where and how to draw the glyph. In the above plot, the obvious attributes are x- and y-position:<br>
-We’ve told R to put <code>mpg</code> along the y-axis and <code>hp</code> along the x-asis, as is clear from the plot.</p>
+<p>Each of the marks in the plot is a <em>glyph</em>. Every glyph has graphical <em>attributes</em> (called aesthetics in <code>ggplot2</code>) that tell where and how to draw the glyph. In the above plot, the obvious attributes are x- and y-position: We’ve told R to put <code>mpg</code> along the y-axis and <code>hp</code> along the x-asis, as is clear from the plot.</p>
 <p>But each point also has other attributes, including color, shape, size, stroke, fill, and alpha (transparency). We didn’t specify those in our example, so <code>gf_point()</code> uses some default values for those – in this case smallish black filled-in circles.</p>
 <section id="specifying-attributes" class="level3">
 <h3 class="anchored" data-anchor-id="specifying-attributes">Specifying attributes</h3>
@@ -483,7 +504,7 @@ We’ve told R to put <code>mpg</code> along the y-axis and <code>hp</code> alon
 
 </div>
 <script type="webr-3-contents">
-eyJhdHRyIjp7ImF1dG9ydW4iOmZhbHNlLCJlZGl0Ijp0cnVlLCJldmFsIjp0cnVlfSwiY29kZSI6ImdmX3BvaW50KG1wZyB+IGhwLCBjb2xvciA9IH4gY3lsLCBzaXplID0gfiBjYXJiLCBhbHBoYSA9IDAuNTAsIGRhdGEgPSBtdGNhcnMpICJ9
+eyJhdHRyIjp7ImF1dG9ydW4iOmZhbHNlLCJlZGl0Ijp0cnVlLCJldmFsIjp0cnVlLCJmaWctaGVpZ2h0IjoiMyIsImZpZy13aWR0aCI6IjYifSwiY29kZSI6ImdmX3BvaW50KG1wZyB+IGhwLCBkYXRhID0gbXRjYXJzLFxuICBjb2xvciA9IH4gY3lsLCBzaXplID0gfiBjYXJiLCBhbHBoYSA9IDAuNTApIn0=
 </script>
 </div>
 </div>
@@ -497,7 +518,7 @@ eyJhdHRyIjp7ImF1dG9ydW4iOmZhbHNlLCJlZGl0Ijp0cnVlLCJldmFsIjp0cnVlfSwiY29kZSI6Imdm
 
 </div>
 <script type="webr-4-contents">
-eyJhdHRyIjp7ImF1dG9ydW4iOmZhbHNlLCJlZGl0Ijp0cnVlLCJldmFsIjp0cnVlfSwiY29kZSI6ImxpYnJhcnkoZHBseXIpXG5nZl9wb2ludChtcGcgfiBocCwgIGNvbG9yID0gfiBmYWN0b3IoY3lsKSwgc2l6ZSA9IH4gY2FyYiwgYWxwaGEgPSAwLjc1LCBkYXRhID0gbXRjYXJzKVxubXRjYXJzIHw+IFxuICBtdXRhdGUoY3lsaW5kZXJzID0gZmFjdG9yKGN5bCkpIHw+IFxuICBnZl9wb2ludChtcGcgfiBocCwgIGNvbG9yID0gfiBjeWxpbmRlcnMsIHNpemUgPSB+IGNhcmIsIGFscGhhID0gMC43NSkifQ==
+eyJhdHRyIjp7ImF1dG9ydW4iOmZhbHNlLCJlZGl0Ijp0cnVlLCJldmFsIjp0cnVlLCJmaWctaGVpZ2h0IjoiMyIsImZpZy13aWR0aCI6IjYifSwiY29kZSI6ImxpYnJhcnkoZHBseXIpXG5nZl9wb2ludChtcGcgfiBocCwgIGRhdGEgPSBtdGNhcnMsXG4gIGNvbG9yID0gfiBmYWN0b3IoY3lsKSwgc2l6ZSA9IH4gY2FyYiwgYWxwaGEgPSAwLjc1KVxubXRjYXJzIHw+IFxuICBtdXRhdGUoY3lsaW5kZXJzID0gZmFjdG9yKGN5bCkpIHw+IFxuICBnZl9wb2ludChtcGcgfiBocCwgIGNvbG9yID0gfiBjeWxpbmRlcnMsIHNpemUgPSB+IGNhcmIsIGFscGhhID0gMC43NSkifQ==
 </script>
 </div>
 </div>
@@ -512,7 +533,7 @@ eyJhdHRyIjp7ImF1dG9ydW4iOmZhbHNlLCJlZGl0Ijp0cnVlLCJldmFsIjp0cnVlfSwiY29kZSI6Imxp
 
 </div>
 <script type="webr-5-contents">
-eyJhdHRyIjp7ImF1dG9ydW4iOmZhbHNlLCJlZGl0Ijp0cnVlLCJldmFsIjp0cnVlfSwiY29kZSI6ImRhdGEocGVuZ3VpbnMsIHBhY2thZ2UgPSBcInBhbG1lcnBlbmd1aW5zXCIpICAgXG5nZl9kZW5zaXR5KCB+IGJpbGxfbGVuZ3RoX21tLCBkYXRhID0gcGVuZ3VpbnMpXG5nZl9kZW5zaXR5KCB+IGJpbGxfbGVuZ3RoX21tLCAgZmlsbCA9IH4gc3BlY2llcywgIGFscGhhID0gMC41LCBkYXRhID0gcGVuZ3VpbnMpXG4jIGdmX2RlbnMoKSBpcyBzaW1pbGFyLCBidXQgdGhlcmUgaXMgbm8gbGluZSBhdCBib3R0b20vc2lkZXMgYW5kIHRoZSBwbG90IGlzIG5vdCBmaWxsYWJsZVxuZ2ZfZGVucyggfiBiaWxsX2xlbmd0aF9tbSwgY29sb3IgPSB+IHNwZWNpZXMsICBhbHBoYSA9IDAuNywgZGF0YSA9IHBlbmd1aW5zKVxuIyBnZl9kZW5zMigpIGlzIGxpa2UgZ2ZfZGVucygpIGJ1dCBpcyBmaWxsYWJsZVxuZ2ZfZGVuczIoIH4gYmlsbF9sZW5ndGhfbW0sIGZpbGwgPSB+IHNwZWNpZXMsIGRhdGEgPSBwZW5ndWlucyxcbiAgICAgICAgICBjb2xvciA9IFwiZ3JheTUwXCIsIGFscGhhID0gMC40KSAifQ==
+eyJhdHRyIjp7ImF1dG9ydW4iOmZhbHNlLCJlZGl0Ijp0cnVlLCJldmFsIjp0cnVlLCJmaWctaGVpZ2h0IjoiMyIsImZpZy13aWR0aCI6IjYifSwiY29kZSI6ImRhdGEocGVuZ3VpbnMsIHBhY2thZ2UgPSBcInBhbG1lcnBlbmd1aW5zXCIpICAgXG5nZl9kZW5zaXR5KCB+IGJpbGxfbGVuZ3RoX21tLCBkYXRhID0gcGVuZ3VpbnMpXG5nZl9kZW5zaXR5KCB+IGJpbGxfbGVuZ3RoX21tLCAgZGF0YSA9IHBlbmd1aW5zLFxuICBmaWxsID0gfiBzcGVjaWVzLCAgYWxwaGEgPSAwLjUpXG5cbiMgZ2ZfZGVucygpIGlzIHNpbWlsYXIsIGJ1dCB0aGVyZSBpcyBubyBsaW5lIGF0IGJvdHRvbS9zaWRlcyBcbiMgYW5kIHRoZSBwbG90IGlzIG5vdCBmaWxsYWJsZVxuZ2ZfZGVucyggfiBiaWxsX2xlbmd0aF9tbSwgZGF0YSA9IHBlbmd1aW5zcixcbiAgY29sb3IgPSB+IHNwZWNpZXMsICBhbHBoYSA9IDAuNykgXG5cbiMgZ2ZfZGVuczIoKSBpcyBsaWtlIGdmX2RlbnMoKSBidXQgaXMgZmlsbGFibGVcbmdmX2RlbnMyKCB+IGJpbGxfbGVuZ3RoX21tLCBkYXRhID0gcGVuZ3VpbnMsXG4gIGZpbGwgPSB+IHNwZWNpZXMsIGNvbG9yID0gXCJncmF5NTBcIiwgYWxwaGEgPSAwLjQpICJ9
 </script>
 </div>
 </div>
@@ -523,7 +544,7 @@ eyJhdHRyIjp7ImF1dG9ydW4iOmZhbHNlLCJlZGl0Ijp0cnVlLCJldmFsIjp0cnVlfSwiY29kZSI6ImRh
 
 </div>
 <script type="webr-6-contents">
-eyJhdHRyIjp7ImF1dG9ydW4iOmZhbHNlLCJlZGl0Ijp0cnVlLCJldmFsIjp0cnVlfSwiY29kZSI6IiMgbGVzcyBzbW9vdGhpbmdcbnBlbmd1aW5zIHw+IGdmX2RlbnMoIH4gYmlsbF9sZW5ndGhfbW0sIGNvbG9yID0gfiBzcGVjaWVzLCBhbHBoYSA9IDAuNywgYWRqdXN0ID0gMC4yNSkgIFxuIyBtb3JlIHNtb290aGluZ1xucGVuZ3VpbnMgfD4gZ2ZfZGVucyggfiBiaWxsX2xlbmd0aF9tbSwgY29sb3IgPSB+IHNwZWNpZXMsIGFscGhhID0gMC43LCBhZGp1c3QgPSA0KSAgICAgIn0=
+eyJhdHRyIjp7ImF1dG9ydW4iOmZhbHNlLCJlZGl0Ijp0cnVlLCJldmFsIjp0cnVlLCJmaWctaGVpZ2h0IjoiMyIsImZpZy13aWR0aCI6IjYifSwiY29kZSI6IiMgbGVzcyBzbW9vdGhpbmdcbnBlbmd1aW5zIHw+IGdmX2RlbnMoIH4gYmlsbF9sZW5ndGhfbW0sIGNvbG9yID0gfiBzcGVjaWVzLCBhbHBoYSA9IDAuNywgYWRqdXN0ID0gMC4yNSkgIFxuIyBtb3JlIHNtb290aGluZ1xucGVuZ3VpbnMgfD4gZ2ZfZGVucyggfiBiaWxsX2xlbmd0aF9tbSwgY29sb3IgPSB+IHNwZWNpZXMsIGFscGhhID0gMC43LCBhZGp1c3QgPSA0KSAgICAgIn0=
 </script>
 </div>
 </div>
